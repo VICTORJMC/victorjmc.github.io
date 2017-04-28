@@ -139,7 +139,7 @@ transform: rotate(180deg);
 #slider section.slide{
   position: absolute; /*SE SUPERPONEN UNOS SOBRE OTROS*/
   width: 100%;
-  top: -17px;           /*SE PINTAN DESDE ESQ IZQ DE ARRIBA*/
+  top: 0px;           /*SE PINTAN DESDE ESQ IZQ DE ARRIBA*/
   left: 0px;
 }
 
