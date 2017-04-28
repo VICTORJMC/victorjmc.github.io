@@ -1,0 +1,17 @@
+div#mail{
+    color: black;
+    background: url("img\mail.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 1094px;
+    height: 90%;
+    border: 1px solid white;
+    box-shadow: 1px 1px 0px white,
+                2px 2px 0px white,
+                3px 3px 0px white,
+                4px 4px 0px white,
+                5px 5px 0px gray,
+                6px 6px 0px gray;
+    margin: 20px;
+    padding: 5px;
+}
