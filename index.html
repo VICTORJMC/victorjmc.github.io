@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>VJMC</title>
+ <script src="js/modernizr-custom.js"></script>
+ <link rel="stylesheet" " href="css/icomoon.css">
+ <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
+ <link rel="stylesheet" " href="css/desing.css">
+ <link rel="stylesheet" " href="css/normalize.css">
+ <link rel="stylesheet" " href="css/aldo.css">
+ <link rel="stylesheet" href="style.css">
+
+ </head>
+ 
+<body>
+	 <header>
+         <h1> <a href="index.html">
+               <figure><img  src="img\icon.png" alt=""></figure>
+              </a>
+               <a href="index.html">VJMC</a>
+        </h1>
+          
+       
+
+         <nav id="ioMenu">
+         	<figure id="showMenu" class="ioMenuMovil" onClick="displayMenu()"><img  src="img\menu.png" alt=""></figure>
+
+            <div id="card_menu">
+               	<figure id="hideMenu" class="iomenumovil" onClick="displayMenu()"><img  src="img\exit.png"
+               alt="" > </figure>
+               <figure id="logo_menu"><img src="img\logo.png" alt=""> </figure>
+               <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Aboutme</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Fotos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a onClick="displayFormContact('block')" href="#">Contacto</a></li>
+               </ul>
+           </div>
+        </nav>
+               
+         <div id="prev_section" onClick="displaySection('prev')"><img  src="icons\317-arrow-right2.png" alt=""></img></div>
+         <div id="next_section" onClick="displaySection('next')"><img  src="icons\317-arrow-right2.png" alt=""></img></div>
+         
+</header>
+
+
+<!--S10 295 Y CSS-->
+<div id="slider">
+  <section class="slide" id="home" style="display:block">
+  <div class="mainanimation"><div id="particles-js"> </div></div>
+  <div class="mainlogo">
+  <h2>BIENVENIDOS 
+  <div id="reloj">
+<script type="text/javascript">
+function startTime(){
+today=new Date();
+h=today.getHours();
+m=today.getMinutes();
+s=today.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);}
+function checkTime(i)
+{if (i<10) {i="0" + i;}return i;}
+window.onload=function(){startTime();}
+</script>
+</div></h2>
+  <figure><img src="img/logo.png" alt=""></figure></div>
+  <div class="buttonspage">
+  <div id="contratame" onClick="displayFormContact('block')">CONTRÁTAME</div>
+  <a href="docs/cv.pdf" target="_">Descargar CV</a>
+  </div></section>
+  
+  <section class="slide" id="aboutme" style="display:none"></section>
+  <section class="slide" id="skills" style="display:none"></section>
+  <section class="slide" id="portfolio" style="display:none"></section>
+  <section class="slide" id="blog" style="display:none"></section>
+
+
+<!--S10 298 -->
+<div id="contact_form">
+  <form action="contact.php" id="form1" name="form1" method="post">
+    <div id="close_form" onClick="displayFormContact('none')"></div>
+    <figure id="logo_mensaje"><img src="icons\388-mail.png"></figure>
+<p> Dí hola </p>
+<input type="text" id="name" name="name"  placeholder="Tu nombre" />
+<input type="text" id="email" name="email"  placeholder="Tu email" />
+<textarea name="message" id="message"  placeholder="Mensaje"> </textarea>
+<input type="submit" name="Submit" id="button" valeu="ENVIAR" /></input><!--BONTON ENVIAR-->
+  </form> 
+</div>
+<!--S10 301-->
+<div id="contact_buttom" onClick="displayFormContact('block')"></div> 
+
+</script>
+
+<!--S10 304 Y CSS-->
+<footer>
+<div class="rrss">
+<a target="_blank" href="https://drive.google.com/drive/my-drive"></a>
+<a target="_blank" href="https://www.facebook.com/"></a>
+<a target="_blank" href="#"></a>
+<a target="_blank" href="https://twitter.com/?lang=es"></a>
+</div>
+<p>2017 all rights reserved | Privacity Policy</p>   
+</footer>
+   
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+  
+ <!-- S10-294 --> 
+<script>                            
+alertSize();
+function alertSize() { <!-- RECONOCER TAMAÑO DE VENTANA -->
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //No-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+  
+ 
+    var display;
+    var card_menu = document.getElementById("card_menu");
+    display = card_menu.style.display;<!-- guarda valor del css-->
+    if (myWidth < 767){
+      card_menu.style.display = "none"
+         }
+      else{
+        card_menu.style.display = "block"
+         }
+  }
+</script>
+
+<script>
+  function displayMenu(){
+    <!-- Esto es un comentario alert("SOY BUENO") alert vale para depurar codigo -->
+    <!-- Activar y descativar el display en html no en CSS de div id="card_menu" -->
+    var display;
+    var card_menu = document.getElementById("card_menu");
+    display = card_menu.style.display;<!-- guarda valor del css-->
+    if (display == "none"){
+      card_menu.style.display = "block"
+         }
+      else{
+        card_menu.style.display = "none"
+         }
+  }
+</script>
+
+
+<!--SEC10 296-->
+<script>
+function displaySection(nav){
+  <!--alert("hola")}-->
+var section = new Array(5);
+ section[0] = "home";
+ section[1] = "aboutme";
+ section[2] = "skills";
+ section[3] = "portfolio";
+ section[4] = "blog";
+
+ var search;
+ var show;
+ for (var i=0;  i<5; i++) { <!--RECORRE ARRAY-->
+     search = document.getElementById(section[i]); <!--GUARDA EN SEARCH EL VALOR DE I-->
+     show = search.style.display;
+
+     if (show == "block") { <!--SI LA SECTION ESTA ACTIVA SE PONE EN NONE-->
+      search.style.display = "none";
+            if (nav == "next"){
+               i++;
+               if (i>4) i=0;
+      }
+           if (nav == "prev") {
+              i--;
+              if (i<0) i = 4; <!--pero si llega a home que vaya a la úl.-->
+              }
+              search = document.getElementById(section[i]); <!--se asigna valor-->
+              search.style.display = "block";                <!--se activa-->
+              break;                                         <!--para que salga-->
+
+     }
+
+   }
+   if (section[i] == "home") {
+    bkgr_body = "black";
+    bkgr_menu = "black";
+   }
+   else{
+    bkgr_body = "#f1f1f1";
+    bkgr_menu = "black";    
+   }
+   search.style.background = bkgr_body;
+   var menu = document.getElementsByTagName("header")[0];
+   menu.style.background = bkgr_menu;
+}
+</script>
+
+
+<!--S10 301-->
+<script>
+function displayFormContact(status){ 
+var form = document.getElementById("contact_form");
+form.style.display = status;
+} 
+</script>
+
+</body>
+
+
+</html>
