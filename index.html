@@ -32,7 +32,7 @@
                <figure id="logo_menu"><img src="IMG/LOGO.png" alt=""> </figure>
                <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#aboutme">Aboutme</a></li>
+                <li><a onClick="displayAboutme('block')" href="#">Aboutme</a></li>
                 <li><a href="#">Skills</a></li>
                 <li><a href="#">Fotos</a></li>
                 <li><a href="#">Blog</a></li>
@@ -206,7 +206,14 @@ var form = document.getElementById("contact_form");
 form.style.display = status;
 } 
 </script>
-	
+
+<script>
+function displayAboutme(status){ 
+var form = document.getElementById("aboutme");
+form.style.display = status;
+} 
+</script>
+
 	
 </body>
 </html>
