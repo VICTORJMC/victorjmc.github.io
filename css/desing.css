@@ -146,7 +146,7 @@ transform: rotate(180deg);
 /*S10 302 TB HTML*/
 #slider #home{
 font-family: 'Cinzel', serif;    
-height: 400px;
+height: 500px;
 position: relative;
 text-align: center;
 padding-bottom: 50px;
@@ -274,13 +274,21 @@ top:20px;
 font-family:'Cinzel'; 
 }
 #slider #skills{
-height: 300px;
+height: 500px;
 background: red;
 }
-#slider #portfolio{
-height: 200px;
-background: blue;
+#slider #fotos{
+height: 500px;
+background: black;
 }
+
+#slider #fotos figure,
+#slider #fotos figure img{
+width: 80%;   /*OCUPA EL 100% DEL PADRE*/
+}
+
+
+
 #slider #blog{
 height: 100px;
 background: purple;
