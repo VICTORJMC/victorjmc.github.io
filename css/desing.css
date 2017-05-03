@@ -284,7 +284,7 @@ background: black;
 
 #slider #fotos figure,
 #slider #fotos figure img{
-width: 80%;   /*OCUPA EL 100% DEL PADRE*/
+width: 70%;   /*OCUPA EL 100% DEL PADRE*/
 }
 
 
