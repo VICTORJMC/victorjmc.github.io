@@ -393,7 +393,7 @@ border-radius: 5px;
 #contact_buttom{
 width: 60px;
 height:60px; 
-background: white;
+background: orange;
 border-radius: 50%;
 color: grey;
 z-index: 80%;
@@ -412,7 +412,7 @@ position: relative;
 font-size: 2.5em;
 top: 6px;
 left: 11px;
-color: orange;
+color: black;
 }
 /* FIN S10 301*/
 
@@ -456,7 +456,7 @@ footer:hover:after{      /*el puntero da la vuelta a la flecha y cambia color*/
  transition-duration: 0.5s;
  transform: rotate(0deg); 
  background: none;
- color: black;
+ color: orange;
 }
 
 
