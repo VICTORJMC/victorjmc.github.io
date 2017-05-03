@@ -14,9 +14,9 @@
  </head>
  
 <body>
-	 <header>
+     <header>
          <h1> <a href="index.html">
-               <figure><img  src="IMG/ICON.png" alt=""></figure>
+               <figure><img  src="img\icon.png" alt=""></figure>
               </a>
                <a href="index.html">VJMC</a>
         </h1>
@@ -24,33 +24,33 @@
        
 
          <nav id="ioMenu">
-         	<figure id="showMenu" class="ioMenuMovil" onClick="displayMenu()"><img  src="IMG/menu.png" alt=""></figure>
+             <figure id="showMenu" class="ioMenuMovil" onClick="displayMenu()"><img  src="img\menu.png" alt=""></figure>
 
             <div id="card_menu">
-               	<figure id="hideMenu" class="iomenumovil" onClick="displayMenu()"><img  src="IMG/exit.png"
+                   <figure id="hideMenu" class="iomenumovil" onClick="displayMenu()"><img  src="img\exit.png"
                alt="" > </figure>
-               <figure id="logo_menu"><img src="IMG/LOGO.png" alt=""> </figure>
+               <figure id="logo_menu"><img src="img\logo.png" alt=""> </figure>
                <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Aboutme</a></li>
+                <li><a href="#">About me</a></li>
                 <li><a href="#">Skills</a></li>
-                <li><a href="#">Fotos</a></li>
+                <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a onClick="displayFormContact('block')" href="#">Contacto</a></li>
+                <li><a href="#">Contacto</a></li>
                </ul>
            </div>
         </nav>
                
-         <div id="prev_section" onClick="displaySection('prev')"><img  src="ICONS/317-arrow-right2.png" alt=""></img></div>
-         <div id="next_section" onClick="displaySection('next')"><img  src="ICONS/317-arrow-right2.png" alt=""></img></div>
+         <div id="prev_section" onClick="displaySection('prev')"><img  src="icons\317-arrow-right2.png" alt=""></img></div>
+         <div id="next_section" onClick="displaySection('next')"><img  src="icons\317-arrow-right2.png" alt=""></img></div>
          
 </header>
 
+  <!--S10 295 Y CSS-->
 
-<!--S10 295 Y CSS-->
 <div id="slider">
   <section class="slide" id="home" style="display:block">
-  <div class="mainanimation"><div id="particles-js"> </div></div>
+    <div class="mainanimation"><div id="particles-js"> </div></div>
   <div class="mainlogo">
   <h2>BIENVENIDOS 
   <div id="reloj">
@@ -73,47 +73,15 @@ window.onload=function(){startTime();}
   <div class="buttonspage">
   <div id="contratame" onClick="displayFormContact('block')">CONTRÁTAME</div>
   <a href="docs/cv.pdf" target="_">Descargar CV</a>
-  </div></section>
-  
+</div>
+  </section>
   <section class="slide" id="aboutme" style="display:none"></section>
   <section class="slide" id="skills" style="display:none"></section>
   <section class="slide" id="portfolio" style="display:none"></section>
   <section class="slide" id="blog" style="display:none"></section>
+ 
 
-
-<!--S10 298 -->
-<div id="contact_form">
-  <form action="contact.php" id="form1" name="form1" method="post">
-    <div id="close_form" onClick="displayFormContact('none')"></div>
-    <figure id="logo_mensaje"><img src="ICONS/388-mail.png"></figure>
-<p> Dí hola </p>
-<input type="text" id="name" name="name"  placeholder="Tu nombre" />
-<input type="text" id="email" name="email"  placeholder="Tu email" />
-<textarea name="message" id="message"  placeholder="Mensaje"> </textarea>
-<input type="submit" name="Submit" id="button" valeu="ENVIAR" /></input><!--BONTON ENVIAR-->
-  </form> 
-</div>
-<!--S10 301-->
-<div id="contact_buttom" onClick="displayFormContact('block')"></div> 
-
-</script>
-
-<!--S10 304 Y CSS-->
-<footer>
-<div class="rrss">
-<a target="_blank" href="https://drive.google.com/drive/my-drive"></a>
-<a target="_blank" href="https://www.facebook.com/"></a>
-<a target="_blank" href="#"></a>
-<a target="_blank" href="https://twitter.com/?lang=es"></a>
-</div>
-<p>2017 all rights reserved | Privacity Policy</p>   
-</footer>
-   
-<script src="js/particles.js"></script>
-<script src="js/app.js"></script>
-  
- <!-- S10-294 --> 
-<script>                            
+<script>  <!-- S10-294 -->                            
 alertSize();
 function alertSize() { <!-- RECONOCER TAMAÑO DE VENTANA -->
   var myWidth = 0, myHeight = 0;
@@ -130,7 +98,7 @@ function alertSize() { <!-- RECONOCER TAMAÑO DE VENTANA -->
     myWidth = document.body.clientWidth;
     myHeight = document.body.clientHeight;
   }
-  
+ 
  
     var display;
     var card_menu = document.getElementById("card_menu");
@@ -142,9 +110,7 @@ function alertSize() { <!-- RECONOCER TAMAÑO DE VENTANA -->
         card_menu.style.display = "block"
          }
   }
-</script>
 
-<script>
   function displayMenu(){
     <!-- Esto es un comentario alert("SOY BUENO") alert vale para depurar codigo -->
     <!-- Activar y descativar el display en html no en CSS de div id="card_menu" -->
@@ -158,11 +124,8 @@ function alertSize() { <!-- RECONOCER TAMAÑO DE VENTANA -->
         card_menu.style.display = "none"
          }
   }
-</script>
-
 
 <!--SEC10 296-->
-<script>
 function displaySection(nav){
   <!--alert("hola")}-->
 var section = new Array(5);
@@ -195,19 +158,10 @@ var section = new Array(5);
      }
 
    }
-
+   
+}
+ 
 </script>
-
-
-<!--S10 301-->
-<script>
-function displayFormContact(status){ 
-var form = document.getElementById("contact_form");
-form.style.display = status;
-} 
-</script>
-
+   
 </body>
-
-
 </html>
