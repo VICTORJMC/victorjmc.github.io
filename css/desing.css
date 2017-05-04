@@ -273,6 +273,21 @@ color: white;
 top:20px;
 font-family:'Cinzel'; 
 }
+
+#slider #aboutme .text{
+width: 70%;  
+margin-left: 9%;
+margin-top: 1%; 
+    border: 1px solid white;
+    box-shadow: 1px 1px 0px gray,
+                2px 2px 0px gray,
+                3px 3px 0px gray,
+                4px 4px 0px gray,
+                5px 5px 0px white,
+                6px 6px 0px white; 
+}
+
+
 #slider #skills{
 height: 500px;
 background: red;
@@ -284,7 +299,7 @@ background: black;
 
 
 #slider #fotos figure img{
-width: 70%;  
+width: 60%;  
 margin-left: 9%;
 margin-top: 1%; 
     border: 1px solid white;
