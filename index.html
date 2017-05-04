@@ -11,7 +11,6 @@
  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
  <link rel="stylesheet" " href="css\desing.css">
  <link rel="stylesheet" " href="css\normalize.css">
- <link rel="stylesheet" " href="css\aldo.css">
  <link rel="stylesheet" href="style.css">
 	
 
@@ -56,7 +55,12 @@
   <section class="slide" id="home" style="display:block">
     <div class="mainanimation"><div id="particles-js"> </div></div>
   <div class="mainlogo">
-  <h2>BIENVENIDOS 
+    <h2>BIENVENIDOS</br><script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+</script>  
   <div id="reloj">
 <script type="text/javascript">
 function startTime(){
