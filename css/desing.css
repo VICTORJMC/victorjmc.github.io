@@ -282,11 +282,18 @@ height: 500px;
 background: black;
 }
 
-#slider #fotos figure,
+
 #slider #fotos figure img{
 width: 70%;  
 margin-left: 9%;
-margin-top: 1%;  
+margin-top: 1%; 
+    border: 1px solid white;
+    box-shadow: 1px 1px 0px gray,
+                2px 2px 0px gray,
+                3px 3px 0px gray,
+                4px 4px 0px gray,
+                5px 5px 0px white,
+                6px 6px 0px white; 
 }
 
 
