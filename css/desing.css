@@ -239,6 +239,47 @@ margin-left: -12%;
 border-radius: 150px;
 }
 
+@-moz-keyframes flipInY {
+  0% {
+    -moz-transform: perspective(700px) rotateY(100deg);
+    transform: perspective(700px) rotateY(100deg);
+    opacity: 0;
+  }
+
+  40% {
+    -moz-transform: perspective(700px) rotateY(-40deg);
+    transform: perspective(700px) rotateY(-40deg);
+  }
+
+  70% {
+    -moz-transform: perspective(700px) rotateY(40deg);
+    transform: perspective(700px) rotateY(40deg);
+  }
+
+  100% {
+    -moz-transform: perspective(700px) rotateY(0deg);
+    transform: perspective(700px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+
+#slider #home .mainlogo figure:hover{
+  -moz-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -moz-animation: 3s flipInY 1;
+  animation-name: flipInY;
+}
+
+#slider #home .mainlogo {
+  -moz-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -moz-animation: 3s flipInY 1;
+  animation-name: flipInY;
+}
+
 /*S10 303 TB HTML*/
 #slider #home .buttonspage{
   width: 100%;
