@@ -35,10 +35,10 @@
                <figure id="logo_menu"><img src="IMG/LOGO.png" alt=""> </figure>
                <ul>
                 <li><a href="#">Home</a></li>
-                <li><a onClick="displayAboutme('block')" href="#">Aboutme</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Fotos</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a onClick="navSection('aboutme')"href="#">Aboutme</a></li>
+                <li><a onClick="navSection('skills')"href="#">Skills</a></li>
+                <li><a onClick="navSection('fotos')"href="#">Fotos</a></li>
+                <li><a onClick="navSection('Blog')"href="#">Blog</a></li>
                 <li><a onClick="displayFormContact('block')" href="#">Contacto</a></li>
                </ul>
            </div>
@@ -91,11 +91,15 @@ window.onload=function(){startTime();}
    </h7> 
  </div>
    </section>
-  <section class="slide" id="skills" style="display:none"></section>
+  <section class="slide" id="skills" style="display:none">
+	<div id="skillsimg"><figure><img  src="IMG/build.gif" alt=""></figure></div>
+</section>
    <section class="slide" id="fotos" style="display:none">
     <figure><img src="IMG/yo.jpg" alt=""></figure></div>
   </section>
-  <section class="slide" id="blog" style="display:none"></section>
+  <section class="slide" id="blog" style="display:none">
+	<div id="blogimg"><figure><img  src="IMG/build.gif" alt=""></figure></div>
+  </section>
  
 	
 <!--S10 298 -->
@@ -206,6 +210,31 @@ var section = new Array(5);
    }
    
 }
+					    
+<script>
+function navSection(nav){
+var section = new Array(5);
+ section[0] = "home";
+ section[1] = "aboutme";
+ section[2] = "skills";
+ section[3] = "fotos";
+ section[4] = "blog";
+
+ var search;
+ var show;
+for (var i=0;  i<5; i++) { 
+     search = document.getElementById(section[i]);
+     search.style.display ="none"; //oculta todas las seciones
+
+     if (section[i] == nav) { 
+      search.style.display = "block";
+      }<!-- //del if -->
+    }  <!-- //del for -->
+
+ }<!-- //del function -->
+</script>					    
+					    
+
  
 </script>
  
