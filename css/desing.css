@@ -331,8 +331,14 @@ margin-top: 1%;
 
 #slider #skills{
 height: 500px;
-background: red;
+background: black;
 }
+#slider #skills #skillsimg figure img{
+width: 60%;  
+margin-left: 9%;
+margin-top: 1%; 
+}
+
 #slider #fotos{
 height: 500px;
 background: black;
@@ -355,8 +361,14 @@ margin-top: 1%;
 
 
 #slider #blog{
-height: 100px;
-background: purple;
+height: 500px;
+background: black;
+}
+
+#slider #blog #blogimg figure img{
+width: 60%;  
+margin-left: 9%;
+margin-top: 1%; 
 }
 
 /*FIN S10 295 TB HTML*/
