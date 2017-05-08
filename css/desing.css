@@ -361,9 +361,9 @@ margin-top: 1%;
 
 
 #slider #blog{
+  position: relative;
 height: 500px;
 background: black;
-  top:20px;
 }
 #slider #blog #blogdiv figure img{
 width: 60%;  
