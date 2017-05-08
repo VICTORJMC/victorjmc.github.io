@@ -333,7 +333,7 @@ margin-top: 1%;
 height: 500px;
 background: black;
 }
-#slider #skills #skillsimg figure img{
+#slider #skills #skillsdiv figure img{
 width: 60%;  
 margin-left: 9%;
 margin-top: 1%; 
@@ -365,7 +365,7 @@ height: 500px;
 background: black;
 }
 
-#slider #blog #blogimg figure img{
+#slider #blog #blogdiv figure img{
 width: 60%;  
 margin-left: 9%;
 margin-top: 1%; 
