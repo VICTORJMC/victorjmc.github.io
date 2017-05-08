@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -34,12 +34,13 @@
                alt="" > </figure>
                <figure id="logo_menu"><img src="IMG/LOGO.png" alt=""> </figure>
                <ul>
-                <li><a href="#">Home</a></li>
-                <li><a onClick="navSection('aboutme')"href="#">Aboutme</a></li>
-                <li><a onClick="navSection('skills')"href="#">Skills</a></li>
-                <li><a onClick="navSection('fotos')"href="#">Fotos</a></li>
-                <li><a onClick="navSection('Blog')"href="#">Blog</a></li>
-                <li><a onClick="displayFormContact('block')" href="#">Contacto</a></li>
+                <li><a onClick="navSection('home')"href="#">Home</a></li>
+                 <li><a onClick="navSection('aboutme')"href="#">Aboutme</a></li>
+                  <li><a onClick="navSection('skills')"href="#">Skills</a></li>
+                   <li><a onClick="navSection('fotos')"href="#">Fotos</a></li>
+                    <li><a onClick="navSection('blog')"href="#">Blog</a></li>
+                     <li><a onClick="displayFormContact('block')" href="#">Contacto</a></li>
+
                </ul>
            </div>
         </nav>
@@ -92,13 +93,13 @@ window.onload=function(){startTime();}
  </div>
    </section>
   <section class="slide" id="skills" style="display:none">
-	<div id="skillsimg"><figure><img  src="IMG/build.gif" alt=""></figure></div>
-</section>
+    <div id="skillsdiv"><figure><img  src="IMG/build.gif" alt=""></figure></div>
+  </section>
    <section class="slide" id="fotos" style="display:none">
     <figure><img src="IMG/yo.jpg" alt=""></figure></div>
   </section>
   <section class="slide" id="blog" style="display:none">
-	<div id="blogimg"><figure><img  src="IMG/build.gif" alt=""></figure></div>
+    <div id="blogdiv"><figure><img  src="IMG/build.gif" alt=""></figure></div>
   </section>
  
 	
@@ -210,7 +211,9 @@ var section = new Array(5);
    }
    
 }
-					    
+ 
+</script>
+ 
 <script>
 function navSection(nav){
 var section = new Array(5);
@@ -232,12 +235,11 @@ for (var i=0;  i<5; i++) {
     }  <!-- //del for -->
 
  }<!-- //del function -->
-</script>					    
-					    
-
- 
 </script>
- 
+
+
+
+
 	<!--S10 301-->
 <script>
 function displayFormContact(status){ 
@@ -246,12 +248,7 @@ form.style.display = status;
 } 
 </script>
 
-<script>
-function displayAboutme(status){ 
-var form = document.getElementById("aboutme");
-form.style.display = status;
-} 
-</script>
+
 <script src="JS/particles.js"></script>
 <script src="JS/app.js"></script>
 	
