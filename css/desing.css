@@ -376,6 +376,7 @@ color:red;
 }
 
 #slider #mail{
+font-family: Cinzel; 
 margin:75px 25px 25px 75px;
 height: 500px;
 width: 1000px;
@@ -383,7 +384,6 @@ background: white;
 border: 3.5px solid grey; 
 }
 #slider #mail #mailtitulo{
- font-family: Cinzel; 
  background: #b61924;
  color: white;
  margin: 0px 20px 0px 20px; 
@@ -394,7 +394,6 @@ border: 3.5px solid grey;
 #slider #mail #maildiv p{
 position: relative;
 color: black;
-font-family: Cinzel; 
 margin: 0px 0px 20px 0px; 
 }
 
