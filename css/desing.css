@@ -366,9 +366,11 @@ height: 500px;
 background: black;
 }
 #slider #blog #blogdiv figure img{
-width: 60%;  
-margin-left: 9%;
-margin-top: 1%; 
+  width: 400px;/*mostrar imágenes con cualquier altura/anchura,*/
+  height: 500px; 
+  margin:75px 25px 25px 350px;
+ } 
+
 }
 
 /*FIN S10 295 TB HTML*/
