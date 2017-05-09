@@ -1,6 +1,6 @@
 body{
-font-size: 16
-background: black;
+font-size: 16;
+background black;
 position: relative;
 }
 
@@ -48,6 +48,742 @@ display: none;
 position: relative;
 width: 230px;
 background: white;
+top: -40px;
+left: 0px;
+border-right: 3px solid #AFAEAE;
+z-index: 999;
+padding-bottom: 30px;
+}
+
+
+
+
+header nav #card_menu #logo_menu{
+  /*background: red;*/
+  height: 200px;
+  width: 80%;
+  margin: 30px 0px;
+  margin-left: 10%;
+  margin-bottom: 50px;
+  }
+
+header nav #card_menu ul{
+/*background: red;*/
+margin-top: -20px;
+ } 
+
+header nav #card_menu ul li{
+list-style: none;
+font-size: 1.5em;
+line-height: 37px;
+  }  
+header nav #card_menu ul li a{
+text-decoration: none;
+color: black;
+  }            /*S10 291 FIN*/
+
+
+header nav #card_menu #hideMenu img{
+  margin-left: -17%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+ }
+
+
+header nav #card_menu #logo_menu img{
+  width: 100%;
+ }
+
+
+
+
+header #prev_section,
+header #next_section{
+/*background: white;*/
+width: 25px;
+height: 25px;
+cursor: pointer;
+margin: 5px;
+position: absolute;
+top: 0px;/*SE COLOCAN UNO SOBRE EL OTRO ESQ SUP IZQ*/
+overflow: hidden; /*OCULTAR SCROLL EN VENTANAS*/
+}
+
+header #prev_section{/*LOS SEPARAMOS UNO DEL OTRO*/
+right: 35px;  
+}
+header #next_section{
+right: 5px;  
+}
+
+header #next_section img,
+header #prev_section img{
+width: 100%; /*que ocupe el 100% del recuadro*/
+ 
+}
+
+header #prev_section img{
+transform: rotate(180deg); 
+}
+
+/*S10 295 TB HTML*/
+#slider{
+  top: 0px;
+  width: 100%;
+  position: relative;
+  height: 600px;
+  background: black;
+  /*border: 1px solid red;*/
+}
+#slider section.slide{
+  position: absolute; /*SE SUPERPONEN UNOS SOBRE OTROS*/
+  width: 100%;
+  top: 0px;           /*SE PINTAN DESDE ESQ IZQ DE ARRIBA*/
+  left: 0px;
+}
+
+/*S10 302 TB HTML*/
+#slider #home{
+font-family: 'Cinzel', serif;    
+height: 500px;
+position: relative;
+text-align: center;
+padding-bottom: 50px;
+}
+
+#slider #home .mainanimation{
+/*background: red;*/
+width: 80%;
+margin-left: 10%;
+min-height: 300px;
+position: absolute;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+#slider #home .mainlogo{
+background: none;
+position: relative;
+/*background: green;*/
+width: 60vw;
+margin-left: 20vw;
+min-width: 250px;
+}
+
+#slider #home .mainlogo h2{
+font-size: 1.2em;
+color: white;
+padding-top: 15px;
+margin-left: -35%;
+}
+
+#slider #home .mainlogo figure,
+#slider #home .mainlogo figure img{
+width: 100%;   /*OCUPA EL 100% DEL PADRE*/
+margin: 0px;
+margin-left: -12%;
+border-radius: 150px;
+}
+
+@-moz-keyframes flipInY {
+  0% {
+    -moz-transform: perspective(700px) rotateY(100deg);
+    transform: perspective(700px) rotateY(100deg);
+    opacity: 0;
+  }
+
+  40% {
+    -moz-transform: perspective(700px) rotateY(-40deg);
+    transform: perspective(700px) rotateY(-40deg);
+  }
+
+  70% {
+    -moz-transform: perspective(700px) rotateY(40deg);
+    transform: perspective(700px) rotateY(40deg);
+  }
+
+  100% {
+    -moz-transform: perspective(700px) rotateY(0deg);
+    transform: perspective(700px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+
+#slider #home .mainlogo figure:hover{
+  -moz-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -moz-animation: 3s flipInY 1;
+  animation-name: flipInY;
+}
+
+#slider #home .mainlogo {
+  -moz-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -moz-animation: 3s flipInY 1;
+  animation-name: flipInY;
+}
+
+/*S10 303 TB HTML*/
+#slider #home .buttonspage{
+  width: 100%;
+  text-align: center;
+  background: black;
+}
+#slider #home .buttonspage > *{ /*SAL CONTENIDO DE .buttonspage*/
+display: inline-block;
+/*background: red;*/
+width: 40%; /*garantizar que quepa*/
+margin: 5px 2.5%; /*2.5 SEPARACIÓN ENTRE BOTONES*/
+color: white;
+padding: 5px 2.5%; /*5 OCUPA EL DIV*/
+}
+
+#slider #home #contratame{
+  cursor: pointer;
+  background: #F8931F;
+}
+
+
+#slider #home a{
+  text-decoration: none;
+  background: #F8931F;
+  color: white;
+}
+
+/*FIN S10 302 TB HTML*/
+
+#slider #bancos{
+height: 500px;
+background: black;
+color: white;
+margin:75px 25px 25px 75px;
+font-family: 'Lato';
+}
+
+#slider #bancos .enlaces{
+    color:white;
+    width: 1000px;
+    height: 460px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 0px gray,
+                2px 2px 0px gray,
+                3px 3px 0px gray,
+                4px 4px 0px gray,
+                5px 5px 0px white,
+                6px 6px 0px white;
+ }
+
+#slider #bancos .enlaces h7{
+  color: black;
+}
+
+#slider #bancos .enlaces h7{
+  color: black;
+}
+
+#slider #bancos .enlaces #link1{
+  color: orange;
+  text-decoration: none;
+}
+
+#slider #bancos .enlaces p.enl{
+  position: relative;
+  top: 80px;
+  margin-left: 200px;
+}
+
+#slider #arqueo{
+height: 500px;
+width: 1000px;
+background: black;
+color: white;
+margin:75px 25px 25px 75px;
+font-family:'Lato'; 
+border: 2px solid;
+}
+
+#slider #arqueo output{
+color:red;
+}
+
+#slider #arqueo p{
+  position: relative; left: 95px; top:70px; 
+}
+
+#slider #arqueo p h8{
+  position: relative; left: 140px;
+}
+
+#slider #arqueo form{
+  position: relative; left: 90px; top: 75px;
+}
+
+#slider #mail{
+margin:4px 25px 25px 25px; 
+height: 900px;
+width: 1100px;
+background: white;
+border: 3.5px solid grey; 
+}
+#slider #mail #mailtitulo{
+ font-family: Cinzel; 
+ background: #b61924;
+ color: white;
+ margin: 0px 20px 0px 20px; 
+ }
+
+}
+
+#slider #mail #maildiv p{
+position: relative;
+color: black;
+font-family: Cambria,Georgia,serif;
+margin: 0px 0px 20px 0px; 
+}
+
+
+
+
+
+#slider #utilidades{
+  height: 500px;
+  background: black;
+  }
+
+
+#slider #utilidades #util figure img{
+  width: 400px;/*mostrar imágenes con cualquier altura/anchura,*/
+  height: 500px; 
+  margin:75px 25px 25px 350px;
+   
+}
+
+/*FIN S10 295 TB HTML*/
+
+/*S10 300 */
+#contact_form{
+  position: absolute;
+  right: 0px;
+  top: 35px;
+  background: white;
+  width: 250px;
+  border: 2px solid black;
+  box-shadow: 0px 0px 3px #9F9E9E;
+  height: 100vh;/*100% DEL LA ALTURA DEL DISP.*/
+  z-index: 999;
+  display: none;
+
+}
+
+#contact_form #close_form{
+position: absolute;
+background: white;
+width: 30px;
+height: 30px;
+left: 85%;
+top: 190px;
+}
+
+#contact_form #close_form:hover{
+  cursor: pointer;
+  }
+#contact_form #close_form:before{
+font-family: 'icomoon';
+  content: "\ea0f";
+top: 5px;
+left: 1px;
+position: relative;
+font-size: 2em;
+}
+
+#contact_form figure{
+font-family: 'icomoon';
+  content: "\eae1";
+top: 5px;
+left: 40px;
+position: relative;
+}
+
+#contact_form figure{
+height: 180px;
+width: 100%;
+margin: 0px;
+padding: 0px;
+text-aling: center;
+
+}
+
+#contact_form figure img{
+margin: 50px;
+height: 50%;
+width: 50%;
+}
+
+#contact_form  p{
+/*background: red;*/
+color: white;
+margin: 20px;
+font-weight: bold;
+width: 90%;
+margin-left: 5%;
+}
+
+#contact_form input,
+#contact_form textarea{
+display: block;
+margin: 20px;
+border: none;
+border-bottom: 2px solid gray;
+width: 90%;
+margin-left: 5%;
+padding-bottom: 3px;
+margin-bottom: 50px;
+font-weight: bold;
+}
+
+#contact_form #button{
+/*background: red;*/
+height: 100%;
+color: black;
+border: none;
+padding: 8px 0px;
+border-radius: 5px;
+}
+/* FIN S10 300 */
+
+/*S10 301*/
+#contact_buttom{
+width: 60px;
+height:60px; 
+background: orange;
+border-radius: 50%;
+color: grey;
+z-index: 80%;
+right: 30px;
+position: fixed;
+top: 60vh;
+}
+
+#contact_buttom:hover{
+  cursor: pointer;
+}
+#contact_buttom:before{
+font-family: 'icomoon';
+content: "\e905";
+position: relative;
+font-size: 2.5em;
+top: 6px;
+left: 11px;
+color: black;
+}
+/* FIN S10 301*/
+
+/*S10 304*/
+footer{
+width: 100%;
+background: : #b61924;
+color: white;
+text-align: : center;
+z-index: 90;
+height: 150px;
+position: fixed;
+bottom: -130px;
+transition-duration: 0.5s;
+}
+/*FIN S10 304*/
+
+/*S10 305*/
+footer:hover{
+  bottom: 0px; /*la animación es por el bottom de footer*/
+}
+
+footer:after{
+  content: "\ea43";
+  font-family: 'icomoon';
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 75px;
+  height: 75px;
+  margin-left: -20px;
+  background: none;
+  margin-top: -49px;
+  border-radius: 50%;
+  color: white;
+  transform: rotate(180deg);
+  font-size: 5em;
+}
+
+footer:hover:after{      /*el puntero da la vuelta a la flecha y cambia color*/
+ transition-duration: 0.5s;
+ transform: rotate(0deg); 
+ background: none;
+ color: orange;
+}
+
+
+footer .rrss{
+margin-top: 70px;
+width: 100%;
+height: 40px;
+background: black;
+}
+
+
+footer .rrss a{
+width: 40px;
+height: 40px;
+background: black;
+display: inline-block;
+position: relative;
+}
+
+footer .rrss a:before{
+color: white;
+text-decoration: none;
+position: absolute;
+font-size: 2em;
+top: 5px;
+left: 5px;
+font-family: 'icomoon';
+}
+
+footer .rrss a:nth-child(1):before{   /*ESTE SOLO SE APLICA AL 1ER ENLACE*/
+  content: "\ea8f";
+}
+
+footer .rrss a:nth-child(2):before{ 
+  content: "\ea91";
+}
+
+footer .rrss a:nth-child(3):before{ 
+  content: "\ea93";
+}
+
+footer .rrss a:nth-child(4):before{ 
+  content: "\ea96";
+}
+/*fin S10 305*/
+
+
+
+
+
+/*ESQUELETO RESPONSIVE DESING*/
+
+@media screen and (min-width: 480px){
+         /* body{           background: red; }/*cambia el color del fondo si 480px*/
+         /*S10 302 TB HTML*/
+          #slider #home .mainlogo{
+          width: 300px;
+          left: 50%;
+          margin-left: -80px;/*centrado a OJO*/
+         }
+         #slider #home .mainlogo h2{
+          font-size: 1.4em;
+         }
+
+
+
+         /*FIN S10 302 TB HTML*/
+
+
+}
+@media screen and (min-width: 600px){
+          body{
+           /*background: orange;*/
+          }
+
+
+}
+@media screen and (min-width: 767px){
+          body{
+            background: black;
+           /*background: yelow;*/
+          }
+
+         header{
+          height: 70px;
+          } 
+
+
+         header h1{                        /*S10-290*/
+           display: inline-block;
+           width: 15%;
+          /* background: red; para ver durante desar*/
+           margin: 0px;
+           height: 80px;
+           margin-left: 60px;
+           line-height: 80px;/*CENTRA VJMC EN H1*/
+           min-width: 200px;
+          }    
+        header h1 > *{ /*hijos del h1 enlaces*/
+          display: inline-block;
+          vertical-align: middle;
+          text-decoration: none;
+          color: white; 
+          font-size: 0.5em;
+          margin: 0px 3px;
+          }
+
+         header h1 figure{ /*FIGURE ES EL AREA Q OCUPA IMG*/
+          height: 60px;
+          width: 60px;
+          margin: 0px;
+
+          /*background: green;*/
+         }
+         header h1 figure img{
+         width: 100%;
+         border-radius: 150px;
+         }
+
+         header nav{                           /* SEC10 292*/
+         display: inline-block; 
+         vertical-align: middle;
+         width: 62%;
+         position: relative;
+         /*background: red;*/
+         }
+
+          header nav #showMenu ,
+          header nav #hideMenu {
+          display: none;
+          }
+
+
+          header nav #card_menu {
+          display: inline-block;
+          border: none;
+          background: none;
+          position: relative;
+          top: 0px;
+          width: 100%; /*se adapta al padre*/
+         /* background: green;*/
+          text-align: right;
+          padding-bottom: 0px;
+          }  
+
+          header nav #card_menu figure{
+          display: none; 
+          } 
+
+          header nav #card_menu ul{  
+          padding: 0px;
+          margin: 0px;
+          margin-top: -15px;
+          }
+
+          header nav #card_menu ul li{  
+          display: inline-block;
+          width: 75px;
+          /*background: blue;*/
+          text-align: center;
+          font-size: 1em;
+          margin: 0px -2px;
+          }  
+          header nav #card_menu ul li a{   
+          color: white; 
+          }                              /*FIN SEC10-292*/
+
+                                            
+
+          header #next_section , /*ESTAS PROPIEDADES IGUALES A LOS 2*/
+          header #prev_section {
+          position: absolute; /*redundante pero se ve mejor sin mirar atras*/
+          width: 50px;
+          height: 50px;
+          
+          right: 40px;
+          z-index: 999; /*PARA TODO LO QUE HAYA DEBAJO SE VEA*/
+          border-radius: 80%;
+          }
+         header #prev_section {
+         top:115px;  
+         }
+         header #next_section {
+         top:190px;  
+         }
+
+         header #next_section img,
+         header #prev_section img{
+         width: 100%; /*que ocupe el 100% del área*/
+         }
+
+         #contact_form{
+          top: 50px;
+          width: 400px;
+         }
+  }
+
+
+
+
+
+@media screen and (min-width: 950px){
+          body{
+           background: black;
+          }
+}
+
+
 top: -40px;
 left: 0px;
 border-right: 3px solid #AFAEAE;
