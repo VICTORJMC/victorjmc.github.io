@@ -18,3 +18,327 @@
 
  </head>
  
+<body>
+     <header>
+         <h1> <a href="index.html">
+               <figure><img  src="IMG/ICON.png" alt=""></figure>
+              </a>
+               <a href="index.html">VJMC</a>
+        </h1>
+          
+       
+
+         <nav id="ioMenu">
+             <figure id="showMenu" class="ioMenuMovil" onClick="displayMenu()"><img  src="IMG/menu.png" alt=""></figure>
+
+            <div id="card_menu">
+                   <figure id="hideMenu" class="iomenumovil" onClick="displayMenu()"><img  src="IMG/exit.png"
+               alt="" > </figure>
+               <figure id="logo_menu"><img src="IMG/LOGO.png" alt=""> </figure>
+               <ul>
+                <li><a onClick="navSection('home')"href="#">Home</a></li>
+                 <li><a onClick="navSection('bancos')"href="#">Bancos</a></li>
+                  <li><a onClick="navSection('arqueo')"href="#">Arqueo</a></li>
+                   <li><a onClick="navSection('mail')"href="#">Mail</a></li>
+                    <li><a onClick="navSection('utilidades')"href="#">Utilidades</a></li>
+
+                
+               </ul>
+           </div>
+        </nav>
+               
+         <div id="prev_section" onClick="displaySection('prev')"><img  src="ICONS/317-arrow-right2.png" alt=""></img></div>
+         <div id="next_section" onClick="displaySection('next')"><img  src="ICONS/317-arrow-right2.png" alt=""></img></div>
+         
+</header>
+
+  <!--S10 295 Y CSS-->
+
+<div id="slider">
+  <section class="slide" id="home" style="display:block">
+    <div class="mainanimation"><div id="particles-js"> </div></div>
+  <div class="mainlogo">
+  <h2>BIENVENIDOS</br><script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+</script>  
+  <div id="reloj">
+ <script type="text/javascript">
+function startTime(){
+today=new Date();
+h=today.getHours();
+m=today.getMinutes();
+s=today.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);}
+function checkTime(i)
+{if (i<10) {i="0" + i;}return i;}
+window.onload=function(){startTime();}
+</script>
+</div></h2>
+  <figure><img src="IMG/LOGO.png" alt=""></figure></div>
+  <div class="buttonspage">
+  <div id="contratame"> <a id="none" target="_blank" href="file:///R:/ESCANER/">ESCANER</a></div>
+  <a target="_blank" href="file://///AYTO21INFO402/InterColabora/Cjlia%20Econom%C3%ADa,%20Hacienda,%20Contrataci%C3%B3n,%20Compras%20y%20RRHH/Tesoreria/VICTOR/ORDENANZAS%202017.pdf" target="_">ORDENANZAS 2017</a>
+</div>
+  </section>
+
+    <section class="slide" id="bancos" style="display:none">
+    <div class="enlaces">
+
+</div>
+   </section>
+
+  <section class="slide" id="arqueo" style="display:none">
+    <P >BANCO <h8>GTWIN</h8> </p>  
+    <div class="arqueodiv">
+    <form id="bbva"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)"><input  id="valor1" type="number" step="any"> -
+    <input id="valor2" type="number" step="any"> =
+    <output id="resultado" name="o" for="valor1 valor2"></output>
+<input type="reset" value="Borrar">BBVA
+</form>
+<form id="bankia"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)"><input  id="valor1" type="number" step="any"> -
+    <input id="valor2" type="number" step="any"> =
+    <output id="resultado" name="o" for="valor1 valor2"></output>
+<input type="reset" value="Borrar">BANKIA 
+</form>
+<form id="bankia560"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+    <input  id="valor1" type="number" step="any"> -
+    <input id="valor2" type="number" step="any"> =
+    <output id="resultado" name="o" for="valor1 valor2"></output>
+<input type="reset" value="Borrar">BANKIA
+</form>
+<form   id="caixa" method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+    <input  id="valor1" type="number" step="any"> -
+    <input id="valor2" type="number" step="any"> =
+    <output id="resultado" name="o" for="valor1 valor2"></output>
+<input type="reset" value="Borrar">CAJAMAR
+</form>
+<form id="CAJAMAR"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)"> 
+    <input  id="valor1" type="number" step="any"> -
+    <input id="valor2" type="number" step="any"> =
+    <output id="resultado" name="o" for="valor1 valor2"></output>
+<input type="reset" value="Borrar">LA CAIXA
+</form>
+<form id="ibercaja"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+    <input  id="valor1" type="number" step="any"> -
+    <input id="valor2" type="number" step="any"> =
+    <output id="resultado" name="o" for="valor1 valor2"></output>
+<input type="reset" value="Borrar">IBERCAJA 
+</form>
+<form id="popular"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+    <input  id="valor1" type="number" step="any"> -
+    <input id="valor2" type="number" step="any"> =
+    <output id="resultado" name="o" for="valor1 valor2"></output>
+<input type="reset" value="Borrar">POPULAR
+</form>
+<form id="bsch"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+    <input  id="valor1" type="number" step="any"> -
+    <input id="valor2" type="number" step="any"> =
+    <output id="resultado" name="o" for="valor1 valor2"></output>
+<input type="reset" value="Borrar">BSCH 
+</form>
+<form id="bsch"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+    <input  id="valor1" type="number" step="any"> -
+    <input id="valor2" type="number" step="any"> =
+    <output id="resultado" name="o" for="valor1 valor2"></output>
+<input type="reset" value="Borrar">BSCH
+</form>
+</div>
+  </section>
+   <section class="slide" id="mail" style="display:none">
+     <div id="maildiv">
+<h4>Contactos</h4>      
+fax.91XXXXXXX@fax.vodafone.es<br>
+fax.916540206<br>
+departamento de IBI (916597600 o tramitesweb.ibi@aytoalcobendas.org).<br>
+departamento de multas 914904070, trafico@aytoalcobendas.org
+<h4>Respuestas</h4> 
+<p>Buenos días,<br>
+le informamos que para atender su solicitud es necesario que adjunte copia del D.N.I.,
+N.I.E o pasaporte,<br> si es el titular del recibo, en caso de que no lo sea, es necesario que
+adjunte DNI del interesado, DNI del representante y autorización del titular.
+<br>Si el interesado es una Persona Jurídica dicho dato se comprueba con el CIF de la
+Persona Jurídica, DNI del representante legal y poder de representación.</p>
+<p >Se pone en copia a domiciliaciones para grabar el número de cuenta para el próximo ejercicio.</p>
+<p >El nº IBAN para pago por transferencia es ES73 0049-5176-1624-1684-0867, indicar como concepto DNI/CIF del titular.</p>
+<p >para domiciliar ha de cumplimentar formulario adjunto para reenviar a  <a href="domiciliaciones@aytoalcobendas.org%0D">domiciliaciones@aytoalcobendas.org</a></p>
+<p >se adjunta recibo y se pone en copia a <a href="domiciliaciones@aytoalcobendas.org%0D">domiciliaciones@aytoalcobendas.org</a> para que tramiten su solicitud.</P>
+<p >se rennvía su solicitud al departamento de Rentas encargada de realizar los cambios de domicilio fiscal.</p>
+<p >la Ley General Tributaria indica que se debe aplicar el pago a la deuda más antigua cuando los recibos al están en vía ejecutiva como es el caso, por lo que no se pueden individualizar. Se adjunta relación.</P>
+<p >se adjunta justificante del 2015, y del 2016 certificado de estar acogido al plan de pago Aplaza 6 que finalizó en octubre, y debido a que existen cincuenta días para ordenar devoluciones no</br> se contabiliza hasta diciembre. Se puede solicitar  a partir de entonces.  </P>
+<p >para poder poder alzar el embargo la única manera es que usted no tuviera ingresos o estos fueran de una pensión mínima o un salario inferior al mínimo interprofesional.
+Para poder acreditarlo se necesita un justificante de los movimientos de los dos últimos meses.</p>  
+<h4>Enlaces</h4>   
+<p >certificado negativo de deudas a través del siguiente link:<a href="https://www.alcobendas.org/es/cargarFichaTramite.do?identificador=147">https://www.alcobendas.org/es/cargarFichaTramite.do?identificador=147</a></P>
+<p >pagos sin identificación digital con tarjeta, en el siguiente enlace indicando NIF/CIF y nº de recibo:<a href="https://www.alcobendas.org/es/portal.do?IDM=126&NM=3">https://www.alcobendas.org/es/portal.do?IDM=126&NM=3</a></P>
+<p >certificado del pago de impuestos y tasas municipales a través del siguiente link :<A href="https://www.alcobendas.org/es/cargarFichaTramite.do?identificador=212">https://www.alcobendas.org/es/cargarFichaTramite.do?identificador=212</A></P>
+<p >Simulador IVTM :<A href="https://www.alcobendas.org/es/portal.do?IDM=130&NM=3">SIMULAR</A></P>
+
+
+</div>
+  </section>
+
+  <section class="slide" id="utilidades" style="display:none">
+ <div id="util"><figure><img  src="IMG/buildb.gif" alt=""></figure></div>
+
+  </section>
+  
+ 
+	
+<!--S10 298 -->
+<div id="contact_form">
+
+  <form action="contact.php" id="form1" name="form1" method="post">
+    <div id="close_form" onClick="displayFormContact('none')"></div>
+    <figure id="logo_mensaje"><img src="ICONS/389-mail2.png"></figure>
+<p> Dí hola </p>
+<input type="text" id="name" name="name"  placeholder="Tu nombre" />
+<input type="text" id="email" name="email"  placeholder="Tu email" />
+<textarea name="message" id="message"  placeholder="Mensaje"> </textarea>
+<input type="submit" name="Submit" id="button" valeu="ENVIAR" /></input><!--BONTON ENVIAR-->
+  </form> 
+</div>
+<!--S10 301-->
+<div id="contact_buttom" onClick="displayFormContact('block')"></div> 
+
+
+<!--S10 304 Y CSS-->
+<footer>
+<div class="rrss">
+<a target="_blank" href="https://www.google.com/drive/"></a>
+<a target="_blank" href="https://www.FACEBOOK.com"></a>
+<a href="#"></a>
+<a href="#"></a>
+</div>
+<p>2017 all rights reserved | Privacity Policy</p>   
+</footer>
+   
+
+
+<script>  <!-- S10-294 -->                            
+alertSize();
+function alertSize() { <!-- RECONOCER TAMAÑO DE VENTANA -->
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //No-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+ 
+ 
+    var display;
+    var card_menu = document.getElementById("card_menu");
+    display = card_menu.style.display;<!-- guarda valor del css-->
+    if (myWidth < 767){
+      card_menu.style.display = "none"
+         }
+      else{
+        card_menu.style.display = "block"
+         }
+  }
+
+  function displayMenu(){
+    <!-- Esto es un comentario alert("SOY BUENO") alert vale para depurar codigo -->
+    <!-- Activar y descativar el display en html no en CSS de div id="card_menu" -->
+    var display;
+    var card_menu = document.getElementById("card_menu");
+    display = card_menu.style.display;<!-- guarda valor del css-->
+    if (display == "none"){
+      card_menu.style.display = "block"
+         }
+      else{
+        card_menu.style.display = "none"
+         }
+  }
+
+<!--SEC10 296-->
+function displaySection(nav){
+  <!--alert("hola")}-->
+var section = new Array(5);
+ section[0] = "home";
+ section[1] = "bancos";
+ section[2] = "arqueo";
+ section[3] = "mail";
+ section[4] = "utilidades";
+
+ var search;
+ var show;
+ for (var i=0;  i<5; i++) { <!--RECORRE ARRAY-->
+     search = document.getElementById(section[i]); <!--GUARDA EN SEARCH EL VALOR DE I-->
+     show = search.style.display;
+
+     if (show == "block") { <!--SI LA SECTION ESTA ACTIVA SE PONE EN NONE-->
+      search.style.display = "none";
+            if (nav == "next"){
+               i++;
+               if (i>4) i=0;
+      }
+           if (nav == "prev") {
+              i--;
+              if (i<0) i = 4; <!--pero si llega a home que vaya a la úl.-->
+              }
+              search = document.getElementById(section[i]); <!--se asigna valor-->
+              search.style.display = "block";                <!--se activa-->
+              break;                                         <!--para que salga-->
+
+     }
+
+   }
+   
+}
+</script>
+<!--  // alert("hola")}-->
+
+<!--SEC10 298-->
+<script>
+function navSection(nav){
+var section = new Array(5);
+ section[0] = "home";
+ section[1] = "bancos";
+ section[2] = "arqueo";
+ section[3] = "mail";
+ section[4] = "utilidades";
+
+ var search;
+ var show;
+for (var i=0;  i<5; i++) { 
+     search = document.getElementById(section[i]);
+     search.style.display ="none"; //oculta todas las seciones
+
+     if (section[i] == nav) { 
+      search.style.display = "block";
+      }<!-- //del if -->
+    }  <!-- //del for -->
+
+ }<!-- //del function -->
+</script>
+ 
+	<!--S10 301-->
+<script>
+function displayFormContact(status){ 
+var form = document.getElementById("contact_form");
+form.style.display = status;
+} 
+</script>
+
+<script src="JS/particles.js"></script>
+<script src="JS/app.js"></script>
+	
+	
+	
+</body>
+</html>
+
