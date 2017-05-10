@@ -722,7 +722,7 @@ footer .rrss a:nth-child(4):before{
           top: 0px;
           width: 100%; /*se adapta al padre*/
          /* background: green;*/
-          text-align: justify;
+          text-align: right;
           padding-bottom: 0px;
           }  
 
