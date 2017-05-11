@@ -297,13 +297,15 @@ padding: 5px 2.5%; /*5 OCUPA EL DIV*/
 
 #slider #home #contratame{
   cursor: pointer;
-  background: #F8931F;
+    /*background: #F8931F;*/
+ background: #009966;
 }
 
 
 #slider #home a{
   text-decoration: none;
-  background: #F8931F;
+  /*background: #F8931F;*/
+   background: #009966;
   color: white;
 }
 
@@ -517,7 +519,8 @@ border-radius: 5px;
 #contact_buttom{
 width: 60px;
 height:60px; 
-background: orange;
+/*background: orange;*/
+ background: #009966;  
 border-radius: 50%;
 color: grey;
 z-index: 80%;
