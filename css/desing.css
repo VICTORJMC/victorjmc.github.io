@@ -331,7 +331,6 @@ display: inline-block; /*para ver fotos ocupar el aancho de sección*/
  }
 
 #slider #bancos .enlaces img:hover{
-#slider #bancos .enlaces img:hover{
 transform : scale(2);
     -moz-transform : scale(2); /* Firefox */
     -webkit-transform : scale(2); /* Chrome - Safari */
