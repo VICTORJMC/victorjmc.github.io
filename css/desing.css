@@ -339,29 +339,9 @@ transform : scale(2);
 
 #slider #arqueo{
 height: 500px;
-width: 700px;
-background: black;
-color: white;
-margin:75px 25px 25px 75px;
-font-family:'Lato'; 
-border: 2px solid;
 }
 
-#slider #arqueo output{
-color:red;
-}
 
-#slider #arqueo p{
-  position: relative; left: 95px; top:70px; 
-}
-
-#slider #arqueo p h8{
-  position: relative; left: 140px;
-}
-
-#slider #arqueo form{
-  position: relative; left: 90px; top: 75px;
-}
 
 #slider #mail{
 font-family: Cinzel; 
