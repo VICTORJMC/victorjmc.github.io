@@ -272,7 +272,7 @@ border-radius: 150px;
   animation-name: flipInY;
 }
   
-#slider #home .mainlogo  figure:hover {-webkit-transform:scale(1.2);transform:scale(1.2);}
+#slider #home .mainlogo  figure:hover {filter: opacity(.14);}
 
 /*S10 303 TB HTML*/
 #slider #home .buttonspage{
