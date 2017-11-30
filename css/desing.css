@@ -734,7 +734,9 @@ footer .rrss a:nth-child(5):before{
           }  
           header nav #card_menu ul li a{   
           color: white; 
-          }                              /*FIN SEC10-292*/
+          }    
+         li a:hover, li a:focus {  outline: 2px solid #9F9E9E; } 
+  /*FIN SEC10-292*/
 
                                             
 
