@@ -730,11 +730,10 @@ footer .rrss a:nth-child(5):before{
 
           header nav #card_menu ul li{  
           display: inline-block;
-          width: 140px;
           /*background: blue;*/
           text-align: center;
           font-size: 1em;
-          margin: 0px 0px;
+          margin: 0px 20px;
           }  
           header nav #card_menu ul li a{   
           color: white; 
