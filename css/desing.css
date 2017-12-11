@@ -739,7 +739,7 @@ footer .rrss a:nth-child(5):before{
           header nav #card_menu ul li a{   
           color: white; 
           }    
-         li a:hover, li a:focus {  outline: 2px solid #9F9E9E; } 
+         ul :hover, li:focus {  background-color:  #7c1905   }
   /*FIN SEC10-292*/
 
                                             
