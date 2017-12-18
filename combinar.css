@@ -1,0 +1,52 @@
+
+
+@page { size: auto;  margin: 0mm; }
+
+body {text-align:justify; 
+      padding:20px ;
+      margin-right:5%;
+      font-family: Arial,sans-serif;
+      font-size:1.5em;
+      margin-left:50px;
+}
+
+      
+img{
+      margin: 10px 10px 80px -35px;
+      margin-right: -5%;
+      height: 200px;
+      width: 109%}
+
+input {
+    background-color: transparent;
+    border: 0px solid;
+
+  text-align:center;
+    font-weight: bold;
+   text-transform:uppercase;
+    resize: both;
+    overflow: auto;
+      font-size:0.9em;
+}
+
+input:focus {  background-color: #DCDCDC   }
+
+#firma{
+       margin: 250px 0px 0px 0px;
+       text-align: right;
+            }
+
+script{
+       font-weight: bold;
+            }
+
+
+@media print {
+    input {
+        border: none;
+        width:auto;
+   overflow:visible;
+        
+    }
+ p {page-break-inside: avoid;}
+}
