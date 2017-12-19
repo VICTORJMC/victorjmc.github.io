@@ -287,6 +287,7 @@ width: 40%; /*garantizar que quepa*/
 margin: 5px 2.5%; /*2.5 SEPARACIÓN ENTRE BOTONES*/
 color: white;
 padding: 5px 2.5%; /*5 OCUPA EL DIV*/
+ border-radius: 10px; 
 }
 
 #slider #home #contratame{
