@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="iso-8859-1" />
+<meta charset=="iso-8859-1" />
 <title>Solicitud de Aplazamiento</title> 
 <style type="text/css">
- <link rel="stylesheet" " href="print.css">
 <meta charset="iso-8859-1" />
 
 body {text-align:justify; 
       padding:20px ;
       font-family: Arial,sans-serif;
       }
-
 
 header {
   text-align: center;
@@ -64,22 +62,7 @@ input:hover, select:hover {
 
   }
 
-  @media (min-width: 800px) {
 
-    #NIF {
-    float: left;
-  width: 100%;
-  }
-     #CP {
-    float: left;
-  width: 100%;
-  }
-
-    #CC {
-    float: right;
-  width: 300px;
-  }
-}
 
 @media (max-width: 600px) {
   body {
@@ -87,12 +70,15 @@ input:hover, select:hover {
   }
 
   h1 {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
 
   h2 {
-    font-size: 1.2em;
+    font-size: 0.9em;
   border-bottom: 1px solid #000;
+  }
+  h3,h9,legend,input,p {
+    font-size: 0.7em;
   }
   
 
@@ -130,6 +116,22 @@ body {margin: 25mm 25mm 25mm 25mm;}
 </style>
 </head>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <body>
 <header>
 <h1>SOLICITUD DE APLAZAMIENTO-FRACCIONAMIENTO DE DEUDAS
@@ -139,7 +141,7 @@ body {margin: 25mm 25mm 25mm 25mm;}
 
 
 <fieldset id="name">
-<legend>Apellidos y nombre o razÃ³n social</legend>
+<legend>Apellidos y nombre o razón social</legend>
 <input  type="text" style="width: 100%;"></p>
 </fieldset>
 
@@ -151,7 +153,7 @@ body {margin: 25mm 25mm 25mm 25mm;}
 
 
 <fieldset >
-<legend>TELÃ‰FONO</legend>
+<legend>TELÉFONO</legend>
 <input type="tel" style="width: 100%;"></p>
 </fieldset>
 </div>
@@ -170,11 +172,10 @@ body {margin: 25mm 25mm 25mm 25mm;}
 
 
 <fieldset >
-<legend>CÃ“DIGO POSTAL</legend>
+<legend>CÓDIGO POSTAL</legend>
 <input type="tel" style="width: 100%;"></p>
 </fieldset>
 </div>
-</br>
 <h3>
 Deuda para la que solicita el aplazamiento/fraccionamiento (marcar lo que corresponda)
 </h3>
@@ -183,24 +184,23 @@ Deuda para la que solicita el aplazamiento/fraccionamiento (marcar lo que corres
 </p>
 
 <p>
-<input type="checkbox" class="largerCheckbox" />  SOLO LAS LIQUIDACIONES INDICADAS EN RELACIÃ“N ADJUNTA
+<input type="checkbox" class="largerCheckbox" />  SOLO LAS LIQUIDACIONES INDICADAS EN RELACIÓN ADJUNTA
 </p>
 
 
 <div id="NIF">
 <fieldset >
-<legend>NÂº EXPEDIENTE</legend>
+<legend>Nº EXPEDIENTE</legend>
 <input  type="text" style="width: 100%;"></p>
 </fieldset>
-
 
 <fieldset >
 <legend >PLAZO QUE SOLICITA (MESES)</legend>
 <input type="tel" style="width: 100%;"></p>
 </fieldset>
 
-<fieldset style="width: 63%;" >
-<legend >CUENTA DOMICILIACIÃ“N</legend>
+<fieldset style="width: 70%;" >
+<legend >CUENTA DOMICILIACIÓN</legend>
 <input type="tel" style="width: 100%;"></p>
 </fieldset>
 </div>
@@ -216,16 +216,15 @@ Deuda para la que solicita el aplazamiento/fraccionamiento (marcar lo que corres
 
 <script>
 var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-var diasSemana = new Array("domingo","lunes","martes","miÃ©rcoles","jueves","viernes","sÃ¡bado");
+var diasSemana = new Array("domingo","lunes","martes","miércoles","jueves","viernes","sábado");
 var f=new Date();
 document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
 </script></h3>
 
 
-<p>Los datos personales recogidos serÃ¡n incorporados y tratados en los ficheros EXACCIONES Y EXPEDIENTES, inscritos en el Registro de Ficheros de Datos de la Comunidad de Madrid con los nÂº 2013410146 y 2013410149 respectivamente. En Ã³rgano responsable del fichero es el AYUNTAMIENTO DE ALCOBENDAS, y la direcciÃ³n donde podrÃ¡ ejercer los derechos de acceso, rectificaciÃ³n, cancelaciÃ³n y oposiciÃ³n ante el mismo es RENTAS Y EXACCIONES o REGISTRO, Plaza Mayor 1, 28100 Alcobendas, todo lo cual se informa en cumplimiento del artÃ­culo 5 de la Ley OrgÃ¡nica 15/1999, de 13 de diciembre de ProtecciÃ³n de Datos de CarÃ¡cter Personal.</p> 
-
+<h9>Los datos personales recogidos serán incorporados y tratados en los ficheros EXACCIONES Y EXPEDIENTES, inscritos en el Registro de Ficheros de Datos de la Comunidad de Madrid con los nº 2013410146 y 2013410149 respectivamente. En órgano responsable del fichero es el AYUNTAMIENTO DE ALCOBENDAS, y la dirección donde podrá ejercer los derechos de acceso, rectificación, cancelación y oposición ante el mismo es RENTAS Y EXACCIONES o REGISTRO, Plaza Mayor 1, 28100 Alcobendas, todo lo cual se informa en cumplimiento del artículo 5 de la Ley Orgánica 15/1999, de 13 de diciembre de Protección de Datos de Carácter Personal.</h9>
 <h2>
-NOTA: No se darÃ¡ curso a las solicitudes incompletas o que resulten ilegibles.
-</h2>
+NOTA: No se dará curso a las solicitudes incompletas o que resulten ilegibles.
+</h2> 
 </body>
 </html>
