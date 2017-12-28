@@ -626,8 +626,11 @@ footer .rrss a:nth-child(5):before{
 
 /*ESQUELETO RESPONSIVE DESING*/
 
+@media screen and (min-width: 300px){
+        body{           background: black; }}
+
 @media screen and (min-width: 480px){
-         /* body{           background: red; }/*cambia el color del fondo si 480px*/
+        body{           background: black; }/*cambia el color del fondo si 480px*/
          /*S10 302 TB HTML*/
           #slider #home .mainlogo{
           width: 300px;
@@ -646,20 +649,17 @@ footer .rrss a:nth-child(5):before{
 }
 @media screen and (min-width: 600px){
           body{
-           /*background: orange;*/
+           background: black;
           }
 
 
 }
-@media screen and (min-width: 767px){
+@media screen and (min-width: 1000px){
           body{
             background: black;
            /*background: yelow;*/
           }
 
-         header{
-          height: 70px;
-          } 
 
 
          header h1{                        /*S10-290*/
