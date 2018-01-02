@@ -657,7 +657,7 @@ footer .rrss a:nth-child(5):before{
 
 
 }
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 800px){
           body{
             background: black;
            /*background: yelow;*/
