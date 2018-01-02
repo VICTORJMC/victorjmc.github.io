@@ -629,7 +629,7 @@ footer .rrss a:nth-child(5):before{
 /*@media screen and (min-width: 300px){
         body{           background: black; }}*/
 
-/*@media screen and (min-width: 480px){
+@media screen and (min-width: 480px){
         body{           background: black; }
         
           #slider #home .mainlogo{
@@ -642,7 +642,7 @@ footer .rrss a:nth-child(5):before{
          }
         .buttonspage a{
           font-size: 1.3em;
-         }*/
+         }
 
 
 
