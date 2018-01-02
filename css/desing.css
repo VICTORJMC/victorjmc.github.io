@@ -626,16 +626,31 @@ footer .rrss a:nth-child(5):before{
 
 /*ESQUELETO RESPONSIVE DESING*/
 
-/*@media screen and (min-width: 300px){
-        body{           background: black; }}*/
+@media screen and (min-width: 300px){
+        body{           background: black; }
+          #slider #home .mainlogo img{
+          width: 10%;
+          left: 5%;
+          margin: auto;
+          /*centrado a OJO*/
+         }
+         #slider #home .mainlogo h2{
+          font-size: 1.4em;
+         }
+        .buttonspage a{
+          font-size: 1.1em;
+         }
+
+      }
 
 @media screen and (min-width: 480px){
-        body{           background: black; }
-        
+        body{           background: black; }/*cambia el color del fondo si 480px*/
+         /*S10 302 TB HTML*/
           #slider #home .mainlogo{
           width: 20%;
-          left: 24%;
-          
+          left: 4%;
+          margin: auto;
+          /*centrado a OJO*/
          }
          #slider #home .mainlogo h2{
           font-size: 1.4em;
@@ -650,18 +665,17 @@ footer .rrss a:nth-child(5):before{
 
 
 }
-/*@media screen and (min-width: 600px){
+@media screen and (min-width: 600px){
           body{
            background: black;
-          }*/
-
-
-}
-@media screen and (min-width: 800px){
+          }
+@media screen and (min-width: 1000px){
           body{
             background: black;
            /*background: yelow;*/
           }
+
+
 
 
 
