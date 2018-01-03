@@ -275,10 +275,11 @@ border-radius: 150px;
 #slider #home .mainlogo  figure:hover {filter: opacity(.14);}
 
 /*S10 303 TB HTML*/
-/*#slider #home .buttonspage{
-  width: 100%;
+#slider #home .buttonspage{
+  width: 50%;
+  margin-left:25%;
   text-align: center;
-  background: black;*/
+  background: black;
 }
 #slider #home .buttonspage > *{ /*SAL CONTENIDO DE .buttonspage*/
 display: inline-block;
