@@ -669,15 +669,11 @@ footer .rrss a:nth-child(5):before{
           body{
            background: black;
           }
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 500px){
           body{
             background: black;
            /*background: yelow;*/
           }
-
-
-
-
 
          header h1{                        /*S10-290*/
            display: inline-block;
