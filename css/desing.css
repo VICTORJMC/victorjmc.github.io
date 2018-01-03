@@ -277,14 +277,13 @@ border-radius: 150px;
 /*S10 303 TB HTML*/
 #slider #home .buttonspage{
   width: 100%;
-  margin-left:25%;
-  text-align: center;
+   text-align: center;
   background: black;
 }
 #slider #home .buttonspage > *{ /*SAL CONTENIDO DE .buttonspage*/
 display: inline-block;
 /*background: red;*/
-width: 40%; /*garantizar que quepa*/
+width: 20%; /*garantizar que quepa*/
 margin: 5px 12%; /*2.5 SEPARACIÓN ENTRE BOTONES*/
 color: white;
 padding: 5px 2.5%; /*5 OCUPA EL DIV*/
