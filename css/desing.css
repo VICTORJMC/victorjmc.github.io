@@ -617,6 +617,9 @@ footer .rrss a:nth-child(4):before{
 footer .rrss a:nth-child(5):before{ 
   content: "\e91f";
 }
+footer .rrss a:nth-child(6):before{ 
+ content: "\e98d";
+}
 
 /*fin S10 305*/
 
