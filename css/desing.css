@@ -312,12 +312,12 @@ height: 500px;
 }
 
 
-#slider #bancos .enlaces figure{
+#slider #bancos #slideshow figure{
 display: inline-block; /*para ver fotos ocupar el aancho de sección*/
  }
 
 
-#slider #bancos .enlaces img{
+#slider #bancos #slideshow img{
     margin:60px 25px 25px 0px;
     width: 500px;
     height: 500px;
@@ -325,7 +325,7 @@ display: inline-block; /*para ver fotos ocupar el aancho de sección*/
     border-radius: 10%;
  }
 
-#slider #bancos .enlaces img:hover{
+#slider #bancos #slideshow img:hover{
 transform : scale(2);
     -moz-transform : scale(2); /* Firefox */
     -webkit-transform : scale(2); /* Chrome - Safari */
