@@ -94,7 +94,7 @@ window.onload=function(){startTime();}
 </section>
 
     <section class="slide" id="bancos" style="display:none">
-      <div class="enlaces">
+      <div id="slideshow">
       <figure><img src="IMG/yo.jpg" alt=""></figure>  
       <figure><img src="IMG/yo2.jpg" alt=""></figure>  
       <figure><img src="IMG/yo3.jpg" alt=""></figure>  
@@ -321,6 +321,32 @@ function mensaje_enviado(status){ alert("mensaje enviado")}
 <script src="JS/particles.js"></script>
 <script src="JS/app.js"></script>
 
+<script>
+var slideShow = function(container) {
+    this.images = [];
+    this.curImage = 0;
+    for (i = 0; i < container.childElementCount; i++) {
+        this.images.push(container.children[i]);
+        this.images[i].style.display = "none";
+    }
+    
+    // Handle going to to the next slide
+    var nextSlide = function() {
+        for (var i = 0; i < this.images.length; i++) {
+            this.images[i].style.display = "none";
+        }
+        this.images[this.curImage].style.display = "block";
+        this.curImage++;
+        if (this.curImage >= this.images.length) {
+            this.curImage = 0;
+        }
+        window.setTimeout(nextSlide.bind(this), 5000);
+    };
+    
+    nextSlide.call(this);
+};
+slideShow(document.getElementById("slideshow"));
+    </script>
 	
 	
 </body>
