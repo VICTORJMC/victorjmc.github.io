@@ -321,9 +321,9 @@ height: 500px;
  }
 
 #slideshow img:hover{
-transform : scale(2);
-    -moz-transform : scale(2); /* Firefox */
-    -webkit-transform : scale(2); /* Chrome - Safari */
+transform : scale(1.5);
+    -moz-transform : scale(1.5); /* Firefox */
+    -webkit-transform : scale(1.5); /* Chrome - Safari */
 }
 
 
