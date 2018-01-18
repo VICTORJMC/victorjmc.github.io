@@ -1,14 +1,15 @@
 body{
 font-size: 16;
-background black;
+background: #333;
 position: relative;
 }
 
 header{
-font-family: 'Cinzel';  
+font-family: 'Josefin Sans', sans-serif;
+font-size: 1em;
 width: 100%;
 height: 70px;
-background: #b61924;
+background: #0b76a6;
 position: relative;/*NO SE SUPERPONE SOBRE OTRO*/
 }
 
@@ -43,13 +44,11 @@ header nav .ioMenuMovil img{
   }
 
 header nav #card_menu{
-font-weight: bold;
+float: left;
 display: none;  
 position: relative;
-width: 230px;
 background: white;
 top: -40px;
-left: 0px;
 border-right: 3px solid #AFAEAE;
 z-index: 999;
 padding-bottom: 30px;
@@ -58,14 +57,7 @@ padding-bottom: 30px;
 
 
 
-header nav #card_menu #logo_menu{
-  /*background: red;*/
-  height: 200px;
-  width: 80%;
-  margin: 30px 0px;
-  margin-left: 10%;
-  margin-bottom: 50px;
-  }
+
 
 header nav #card_menu ul{
 /*background: red;*/
@@ -293,14 +285,14 @@ padding: 5px 2.5%; /*5 OCUPA EL DIV*/
 #slider #home #contratame{
   cursor: pointer;
     /*background: #F8931F;*/
- background: #009966;
+background: #0b76a6;
 }
 
 
 #slider #home a{
   text-decoration: none;
   /*background: #F8931F;*/
-   background: #009966;
+background: #0b76a6;
   color: white;
 }
 
@@ -500,7 +492,7 @@ border-radius: 5px;
 width: 60px;
 height:60px; 
 /*background: orange;*/
- background: #009966;  
+background: #0b76a6; 
 border-radius: 50%;
 color: grey;
 z-index: 80%;
@@ -735,14 +727,14 @@ footer .rrss a:nth-child(6):before{
           header nav #card_menu ul li{  
           display: inline-block;
           /*background: blue;*/
-          text-align: center;
-          font-size: 1em;
+          
+          font-size: 1.5em;
           margin: 0px 20px;
           }  
           header nav #card_menu ul li a{   
           color: white; 
           }    
-         ul :hover, li:focus {  background-color:  #7c1905   }
+         ul  :hover  {  background-color:  black   }
   /*FIN SEC10-292*/
 
                                             
