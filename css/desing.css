@@ -312,10 +312,14 @@ height: 500px;
     border-radius: 10%;
  }
 
-#slideshow img:hover{
-transform : scale(1.5);
-    -moz-transform : scale(1.5); /* Firefox */
-    -webkit-transform : scale(1.5); /* Chrome - Safari */
+#slideshow img {
+  transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+#slideshow img:hover {
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
 }
 
 
