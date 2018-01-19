@@ -663,13 +663,14 @@ footer .rrss a:nth-child(6):before{
          header h1{                        /*S10-290*/
            display: inline-block;
            width: 15%;
-          /* background: red; para ver durante desar*/
+          /* background: red; para ver durante desarollo*/
            margin: 0px;
            height: 80px;
-           margin-left: 60px;
+           /*margin-left: 60px;*/
            line-height: 80px;/*CENTRA VJMC EN H1*/
-           min-width: 200px;
-          }    
+           /*min-width: 200px;*/
+           font-size: 1em;
+                   }     
         header h1 > *{ /*hijos del h1 enlaces*/
           display: inline-block;
           vertical-align: middle;
@@ -682,7 +683,7 @@ footer .rrss a:nth-child(6):before{
          header h1 figure{ /*FIGURE ES EL AREA Q OCUPA IMG*/
           height: 60px;
           width: 60px;
-          margin: 0px 3px 0px -70%;
+          margin: 0px 3px 0px 5px;
 
           /*background: green;*/
          }
@@ -697,7 +698,7 @@ footer .rrss a:nth-child(6):before{
          header nav{                           /* SEC10 292*/
          display: inline-block; 
          vertical-align: middle;
-         width: 62%;
+         width: 80%;
          position: relative;
          /*background: red;*/
          }
@@ -725,9 +726,8 @@ footer .rrss a:nth-child(6):before{
           } 
 
           header nav #card_menu ul{ 
-         
-          padding-right: 20px;
-          margin-right: -30%;
+          float: right;
+          padding-right: 1px;
           margin-top: 0;
           }
 
