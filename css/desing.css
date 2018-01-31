@@ -742,7 +742,10 @@ footer .rrss a:nth-child(6):before{
           header nav #card_menu ul li a{   
           color: white; 
           }    
-         ul  :hover  {  background-color:  black   }
+         header nav #card_menu ul  :hover, header nav #card_menu li:focus {  
+            background-color:  black;
+            color:#0b76a6;
+               }
   /*FIN SEC10-292*/
 
                                             
