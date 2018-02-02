@@ -233,30 +233,27 @@ border-radius: 150px;
 
 @-moz-keyframes flipInY {
   0% {
-    -webkit-transform: perspective(700px) rotateY(100deg);
-    transform: perspective(700px) rotateY(100deg);
+    -moz-transform: perspective(700px) rotateY(150deg);
+    transform: perspective(700px) rotateY(150deg);
     opacity: 0;
   }
 
-  40% {
-    -webkit-transform: perspective(700px) rotateY(-40deg);
-    transform: perspective(700px) rotateY(-40deg);
-  }
+
 
   70% {
-    -webkit-transform: perspective(700px) rotateY(40deg);
-     transform: perspective(700px) rotateY(40deg);
+    -moz-transform: perspective(700px) rotateY(40deg);
+    transform: perspective(700px) rotateY(40deg);
   }
 
   100% {
-    -webkit-transform: perspective(700px) rotateY(0deg);
+    -moz-transform: perspective(700px) rotateY(0deg);
     transform: perspective(700px) rotateY(0deg);
     opacity: 1;
   }
 }
 
 
-#slider #home .mainlogo figure{
+#slider #home .mainlogo img{
   -moz-backface-visibility: visible !important;
   -ms-backface-visibility: visible !important;
   backface-visibility: visible !important;
