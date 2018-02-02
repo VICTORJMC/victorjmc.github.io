@@ -235,12 +235,11 @@ border-radius: 150px;
   0% {
     -moz-transform: perspective(700px) rotateY(150deg);
     transform: perspective(700px) rotateY(150deg);
-    opacity: 0;
-  }
+     }
 
 
 
-  70% {
+  50% {
     -moz-transform: perspective(700px) rotateY(40deg);
     transform: perspective(700px) rotateY(40deg);
   }
@@ -248,17 +247,18 @@ border-radius: 150px;
   100% {
     -moz-transform: perspective(700px) rotateY(0deg);
     transform: perspective(700px) rotateY(0deg);
-    opacity: 1;
+   
   }
 }
 
 
 #slider #home .mainlogo img{
+    -moz-animation: 6s flipInY 2;
+  animation-name: flipInY ;
   -moz-backface-visibility: visible !important;
   -ms-backface-visibility: visible !important;
   backface-visibility: visible !important;
-  -moz-animation: 6s flipInY 1;
-  animation-name: flipInY;
+
 }
   
 #slider #home .mainlogo  figure:hover {filter: opacity(.14);}
