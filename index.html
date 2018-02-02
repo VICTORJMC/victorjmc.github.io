@@ -70,22 +70,7 @@ var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Vie
 var f=new Date();
 document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
 </script>  
-  <div id="reloj">
- <script type="text/javascript">
-function startTime(){
-today=new Date();
-h=today.getHours();
-m=today.getMinutes();
-s=today.getSeconds();
-m=checkTime(m);
-s=checkTime(s);
-document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
-t=setTimeout('startTime()',500);}
-function checkTime(i)
-{if (i<10) {i="0" + i;}return i;}
-window.onload=function(){startTime();}
-</script>
-</div></h2>
+</h2>
   <figure><img src="logob.png" alt=""></figure></div>
   <div class="buttonspage">
   <div id="contratame"> <a id="none" target="_blank" href="http://watchwrestling.uno/">DEPORTES</a></div>
