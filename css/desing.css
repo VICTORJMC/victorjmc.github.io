@@ -694,10 +694,10 @@ footer .rrss a:nth-child(6):before{
 
 
          header nav{                           /* SEC10 292*/
+         float: right;
          display: inline-block; 
-         vertical-align: middle;
-         width: 80%;
-         position: relative;
+         /*vertical-align: middle;*/
+         width: 75%;
          /*background: red;*/
          }
 
