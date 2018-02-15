@@ -253,7 +253,7 @@ border-radius: 150px;
 
 
 #slider #home .mainlogo img{
-    -moz-animation: 6s flipInY 2;
+    -moz-animation: 6s flipInY 7;
   animation-name: flipInY ;
   -moz-backface-visibility: visible !important;
   -ms-backface-visibility: visible !important;
