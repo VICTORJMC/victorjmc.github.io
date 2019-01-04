@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<title>VJMC</title>
  <link rel="stylesheet" " href="CSS/particles.js">		 
- <link rel="stylesheet" " href="CSS/app.js">				 
+ <link rel="stylesheet" " href="CSS/app.js">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>	
  <script src="js/modernizr-custom.js"></script>
  <link rel="stylesheet" " href="css\icomoon.css">
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
  <link rel="stylesheet" " href="css\desing.css">
  <link rel="stylesheet" " href="css\normalize.css">
@@ -115,53 +116,75 @@ document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.ge
    
   </section>
    <section class="slide" id="mail" style="display:none">
-          <div id="maildiv">
-      <figure><img src="IMG/1.jpg" alt=""></figure>  
-      <figure><img src="IMG/2.jpg" alt=""></figure>  
-      <figure><img src="IMG/3.jpg" alt=""></figure>  
-      <figure><img src="IMG/4.jpg" alt=""></figure> 
-      <figure><img src="IMG/5.jpg" alt=""></figure>  
-      <figure><img src="IMG/6.jpg" alt=""></figure>  
-      <figure><img src="IMG/7.jpg" alt=""></figure> 
-      <figure><img src="IMG/8.jpg" alt=""></figure>
-      <figure><img src="IMG/9.jpg" alt=""></figure>  
-      <figure><img src="IMG/10.jpg" alt=""></figure>  
-      <figure><img src="IMG/11.jpg" alt=""></figure>  
-      <figure><img src="IMG/12.jpg" alt=""></figure> 
-      <figure><img src="IMG/13.jpg" alt=""></figure>  
-      <figure><img src="IMG/14.jpg" alt=""></figure>  
-      <figure><img src="IMG/15.jpg" alt=""></figure> 
-      <figure><img src="IMG/16.jpg" alt=""></figure>
-      <figure><img src="IMG/17.jpg" alt=""></figure>
-      <figure><img src="IMG/19.jpg" alt=""></figure>
-      <figure><img src="IMG/18.jpg" alt=""></figure>
-      <figure><img src="IMG/21.jpg" alt=""></figure>
-      <figure><img src="IMG/20.jpg" alt=""></figure>
-      <figure><img src="IMG/22.jpg" alt=""></figure>
-      <figure><img src="IMG/23.jpg" alt=""></figure>
-      <figure><img src="IMG/24.jpg" alt=""></figure>
-      <figure><img src="IMG/25.jpg" alt=""></figure>
-      <figure><img src="IMG/26.jpg" alt=""></figure>
-      <figure><img src="IMG/27.jpg" alt=""></figure>  
-      <figure><img src="IMG/28.jpg" alt=""></figure>
-      <figure><img src="IMG/30.jpg" alt=""></figure> 
-      <figure><img src="IMG/31.jpg" alt=""></figure>
-      <figure><img src="IMG/32.jpg" alt=""></figure>
-      <figure><img src="IMG/33.jpg" alt=""></figure>
-      <figure><img src="IMG/34.jpg" alt=""></figure>
-      <figure><img src="IMG/35.jpg" alt=""></figure>
-      <figure><img src="IMG/36.jpg" alt=""></figure>  
-      <figure><img src="IMG/37.jpg" alt=""></figure>
-      <figure><img src="IMG/38.jpg" alt=""></figure> 
-      <figure><img src="IMG/39.jpg" alt=""></figure>
-      <figure><img src="IMG/40.jpg" alt=""></figure>  
-      <figure><img src="IMG/41.jpg" alt=""></figure>
-      <figure><img src="IMG/42.jpg" alt=""></figure>
-      <figure><img src="IMG/43.jpg" alt=""></figure>
-      <figure><img src="IMG/44.jpg" alt=""></figure>
-      <figure><img src="IMG/45.jpg" alt=""></figure>
-      <figure><img src="IMG/46.jpg" alt=""></figure>
-   </div>
+<ol id="navigation">
+  <li><a href="#" data-filename="1">Akrópolis - Valerio Massimo Manfredi</a></li><br>
+  <li><a href="#" data-filename="2">ALEXANDROS: EL HIJO DEL SUEÑO - Valerio Massimo Manfredi</a></li><br>
+  <li><a href="#" data-filename="3">ALEXANDROS:LAS ARENAS DE AMON - Valerio Massimo Manfredi</a></li><br>
+  <li><a href="#" data-filename="4">ALEXANDROS:EL CONFIN DEL MUNDO - Valerio Massimo Manfredi</a></li><br>
+  <li><a href="#" data-filename="5">LOS PILARES DE LA TIERRA - Ken Follett</a></li><br>
+  <li><a href="#" data-filename="6">UN MUNDO SIN FIN - Ken Follett</a></li><br>
+  <li><a href="#" data-filename="7">LA CATEDRAL DEL MAR - Ildefonso Falcones</a></li><br>
+  <li><a href="#" data-filename="8">EL PRIMER HOMBRE DE ROMA - Colleen McCullough</a></li><br>
+  <li><a href="#" data-filename="9">LA CORONA DE HIERBA - Colleen McCullough</a></li><br>
+  <li><a href="#" data-filename="10">FAVORITOS DE LA FORTUNA - Colleen McCullough</a></li><br>
+  <li><a href="#" data-filename="11">LAS MUJERES DE CESAR - Colleen McCullough</a></li><br>
+  <li><a href="#" data-filename="12">CESAR - Colleen McCullough</a></li><br>
+  <li><a href="#" data-filename="13">ANÍBAL – Gisbert Haefs</a></li><br>
+  <li><a href="#" data-filename="14">LAS PUERTAS DE FUEGO - Steven Pressfield</a></li><br>
+  <li><a href="#" data-filename="15">LA HIJA DEL NILO - Javier Negrete</a></li><br>
+  <li><a href="#" data-filename="16">LA PATRULLA - Ben Kane</a></li><br>
+  <li><a href="#" data-filename="17">ANÍBAL: ENEMIGO DE ROMA - Ben Kane</a></li><br>
+  <li><a href="#" data-filename="18">ANÍBAL: CAMPOS DE SANGRE - Ben Kane</a></li><br>
+
+  <li><a href="#" data-filename="20">ANÍBAL: NUBES DE GUERRA - Ben Kane</a></li><br>
+  <li><a href="#" data-filename="21">SALAMINA - Javier Negrete</a></li><br>
+  <li><a href="#" data-filename="22">REBELDES – Pedro Santamaría</a></li><br>
+  <li><a href="#" data-filename="23">PEÑA AMAYA – Pedro Santamaría</a></li><br>
+  <li><a href="#" data-filename="24">HELLENIKON - Luis Villalón</a></li><br>
+  <li><a href="#" data-filename="25">ULTIMAS PASIONES DEL CABALLERO ALMAFIERA - Juan Eslava Galán</a></li><br>
+  <li><a href="#" data-filename="26">VIENTOS DE GUERRA – Steven Pressfield</a></li><br>
+  <li><a href="#" data-filename="27">EL HERRERO DE GALILEA- Nicholas Guild</a></li><br>
+  <li><a href="#" data-filename="28">EL MACEDONIO – Nicholas Guild</a></li><br>
+  <li><a href="#" data-filename="29">CENTURIO - Massimiliano Colombo</a></li><br>
+  <li><a href="#" data-filename="30">LA LEGION DE LOS INMORTALES - Massimiliano Colombo</a></li><br>
+  <li><a href="#" data-filename="31">ALEJANDRO MAGNO I- Gisbert Haefs</a></li><br>
+  <li><a href="#" data-filename="32">LIBRO ALEJANDRO MAGNO II. EL CONQUISTADOR DE UN IMPERIO - Gisbert Haefs</a></li><br>
+  <li><a href="#" data-filename="33">NUMANCIA -  José Luis Corral</a></li><br>
+  <li><a href="#" data-filename="34">EL HEREDERO DE TARTESOS - Arturo Gonzalo Aizpiri</a></li><br>
+  <li><a href="#" data-filename="35">EL CÁLIZ DE MELQART – Arturo Gonzalo Aizpiri</a></li><br>
+  <li><a href="#" data-filename="36">EL ASESINATO DE SOCRATES - Marcos Chicot</a></li><br>
+  <li><a href="#" data-filename="37">EL ASESINATO DE PITÁGORAS - Marcos Chicot</a></li><br>
+  <li><a href="#" data-filename="38">LA HERMANDAD - Marcos Chicot</a></li><br>
+  <li><a href="#" data-filename="39">EL ASIRIO - Nicholas Guild</a></li><br>
+  <li><a href="#" data-filename="40">EL ESPIRITU DEL LINCE - Javier Pellicer</a></li><br>
+  <li><a href="#" data-filename="41">EL ESPARTANO - Javier Negrete</a></li><br>
+  <li><a href="#" data-filename="42">EL HIJO DEL DESIERTO - Antonio Cabanas</a></li><br>
+  <li><a href="#" data-filename="43">YO, JULIA - Santiago Posteguillo</a></li><br>
+  <li><a href="#" data-filename="44">LOS ASESINOS DEL EMPERADOR - Santiago Posteguillo</a></li><br>
+ 
+  </ol>
+
+<div class="box">
+  <img src="IMG/default.jpg" style="position:fixed;">                    
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#navigation li a').hover(
+    function(){
+        //we get our current filename and use it for the src
+        var linkIndex = $(this).attr("data-filename");
+        $(this).addClass('hover');
+        $('.box img').attr('src', 'IMG/'+linkIndex+'.jpg');
+    },
+    function(){
+        $(this).removeClass('hover');
+        $('.box img').attr('src', 'IMG/default.jpg');
+    }
+);
+});
+</script>
+
+  
   </section>
 
   <section class="slide" id="utilidades" style="display:none">
