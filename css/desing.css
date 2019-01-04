@@ -332,22 +332,18 @@ height: 500px;
 }
 
 
-#slider #mail #maildiv figure{
-display: inline-block; /*para ver fotos ocupar el aancho de sección*/
- }
+ #slider #mail.box, #navigation {float: left;}
 
 
-#slider #mail #maildiv img{
-    margin:60px 25px 25px 0px;
-    border: 5px solid white;
- }
 
-#slider #mail #maildiv img:hover{
-transform : scale(2);
-    -moz-transform : scale(2); /* Firefox */
-    -webkit-transform : scale(2); /* Chrome - Safari */
-}
+#slider #mail  a{color: white; }
 
+#slider #mail  ol{
+font-family: 'Cinzel', serif; 
+font-size: 1.2em;  
+color: white; }
+
+#slider #mail  a:hover {color:#0b76a6;}
 
 
 /*#slider #mail:after { 
