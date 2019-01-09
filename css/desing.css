@@ -345,7 +345,8 @@ height: 500px;
 
 #slider #mail  ol{
 font-family: 'Cinzel', serif; 
-font-size: 0.9em;  
+font-size: 0.9em; 
+font-weight: bold;
 color: white; }
 
 #slider #mail  a:hover {color:#0b76a6;}
