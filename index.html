@@ -14,6 +14,14 @@
  <link rel="stylesheet" " href="css\normalize.css">
  <link rel="stylesheet" " href="css\aldo.css">
  <link rel="stylesheet" href="style.css">
+
+ <!--El orden es importante se debe cargar 1 jQUERY-->
+  <script type="text/javascript"  src="jquery-3.3.1.min.js">  </script>
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css"> 
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css"> 
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.min.css"> 
+  <script type="text/javascript"  src="jquery-ui-1.12.1/jquery-ui.min.js">  </script>
+  <script type="text/javascript"  src="JS/tabs.js">  </script>
 	
 
  </head>
@@ -102,16 +110,41 @@ document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.ge
    </section>
 
   <section class="slide" id="arqueo" style="display:none">
-<div id="TT3638ca5"></div>
-<script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/3638/ca5/800"></script>
-<div id="TT2778ca5"></div>
-<script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/2778/ca5/800"></script>
-<div id="TT7498ca5"></div>
-<script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/7498/ca5/800"></script>
-<div id="TT5820ca5"></div>
-<script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/5820/ca5/800"></script>
-<div id="TT29065ca5"></div>
-<script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/29065/ca5/800"></script>
+
+     <div id ="pestanas">
+      <ul>
+        <li><a href="#tabs-1">S.S.REYES</a></li>
+        <li><a href="#tabs-2">PONTEVEDRA</a></li>
+        <li><a href="#tabs-3">PEDRO BERNARDO</a></li>
+        <li><a href="#tabs-4">ALCONCHEL DE LA ESTRELLA</a></li>
+        <li><a href="#tabs-5">NEW YORK</a></li>
+      </ul>
+      <div id="tabs-1">
+        <div id="TT3638ca5"></div>
+        <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/3638/ca5/800"></script>
+      </div>
+
+      <div id="tabs-2"><div id="TT2778ca5"></div>
+       <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/2778/ca5/800"></script>
+     </div>
+
+      <div id="tabs-3">
+        <div id="TT7498ca5"></div>
+        <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/7498/ca5/800"></script>
+      </div>
+
+      <div id="tabs-4">
+      <div id="TT5820ca5"></div>
+      <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/5820/ca5/800"></script>
+      </div>
+
+
+      <div id="tabs-5">
+        <div id="TT29065ca5"></div>
+        <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/29065/ca5/800"></script>
+      </div>
+      
+   </div>
 
    
   </section>
