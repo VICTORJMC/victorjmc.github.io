@@ -1,0 +1,6 @@
+<script>
+
+alert("hola");                         
+
+</script>
+
