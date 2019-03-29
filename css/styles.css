@@ -8,7 +8,6 @@ body {
 
 #global{
     width: 90%;
-    height: 90%;
     margin: 0px auto; /*centrar horizontal*/
     margin-top: 30px;
     padding: 25px;
@@ -22,6 +21,7 @@ body {
   background-color:  #0b76a6;
   padding: 20px 10px;
   color: white;
+  font-size: 1.6em; 
 }
 
 .header a {
@@ -31,7 +31,7 @@ body {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 1.6em; 
+  
   height: 100%;
   transition: all 0.8s ease-out;
   background: #0b76a6;
@@ -43,16 +43,21 @@ body {
 }
 
 .header a.logo {
-  font-size: 25px;
   font-weight: bold;
-  
   border-radius: 100%;
   background-color: black;
   color: #0b76a6;
 }
 
+.header .logo:hover {
+  font-weight: bold;
+  border-radius: 100%;
+  background-color: white;
+  color: black;
+}
+
 .header a:hover {
-  background-color:  #0b76a6;
+  background-color:  black;
   color: white;
   background-position: 99% 50%;
   box-shadow: 0px 0px 8px  white;
@@ -67,20 +72,21 @@ body {
 }
 h1 {
   text-align: center;
+  
 
   }
 
 
 
+/*Saf3.1+, Chrome FF3.5+ IE9 Opera 10.5*/
+@media screen and (max-width: 800px){
+      
 
-@media screen and (max-width: 900px) {
-
-
-      body,#global{
-              -webkit-transform: scale(0.80);  /* Saf3.1+, Chrome */
-                 -moz-transform: scale(0.80);  /* FF3.5+ */
-                  -ms-transform: scale(0.80);  /* IE9 */
-                   -o-transform: scale(0.80);  /* Opera 10.5+ */
+      body{
+              -webkit-transform: scale(0.80);  
+                 -moz-transform: scale(0.80);  
+                  -ms-transform: scale(0.80); 
+                   -o-transform: scale(0.80);  
                       transform: scale(0.80);
                    margin: -50px -73px 0px;
        }
