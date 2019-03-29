@@ -72,16 +72,17 @@ h1 {
 
 
 
-@media screen and (max-width: 300px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
+@media screen and (max-width: 900px) {
+
+
+      #slider,.header{
+              -webkit-transform: scale(0.80);  /* Saf3.1+, Chrome */
+                 -moz-transform: scale(0.80);  /* FF3.5+ */
+                  -ms-transform: scale(0.80);  /* IE9 */
+                   -o-transform: scale(0.80);  /* Opera 10.5+ */
+                      transform: scale(0.80);
+                   margin: -50px -73px 0px;
+       }
 }
 
 
