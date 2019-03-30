@@ -6,15 +6,22 @@ body {
   background: black;
 }
 
-#global{
-    width:99.9%;
+
+    #global{
+    width: 90%;
     margin: 0px auto; /*centrar horizontal*/
-    
-    padding: 5px;
+    margin-top: 30px;
+    padding: 25px;
     background: black;
     color: white ;
-    box-shadow: 0px 0px 8px  white;
-}
+    box-shadow: 0px 0px 8px  white;}
+
+    
+    
+    
+    
+    
+    
 
 .header {
   overflow: hidden;
