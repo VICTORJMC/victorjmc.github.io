@@ -90,11 +90,11 @@ h1 {
       
 
       body{
-              -webkit-transform: scale(0.60);  
-                 -moz-transform: scale(0.60);  
-                  -ms-transform: scale(0.60); 
-                   -o-transform: scale(0.60);  
-                      transform: scale(0.60);
+              -webkit-transform: scale(0.70);  
+                 -moz-transform: scale(0.70);  
+                  -ms-transform: scale(0.70); 
+                   -o-transform: scale(0.70);  
+                      transform: scale(0.70);
                    margin: -50px -73px 0px;
        }
 }
