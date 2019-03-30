@@ -9,8 +9,8 @@ body {
 #global
     width: 100%;
     margin: 0px auto; /*centrar horizontal*/
-    margin-top: 30px;
-    padding: 25px;
+    margin-top: 5px;
+    padding: 5px;
     background: black;
     color: white ;
     box-shadow: 0px 0px 8px  white;
