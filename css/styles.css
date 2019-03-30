@@ -6,8 +6,8 @@ body {
   background: black;
 }
 
-#global
-    
+#global{
+    width:99.9%;
     margin: 0px auto; /*centrar horizontal*/
     
     padding: 5px;
