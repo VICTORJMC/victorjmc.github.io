@@ -88,19 +88,7 @@ h1 {
 
 
 
-/*Saf3.1+, Chrome FF3.5+ IE9 Opera 10.5*/
-@media screen and (max-width: 800px){
-      
 
-      body{
-              -webkit-transform: scale(0.70);  
-                 -moz-transform: scale(0.70);  
-                  -ms-transform: scale(0.70); 
-                   -o-transform: scale(0.70);  
-                      transform: scale(0.70);
-                   margin: -50px -73px 0px;
-       }
-}
 
 
 #slider{
@@ -155,6 +143,22 @@ canvas {
   margin: 0 auto;
 }
 
+#animar{
+  background-color:  #0b76a6;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#animar:hover{
+  background-color:  black;
+  color: #0b76a6;
+}
+
 #logo{
   margin-top: 100px;
   border-radius: 150px;
@@ -185,7 +189,7 @@ canvas {
 }
 
 
-#logo{
+/*#logo{
   -moz-animation: 6s flipInY 7;
   -webkit-animation: 6s flipInY 7;
   animation-name: flipInY ;
@@ -194,7 +198,7 @@ canvas {
   -webkit-backface-visibility: visible !important;
    backface-visibility: visible !important;
 
-}
+}*/
   
 #logo:hover {filter: opacity(.20);}
 
@@ -366,4 +370,19 @@ footer .rrss a:nth-child(7):before{
 }
 footer .rrss a:nth-child(8):before{ 
 content: "\e991";
+}
+
+
+/*Saf3.1+, Chrome FF3.5+ IE9 Opera 10.5*/
+@media screen and (max-width: 800px){
+      
+
+      body{
+              -webkit-transform: scale(0.70);  
+                 -moz-transform: scale(0.70);  
+                  -ms-transform: scale(0.70); 
+                   -o-transform: scale(0.70);  
+                      transform: scale(0.70);
+                   margin: -50px -73px 0px;
+       }
 }
