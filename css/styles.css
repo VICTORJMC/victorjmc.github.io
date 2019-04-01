@@ -158,8 +158,10 @@ canvas {
   background-color:  black;
   color: #0b76a6;
 }
+
 iframe{
   position:relative;
+  width: 90%;
 }
 
 #logo{
@@ -340,7 +342,7 @@ footer .rrss a:before{
 color: white;
 text-decoration: none;
 position: absolute;
-font-size: 2em;
+font-size: 3em;
 top: 5px;
 left: 5px;
 font-family: 'icomoon';
@@ -369,10 +371,10 @@ footer .rrss a:nth-child(6):before{
  content: "\e98d";
 }
 footer .rrss a:nth-child(7):before{ 
- content: "\ea0f";
+ content: "\e913";
 }
 footer .rrss a:nth-child(8):before{ 
-content: "\e991";
+content: "\e99e";
 }
 
 
