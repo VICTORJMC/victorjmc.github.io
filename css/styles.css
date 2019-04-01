@@ -76,7 +76,9 @@ body {
 
 .header-right {
   float: right;
+  margin-top: 30px;
 }
+
 h1 {
   text-align: center;
   
