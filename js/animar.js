@@ -9,15 +9,15 @@ $("#animar").click(function(){
            }, 'slow')
       .animate({
       
-        marginTop: '480px'
+        marginTop: '680px'
       }, 'slow')
       .animate({
   
-        marginLeft: '-600px'
+        marginLeft: '-800px'
       }, 'slow')
       .animate({
   
-        marginTop: '0px'
+        marginTop: '50px'
       }, 'slow')
       .animate({
             marginLeft: '20px'
