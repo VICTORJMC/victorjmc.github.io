@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>HTML5 LocalStorage ToDo List</title>
+  <title>HTML5 LocalStorage Lista de la Compra</title>
   
     <link rel="stylesheet" href="listaCompra_reset.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -34,14 +34,14 @@ body {
 }
 #taskInput {
  
-    font-size:14px;
+    font-size:18px;
     font-family:'Josefin Sans', sans-serif;
     height:36px;
-    width:311px;
+    width:100%;
     border-radius:100px;
-    background-color:#202023;
+    background-color:grey;
     border:0;
-    color:#fff;
+    color:white;
     display:block;
     padding-left:15px;
    -webkit-transition: all 0.30s ease-in-out;
@@ -50,12 +50,12 @@ body {
   -o-transition: all 0.30s ease-in-out;
 }
 #taskInput:focus{
-  box-shadow: 0px 0px 1pt 1pt #999999;
- background-color:#111216; 
+  box-shadow: 0px 0px 1pt 1pt white;
+  background-color:gray; 
   outline:none;
 }
 ::-webkit-input-placeholder {
-    color: #333333;
+    color: black;
     font-style:italic;
     /* padding-left:10px; */
 }
@@ -78,6 +78,7 @@ header {
     width:80%;
     height:48px;
     padding-left:12px;
+    
 }
 header h1,#clear{
     font-size:25px;
@@ -149,9 +150,11 @@ ul li {
     <section id="taskIOSection">
         <div id="formContainer">
             <form id="taskEntryForm">
-                <input id="taskInput" placeholder="What would you like to do today?" />
+                <input id="taskInput" placeholder="Que más compramos hoy?" />
             </form>
         </div>
+        <br>
+        <hr>
         <ul id="taskList">
             <li>FRUTAS-Platanos</li>
             <li>FRUTAS-Limones</li>
