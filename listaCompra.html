@@ -1,247 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
+
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+  <meta charset="UTF-8">
+  <title>HTML5 LocalStorage ToDo List</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+ * {
+    padding:0;
+    margin:0;
+}
 body {
-  margin: 0;
-  min-width: 250px;
+  background:url('https://cdn.dribbble.com/users/3268956/screenshots/6284390/92_2x.jpg');
+    background-color:#2a2a2a;
+    font-family:'Josefin Sans', sans-serif;
+}
+#container {
+    background-color: grey;
+    color:#999999;
+    width:80%;
+    margin: 50px auto auto auto;
+    padding-bottom:12px;
+    opacity: 0.9;
+
+}
+#formContainer {
+    padding-top:12px
+}
+#taskIOSection {
+}
+#taskInput {
+ 
+    font-size:14px;
+    font-family:'Josefin Sans', sans-serif;
+    height:36px;
+    width:311px;
+    border-radius:100px;
+    background-color:#202023;
+    border:0;
+    color:#fff;
+    display:block;
+    padding-left:15px;
+   -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+#taskInput:focus{
+  box-shadow: 0px 0px 1pt 1pt #999999;
+ background-color:#111216; 
+  outline:none;
+}
+::-webkit-input-placeholder {
+    color: #333333;
+    font-style:italic;
+    /* padding-left:10px; */
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #333333;
+    font-style:italic;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #333333;
+    font-style:italic;
+}
+:-ms-input-placeholder {
+    color: #333333;
+    font-style:italic;
+}
+header {
+    margin-top:0;
+    width:80%;
+    height:48px;
+    padding-left:12px;
+}
+header h1,#clear{
+    font-size:25px;
+    font-weight:300;
+    color:#fff;
+    line-height:48px;
+    width:70%;
+    display:inline;
+}
+header a{
+  
+  width:40%;
+  display:inline;
+  line-height:48px;
+  padding-left:312px;
+  text-decoration: none;
 }
 
-/* Include the padding and border in an element's total width and height */
-* {
-  box-sizing: border-box;
+a:hover {
+  color: hotpink;
 }
 
-/* Remove margins and padding from the list */
-ul {
-  margin: 0;
-  padding: 0;
-  border :5px solid;
-}
 
-/* Style the list items */
+#taskEntryForm {
+    
+    width:326px;
+    height: 48px;
+    border-width:0px;
+    padding: 0px 12px 0px 12px;
+    font-size:0px;
+}
+#taskList {
+    width: 70%;
+    margin:auto;
+    font-size:19px;
+    font-weight:600;
+}
 ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: #eee;
-  font-size: 16px;
-  transition: 0.2s;
-  
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: #ddd;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-/* Style the header */
-.header {
-  background-color: black;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-  border :5px solid;
-  border-color:#353535;
-}
-
-h1 {
-font-size: 46px;
-}
-p {
-font-size: 10px;
-float: right;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
-input{
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
-
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: black;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
-  
-}
-
-.addBtn:hover {
-  background-color: #bbb;
-  color:white;
+    color: black;
+    height:48px;
+    width:70%;
+    padding-left:12px;
+    margin:0 auto 10px auto;
+    line-height:48px;
+    list-style:none;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
 }
 </style>
+  
 </head>
+
+
+
+
+
+
+
+
 <body>
 
-<div id="myDIV" class="header">
-  
-  <h2 style="margin:5px">Lista de la Compra Saludable</h2>
-  <input type="text" id="myInput" placeholder="Artículo...">
-  <span onclick="newElement()" class="addBtn">Compra</span>
-  <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral</p> 
-  <p>http://www.elblogdeladietaequilibrada.com/p/recetas-light.html</p> 
+  <div id="container">
+    <header>
+         <h1>Lista de la Compra</h1>
+      <a href="#" id="clear">Borra Todo</a>
+
+    </header>
+    <section id="taskIOSection">
+        <div id="formContainer">
+            <form id="taskEntryForm">
+                <input id="taskInput" placeholder="What would you like to do today?" />
+            </form>
+        </div>
+        <ul id="taskList">
+            <li>FRUTAS-Platanos</li>
+            <li>FRUTAS-Limones</li>
+            <li>FRUTAS-Naranjas</li>
+            <li>GRASAS SALUDABLES-Nueces</li>
+            <li>GRASAS SALUDABLES-Aceite de Oliva</li>
+            <li>VERDURAS-Cebolla</li>
+            <li>VERDURAS-Pimiento verde/rojo</li>
+            <li>VERDURAS-Tomates</li>
+            <li>VERDURAS-Champiñones</li>
+            <li>VERDURAS-Jalapeños</li>
+            <li>LEGUMBRES-Lentejas</li>
+            <li>LEGUMBRES-Guisantes</li>
+            <li>PROTEINAS-Huevos</li>
+            <li>PROTEINAS-Pollo</li>
+            <li>PROTEINAS-Pavo</li>
+            <li>CARBOHIDRATOS-Avena</li>
+            <li>CARBOHIDRATOS-Pan integral</li>
+            <li>CARBOHIDRATOS-Pasta integral</li>
+            <li>LACTEOS-Leche  semidesnatada</li>
+            <li>LACTEOS-Yogurt Natural o de leche de coco</li>
+            <li>LACTEOS-Queso lonchas o de pasta</li>
+            <li>BEBIDAS-Coca Zero</li>
+            <li>LIMPIEZA-Don Limpio</li>
+            <li>LIMPIEZA-Legia Baño</li>  
+            <li>LIMPIEZA-Balletas</li>  
+        </ul>
+    </section>
 </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
+  
 
-<ul id="myUL">
- 
-  <li>FRUTAS-Platanos</li>
-  <li>FRUTAS-Limones</li>
-  <li>FRUTAS-Naranjas</li>
-  <li>GRASAS SALUDABLES-Nueces</li>
-  <li>GRASAS SALUDABLES-Aceite de Oliva</li>
-  <li>VERDURAS-Cebolla</li>
-  <li>VERDURAS-Pimiento verde/rojo</li>
-  <li>VERDURAS-Tomates</li>
-  <li>VERDURAS-Champiñones</li>
-  <li>VERDURAS-Jalapeños</li>
-  <li>LEGUMBRES-Lentejas</li>
-  <li>LEGUMBRES-Guisantes</li>
-  <li>PROTEINAS-Huevos</li>
-  <li>PROTEINAS-Pollo</li>
-  <li>PROTEINAS-Pavo</li>
-  <li>CARBOHIDRATOS-Avena</li>
-  <li>CARBOHIDRATOS-Pan integral</li>
-  <li>CARBOHIDRATOS-Pasta integral</li>
-  <li>LACTEOS-Leche  semidesnatada</li>
-  <li>LACTEOS-Yogurt Natural o de leche de coco</li>
-  <li>LACTEOS-Queso lonchas o de pasta</li>
-  <li>BEBIDAS-Coca Zero</li>
-  <li>LIMPIEZA-Don Limpio</li>
-  <li>LIMPIEZA-Legia Baño</li>  
-  <li>LIMPIEZA-Balletas</li>  
-
-
-
-
-</ul>
-
-<script>
-alert("INSTRUCCIONES. Hay un truco muy sencillo para llevar un dieta equilibrada: llenar la despensa con comida sana y versátil. Por defecto aparecen estos alimentos en la lista, pero puedes eliminarlos con la X de su izquierda y agregar elementos nuevos en el campo Articulo. Además una vez confecciones la lista puedes tachar el artículo comprado pulsando sobre él ");
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("NO HAS ESCRITO NADA!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+    <script>
+    $(document).ready(function () {
+    var i = 0;
+    for (i = 0; i < localStorage.length; i++) {
+        var taskID = "task-" + i;
+        $('#taskList').append("<li id='" + taskID + "'>" + localStorage.getItem(taskID) + "</li>");
     }
-  }
-}
-</script>
+    $('#clear').click(function () {
+        localStorage.clear();
+    });
+    $('#taskEntryForm').submit(function () {
+        if ($('#taskInput').val() !== "") {
+            var taskID = "task-" + i;
+            var taskMessage = $('#taskInput').val();
+            localStorage.setItem(taskID, taskMessage);
+            $('#taskList').append("<li class='task' id='" + taskID + "'>" + taskMessage + "</li>");
+            var task = $('#' + taskID);
+            task.css('display', 'none');
+            task.slideDown();
+            $('#taskInput').val("");
+            i++;
+        }
+        return false;
+    });
+
+    $('#taskList').on("click", "li", function (event) {
+        self = $(this);
+        taskID = self.attr('id');
+        localStorage.removeItem(taskID);
+        self.slideUp('slow', function () {
+            self.remove();
+        });
+
+    });
+
+
+});
+    </script>
+
+
+
 
 </body>
+
 </html>
