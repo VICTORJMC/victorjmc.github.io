@@ -198,7 +198,7 @@ spam{
         var taskID = "task-" + i;
         $('#taskList').append("<li id='" + taskID + "'>" + localStorage.getItem(taskID) + "</li>");
     }
-    $('#clear').click(function () {
+    $('#clear').dblclick(function () {
         localStorage.clear();
     });
     $('#taskEntryForm').submit(function () {
