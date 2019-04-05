@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>HTML5 LocalStorage Lista de la Compra</title>
   
     <link rel="stylesheet" href="listaCompra_reset.min.css">
@@ -15,17 +15,14 @@
     margin:0;
 }
 body {
-  background:url('https://emtstatic.com/2015/12/Supermarket-shopping-cart.jpg');
-   background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center;
+  background:url('https://cdn.dribbble.com/users/3268956/screenshots/6284390/92_2x.jpg');
     background-color:#2a2a2a;
     font-family:'Josefin Sans', sans-serif;
 }
 #container {
     background-color: grey;
     color:#999999;
-    width:90%;
+    width:80%;
     margin: 50px auto auto auto;
     padding-bottom:12px;
     opacity: 0.9;
@@ -41,7 +38,7 @@ body {
     font-size:18px;
     font-family:'Josefin Sans', sans-serif;
     height:36px;
-    width:90%;
+    width:100%;
     border-radius:100px;
     background-color:grey;
     border:0;
@@ -115,13 +112,14 @@ a:hover {
     font-size:0px;
 }
 #taskList {
+   
     width: 100%;
     margin:auto;
-    font-size:18px;
+    font-size:15px;
     font-weight:600;
 }
 ul li {
-   margin-left: 20px;
+    margin-left: 20px;
     color: #505050;
     height:48px;
     width:100%;
@@ -147,55 +145,32 @@ spam{
 
 <body>
 
-  <div id="container">
+ <div id="container">
     <header>
-         <h1>Lista de la Compra</h1>
-      <!--<a href="#" id="clear">Borra Todo</a>-->
+         <h1>Task List</h1>
+      <a href="#" id="clear">Clear all</a>
 
     </header>
     <section id="taskIOSection">
         <div id="formContainer">
             <form id="taskEntryForm">
-                <input id="taskInput" placeholder="Escribe y añade al carrito" />
+                <input id="taskInput" placeholder="What would you like to do today?" />
             </form>
         </div>
-        <br>
-        <hr>
-        <ul id="taskList">
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </ul>
+        <ul id="taskList"></ul>
     </section>
 </div>
   <script src='listaCompra_jquery.min.js'></script>
 
   
-
-    <script>
-    $(document).ready(function () {
+<script type="text/javascript">
+   $(document).ready(function () {
     var i = 0;
     for (i = 0; i < localStorage.length; i++) {
         var taskID = "task-" + i;
         $('#taskList').append("<li id='" + taskID + "'>" + localStorage.getItem(taskID) + "</li>");
     }
-    $('#clear').dblclick(function () {
+    $('#clear').click(function () {
         localStorage.clear();
     });
     $('#taskEntryForm').submit(function () {
@@ -225,11 +200,8 @@ spam{
 
 
 });
-    </script>
 
-
-
-
+</script>
 </body>
 
 </html>
