@@ -173,9 +173,12 @@ ul li {
                 <input id="taskInput" placeholder="Escribe y añade al carrito" />
             </form>
         </div>
+        <br>
+        <hr>
         <ul id="taskList"></ul>
     </section>
 </div>
+
   <script src='listaCompra_jquery.min.js'></script>
 
   
@@ -187,7 +190,7 @@ ul li {
         var taskID = "task-" + i;
         $('#taskList').append("<li id='" + taskID + "'>" + localStorage.getItem(taskID) + "</li>");
     }
-    $('#clear').click(function () {
+    $('#clear').dblclick(function () {
         localStorage.clear();
     });
     $('#taskEntryForm').submit(function () {
@@ -205,7 +208,7 @@ ul li {
         return false;
     });
 
-    $('#taskList').on("click", "li", function (event) {
+    $('#taskList').on("dblclick", "li", function (event) {
         self = $(this);
         taskID = self.attr('id');
         localStorage.removeItem(taskID);
