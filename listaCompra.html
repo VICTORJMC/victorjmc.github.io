@@ -214,7 +214,7 @@ BLACK
         return false;
     });
 
-    $('#taskList').on("dblclick", "li", function (event) {
+    $('#taskList').on("click", "li", function (event) {
         self = $(this);
         taskID = self.attr('id');
         localStorage.removeItem(taskID);
