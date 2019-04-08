@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 
    /*Tabs Pestañas*/
-   $("#pestanas,#vuelos").tabs();
+   $("#pestanas,#vuelos,#biblio").tabs();
 
 
 
