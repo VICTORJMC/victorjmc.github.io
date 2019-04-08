@@ -374,6 +374,10 @@ footer .rrss a:nth-child(8):before{
 content: "\e99e";
 }
 
+footer .rrss a:nth-child(9):before{ 
+content: "\e93a";
+}
+
 
 /*Saf3.1+, Chrome FF3.5+ IE9 Opera 10.5*/
 @media screen and (max-width: 866px){
