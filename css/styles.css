@@ -287,11 +287,11 @@ footer{
 background: : #b61924;
 color: white;
 text-align: : left;
-z-index: 90;
 height: 290px;
-position: absolute;
-margin-bottom: -220px;
+
+margin-top: 350px;
 }
+
 
 
 }
