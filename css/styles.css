@@ -336,10 +336,9 @@ position: relative;
 }
 
 footer .rrss a:before{
-color: white;
 text-decoration: none;
 position: absolute;
-font-size: 2em;
+font-size: 2.2em;
 top: 5px;
 left: 5px;
 font-family: 'icomoon';
@@ -403,13 +402,13 @@ font-size: 1.5em;
 }
 
 #to-gold, #to-purple, #to-blue{
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   border: 1px solid white;
   display: block;
   margin: 0px auto; /*centrar elemento*/
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   cursor: pointer;
 
 }
