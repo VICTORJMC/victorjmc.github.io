@@ -1,0 +1,14 @@
+
+.header {
+    background: #8A2BE2;
+}
+
+#animar{
+  background-color:  #8A2BE2;
+}
+
+#animar:hover{
+  background-color:  black;
+  color: #8A2BE2;
+  font-weight: bold;
+}
