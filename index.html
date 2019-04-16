@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+<link id="theme" rel="stylesheet" type="text/css" href="css/blue.css">  
 <link rel="stylesheet"  href="css\icomoon.css">
 <link rel="stylesheet"  href="css\desing.css">
 <link rel="stylesheet"  href="css\normalize.css">
@@ -25,6 +25,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.css">
 <script type="text/javascript"  src="js/bxslider.js">  </script>
+<script type="text/javascript"  src="js/theme.js">  </script>
 
 
 
@@ -34,19 +35,19 @@
 
 <body>
 <section id="global">
+  <img src="IMG/dron.jpg" style="max-height: 200px; max-width: 200px;" />
 <div class="header">
 
-  <img src="IMG/dron.jpg" style="max-height: 200px; max-width: 200px;" />
+  
   <div class="header-right">
 
-  <nav id="menu">
-
-    <a class="active" onClick="navSection('home')" href="#">Inicio</a>
-    <a onClick="navSection('bancos')"href="#">Vuelos</a>
-    <a onClick="navSection('arqueo')"href="#">Tiempo</a>
-    <a onClick="navSection('mail')"href="#">Biblio</a>
-    <a onClick="navSection('utilidades')"href="#">Agenda</a>
-  </nav>
+     <nav id="menu">
+       <a class="active" onClick="navSection('home')" href="#">Inicio</a>
+       <a onClick="navSection('bancos')"href="#">Vuelos</a>
+       <a onClick="navSection('arqueo')"href="#">Tiempo</a>
+       <a onClick="navSection('mail')"href="#">Biblio</a>
+       <a onClick="navSection('utilidades')"href="#">Agenda</a>
+     </nav>
   </div>
 </div>
   
@@ -75,9 +76,14 @@
       <div class="mainlogo">
         
         <img id="logo" src="IMG/build.gif"   alt="">
-               
-       
         <script type="text/javascript" src="js/animar.js"></script>
+
+
+        <div id="selector-theme">
+          <div id="to-gold"></div>
+          <div id="to-purple"></div>
+          <div id="to-blue"></div>
+       </div>
         
         
 
@@ -348,8 +354,9 @@
 
  
 
-</section>  
-         <footer>
+</section> 
+
+    <footer>
        
         <div class="rrss">
            <a target="_blank" href="https://www.google.com/drive/"></a>
@@ -367,7 +374,6 @@
         </div>
     
    </footer> 
-
 
 
 <script>                            
