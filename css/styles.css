@@ -16,7 +16,7 @@ body {
     padding: 15px;
     background: black;
     color: white ;
-    box-shadow: 0px 0px 8px  white;
+    box-shadow: 0px 0px 40px  white;
   }
 
     
@@ -31,7 +31,7 @@ body {
   height: 90px;
   color: white;
   font-size: 1.6em; 
-  border: 1px solid white;
+  border: 2px solid white;
 
 }
 
@@ -281,10 +281,11 @@ text-align: center;
 }
 
 footer{
+  background:url('IMG/drones.gif');
   width: 90%;
   margin: 0px auto; /*centrar horizontal*/
   margin-top: 2px;
-  background: black;
+  opacity: 10%;
   color: white;
   text-align: : left;
   opacity: 20%;
@@ -306,7 +307,7 @@ footer:after{
   width: 75px;
   height: 75px;
   margin-left: -130px;
-  background: none;
+  
   margin-top: -49px;
   border-radius: 50%;
   color: white;
@@ -317,7 +318,7 @@ footer:after{
 footer:hover:after{      /*el puntero da la vuelta a la flecha y cambia color*/
  transition-duration: 0.5s;
  transform: rotate(0deg); 
- background: none;
+ 
  color:  #0b76a6;
 }
 
@@ -331,7 +332,7 @@ footer .rrss a{
 padding-left: 70px;
 width: 40px;
 height: 40px;
-background: black;
+
 display: inline-block;
 position: relative;
 }
