@@ -1,0 +1,243 @@
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  background: black;
+  
+}
+
+
+*{
+  margin: 0px;/*para que ningun elemento tenga ningún margen*/
+  padding: 0px;
+  list-style: none;/*para que no hya puntos en los ul*/
+}
+
+/*eliminar flotados, para que no haya float de unos elementos sobre otros*/
+.clearfix{
+  float: none;
+  clear:both;
+}
+
+
+
+
+
+
+
+
+    #global{
+    width: 90%;
+    
+    margin: 0px auto; /*centrar horizontal*/
+    margin-top: 30px;
+    padding: 15px;
+    background: black;
+    color: white ;
+    box-shadow: 0px 0px 40px  white;
+  }
+
+    
+  
+    
+    
+    
+
+.header {
+
+  height: 90px;
+  color: white;
+  font-size: 1.6em; 
+  border: 2px solid white;
+
+}
+
+.header a {
+  font-weight: bold;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  
+  height: 100%;
+  transition: all 0.8s ease-out;
+  /*background: #0b76a6;*/
+  background-position: 1% 50%;
+  background-size: 500% 500%;
+  text-decoration: none;
+  border: none;
+  
+}
+
+.header a.logo {
+  font-weight: bold;
+  border-radius: 100%;
+  background-color: black;
+  color: #0b76a6;
+}
+
+.header .logo:hover {
+  font-weight: bold;
+  border-radius: 100%;
+  background-color: white;
+  color: black;
+}
+
+.header a:hover {
+  background-color:  black;
+  color: white;
+  background-position: 99% 50%;
+  box-shadow: 0px 0px 8px  white;
+}
+
+.header a.active {
+   color: white;
+}
+
+.header-right {
+  float: right;
+  margin-top: 20px;
+ 
+}
+
+h1 {
+  text-align: center;
+  
+
+  }
+
+
+
+.img{
+  width: 200px;
+  height: 160px;
+ vertical-align:middle; 
+ 
+}
+
+
+
+
+
+footer{
+  background:url('IMG/drones.gif');
+  width: 90%;
+  margin: 0px auto; /*centrar horizontal*/
+  margin-top: 2px;
+  opacity: 10%;
+  color: white;
+  text-align: : left;
+  opacity: 20%;
+  padding-left: 30px;
+  padding-right: 20px;
+  margin-top: 50px;
+  
+}
+
+
+}
+
+footer:after{
+  content: "\ea43";
+  font-family: 'icomoon';
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 75px;
+  height: 75px;
+  margin-left: -130px;
+  
+  margin-top: -49px;
+  border-radius: 50%;
+  color: white;
+  transform: rotate(180deg);
+  font-size: 5em;
+}
+
+footer:hover:after{      /*el puntero da la vuelta a la flecha y cambia color*/
+ transition-duration: 0.5s;
+ transform: rotate(0deg); 
+ 
+ color:  #0b76a6;
+}
+
+footer .rrss{
+width: 100%;
+height: 80px;
+}
+
+
+footer .rrss a{
+padding-left: 70px;
+width: 40px;
+height: 40px;
+
+display: inline-block;
+position: relative;
+}
+
+footer .rrss a:before{
+text-decoration: none;
+position: absolute;
+font-size: 2.2em;
+top: 5px;
+left: 5px;
+font-family: 'icomoon';
+}
+
+footer .rrss a:nth-child(1):before{   /*ESTE SOLO SE APLICA AL 1ER ENLACE*/
+  content: "\ea8f";
+}
+
+footer .rrss a:nth-child(2):before{ 
+  content: "\ea91";
+}
+
+footer .rrss a:nth-child(3):before{ 
+  content: "\eab0";
+}
+
+footer .rrss a:nth-child(4):before{ 
+  content: "\eab8";
+}
+
+footer .rrss a:nth-child(5):before{ 
+  content: "\e91f";
+}
+footer .rrss a:nth-child(6):before{ 
+ content: "\e98d";
+}
+footer .rrss a:nth-child(7):before{ 
+ content: "\e913";
+}
+footer .rrss a:nth-child(8):before{ 
+content: "\e99e";
+}
+footer .rrss a:nth-child(9):before{ 
+content: "\e93a";
+}
+
+
+#arriba{
+color: white;
+font-size: 1.5em;
+}
+
+/*Saf3.1+, Chrome FF3.5+ IE9 Opera 10.5
+@media screen and (max-width: 866px){
+      
+
+      body{
+              -webkit-transform: scale(0.70);  
+                 -moz-transform: scale(0.70);  
+                  -ms-transform: scale(0.70); 
+                   -o-transform: scale(0.70);  
+                      transform: scale(0.70);
+                   margin: -50px -73px 0px;
+       }
+}*/
+
+
+

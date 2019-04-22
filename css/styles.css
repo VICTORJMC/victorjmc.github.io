@@ -8,9 +8,28 @@ body {
 }
 
 
+*{
+  margin: 0px;/*para que ningun elemento tenga ningún margen*/
+  padding: 0px;
+  list-style: none;/*para que no hya puntos en los ul*/
+}
+
+/*eliminar flotados, para que no haya float de unos elementos sobre otros*/
+.clearfix{
+  float: none;
+  clear:both;
+}
+
+
+
+
+
+
+
+
     #global{
     width: 90%;
-    height: 1300px;
+    height: 1000px;
     margin: 0px auto; /*centrar horizontal*/
     margin-top: 30px;
     padding: 15px;
@@ -20,8 +39,7 @@ body {
   }
 
     
-    
-    
+  
     
     
     
