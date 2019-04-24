@@ -7,7 +7,7 @@ $(document).ready(function(){
 
       $('html, body').animate({
            scrollTop: 0         //suba pixel 0 en 500 miliseg
-      }, 2000);
+      }, 4000);
       
       return false;             //previene comportamiento default, error
     });
