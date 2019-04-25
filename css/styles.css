@@ -29,7 +29,7 @@ body {
 
     #global{
     width: 90%;
-    height: 1300px;
+    height: 1000px;
     margin: 0px auto; /*centrar horizontal*/
     margin-top: 30px;
     padding: 15px;
@@ -408,6 +408,9 @@ content: "\e99e";
 }
 footer .rrss a:nth-child(9):before{ 
 content: "\e93a";
+}
+footer .rrss a:nth-child(10):before{ 
+content: "\e9b8";
 }
 
 
