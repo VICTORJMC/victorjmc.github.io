@@ -1,0 +1,341 @@
+/* Importar fuentes custom*/
+@font-face{
+	font-family: "yanone";
+	src: url("fonts/yanone.ttf");
+}
+
+@font-face{
+	font-family: "finger";
+	src: url("fonts/finger.ttf");
+}
+
+/*Generales*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px;
+	background: url("../img/pattern.png");
+	background-attachment: fixed;
+}
+
+.clearfix{
+	float:none;
+	clear:both;
+}
+
+/*Barra de navegacion / cabecera*/
+
+header{
+	font-size: 25px;
+	display: block;
+	width: 100%;
+	height: 90px;
+	background: rgba(53, 103, 164, 0.8);
+	position: fixed;
+	z-index: 999;
+	}
+
+header ul{
+	display: block;
+	width: 80%;
+	height: inherit;
+	margin: 0px auto;
+	
+	display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+header ul li{
+	display: inline-block;
+	margin: 0px auto;
+	text-align: center;
+	line-height: 88px;
+}
+
+header a{
+	display: block;
+	padding-right: 20px;
+	padding-left: 20px;
+	height: inherit;
+	text-decoration: none;
+	color:white;
+	transition: all 300ms;
+}
+
+img{
+	margin-top: 30px;
+	height: 80px;
+	width: 80px;
+	border-radius: 100%;
+}	
+
+header a:hover,
+.actived{
+	background: rgba(0,0,0,0.8);
+}
+
+/*Logotipo*/
+
+#logo{
+	font-family: "finger";
+	font-size: 30px;
+}
+
+#logo a{
+	transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover{
+	background: transparent;
+	color: black;
+	transform:scale(1.50,1.50);
+}
+
+/*Contenedor principal*/
+
+#global{
+	min-height: 1100px;
+	height: auto;
+	width: 90%;
+	margin: 0px auto;
+	box-shadow: 0px 0px 80px white;
+	border-left:3px solid #b7b7b7;
+	border-right:3px solid #b7b7b7;
+	background: rgba(255, 255, 255, 0.3);
+	padding-top: 120px;
+}
+
+h1 {text-align: center;}
+
+
+#slider{
+  top: 0px;
+  width: 100%;
+  position: relative;
+  height: 800px;
+  }
+
+#slider .slide{
+  position: absolute; /*SE SUPERPONEN UNOS SOBRE OTROS*/
+  width: 100%;
+  top: -20px;         /*SE PINTAN DESDE ESQ IZQ DE ARRIBA*/
+  left: 0px;
+}
+
+
+#slider #home{
+height: 800px;
+position: relative;
+}
+
+
+#slider #bancos{
+height: 800px;
+position: relative;
+}
+
+	
+#tabs-1{
+	position: relative;
+	padding-bottom: 40.25%; /*16:9*/
+	padding-top: 25px;
+	height: 0;
+}
+
+#tabs-2{
+	position: relative;
+	padding-bottom: 40.25%; /*16:9*/
+	padding-top: 25px;
+	height: 0;
+}
+#tabs-3{
+	position: relative;
+	padding-bottom: 40.25%; /*16:9*/
+	padding-top: 25px;
+	height: 0;
+}
+
+#tabs-4{
+	position: relative;
+	padding-bottom: 40.25%; /*16:9*/
+	padding-top: 25px;
+	height: 0;
+}
+
+#tabs-1 iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#tabs-2 iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#tabs-3 iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#tabs-4 iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+#slider #arqueo{
+height: 800px;
+position: relative;
+}
+
+#slider #mail{
+height: 800px;
+position: relative;
+}
+
+
+#slider #utilidades{
+height: 800px;
+position: relative;
+}
+.googleCalendar{
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 50%;
+}
+
+.googleCalendar iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Pie de pagina*/
+footer{
+  color: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  margin: 0px auto; /*centrar horizontal*/
+  padding-top: 15px;
+  
+}
+
+footer .rrss{
+width: 100%;
+height: 80px;
+}
+
+footer .rrss p{color:white;padding-left: 30px;}
+footer .rrss a{
+padding-left: 30px;
+font-size: 1.8em;
+width: 40px;
+height: 40px;
+display: inline-block;
+position: relative;
+color:white;
+}
+
+footer .rrss a:before{
+text-decoration: none;
+position: absolute;
+top: 5px;
+
+font-family: 'icomoon';
+}
+
+footer .rrss a:nth-child(1):before{   /*ESTE SOLO SE APLICA AL 1ER ENLACE*/
+  content: "\ea8f";
+}
+
+footer .rrss a:nth-child(2):before{ 
+  content: "\ea91";
+}
+
+footer .rrss a:nth-child(3):before{ 
+  content: "\eab0";
+}
+
+footer .rrss a:nth-child(4):before{ 
+  content: "\eab8";
+}
+
+footer .rrss a:nth-child(5):before{ 
+  content: "\e91f";
+}
+footer .rrss a:nth-child(6):before{ 
+ content: "\e98d";
+}
+footer .rrss a:nth-child(7):before{ 
+ content: "\e913";
+}
+footer .rrss a:nth-child(8):before{ 
+content: "\e99e";
+}
+footer .rrss a:nth-child(9):before{ 
+content: "\e93a";
+}
+footer .rrss a:nth-child(10):before{ 
+content: "\e9b8";
+}
+footer .rrss a:nth-child(11):before{ 
+content: "\ea41";
+}
+
+
+#arriba{
+color: white;
+font-size: 1.3em;
+}
+
+
