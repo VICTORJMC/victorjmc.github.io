@@ -1,62 +1,65 @@
 <!DOCTYPE html>
-<html lang="es">
- <head>
-  <meta charset="UTF-8">
-  <title>Proyecto con JavaScript</title>
-<link rel="stylesheet" type="text/css" href="css/stylesrecetas.css">
-<link id="theme" rel="stylesheet" type="text/css" href="css/gold.css">  
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styles2.css">
+
 <link rel="stylesheet"  href="css\icomoon.css">
 <link rel="stylesheet"  href="css\desing.css">
 <link rel="stylesheet"  href="css\normalize.css">
 <link rel="stylesheet"  href="css\aldo.css">
 <link rel="stylesheet" href="style.css">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+<script src="js/modernizr-custom.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
-<!--jQUERY -->  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<script type="text/javascript"  src="js/content.js">  </script>
-<script type="text/javascript"  src="js/subir.js">  </script>
-
-
+<!--El orden es importante se debe cargar 1 jQUERY-->
+<script type="text/javascript"  src="jquery-3.3.1.min.js">  </script>
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css"> 
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css"> 
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.min.css"> 
+<script type="text/javascript"  src="jquery-ui-1.12.1/jquery-ui.min.js">  </script>
+<script type="text/javascript"  src="js/tabs.js">  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.css">
+<script type="text/javascript"  src="js/bxslider.js">  </script>
+<script type="text/javascript"  src="js/theme.js">  </script>
 
 </head>
 
 
 
 <body>
+
+<header>
+  <ul>
+       <li><a href="index.html">Inicio</a></li>
+       <li><a href="index.html">Vuelos</a></li>
+       <li><a href="index.html">Tiempo</a></li>
+       <li id="logo"><a href="#"><img src="IMG/dron.jpg" style="max-height: 200px; max-width: 200px;" /></a></li>
+       <li><a href="index.html">Biblio</a></li>
+       <li><a href="index.html">Agenda</a></li>
+       <li><a href="recetas.html">Recetas</a></li>
+  </ul>
+</header>
+
 <section id="global">
-  <img src="IMG/dron.jpg" style="max-height: 200px; max-width: 200px;" />
-<div class="header">
+    <h1>Bienvenidos hoy es 
+            <script>
+            var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","  Diciembre");
+            var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+            var f=new Date();
+            document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+            </script> 
+    </h1><br>
 
   
-  <div class="header-right">
-
-     <nav id="menu">
-        <a href="index.html">Inicio</a>
-        <a href="index.html">Vuelos</a>
-        <a href="index.html">Tiempo</a>
-        <a href="index.html">Biblio</a>
-        <a href="index.html">Agenda</a>
-        <a href="recetas.html">Recetas</a>
-     </nav>
-  </div>
-</div>
-  
-  
 
 
-  <h1>Bienvenidos hoy es 
-          <script>
-          var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-          var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
-          var f=new Date();
-          document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
-          </script> 
-        </h1><br>
 
-          
-             <h2>LEKUE Espaguetis con langostinos y piñones</h2>
+       <h2>LEKUE Espaguetis con langostinos y piñones</h2>
              <span>Ingredientes: 250 gr Espaguetis, 200 gr Langostinos, Piñones, Aceite de Oliva, sal y pimienta. </span>
              <p>Cocinar en el micro los langostinos y los piñones durante 2min.</p><img style="float: right; margin: 0px 0px 15px 15px;" src="img/b.jpg" width="200" height="100"/>
              <hr><br>
@@ -186,9 +189,23 @@
           
           <div class="clearfix"></div>
 
-</section> 
-          
-    <footer>
+        
+
+
+
+
+
+
+
+
+
+
+ 
+</section><!--id="global"-->
+
+
+
+<footer>
        
         <div class="rrss">
            <a target="_blank" href="https://www.google.com/drive/"></a>
@@ -200,14 +217,45 @@
            <a target="_blank" href="https://www.documaniatv.com/documentales-historia-videos-1-date.html"></a>
            <a target="_blank" href="http://watchwrestling.uno/"></a>
            <a target="_blank" href="listaComprab&w.html" title="Lista de la Compra"></a>
-           <a href="#" class="subir" id="arriba">Arriba</a> 
-          <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral </p>
-
+           <a target="_blank" href="task.html" title="Tareas"></a>
+           <a href="#" class="subir" ></a> 
+           <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral </p>
         </div>
+
     
-   </footer> 
+</footer> 
+
+
+<script>                            
+
+function navSection(nav){
+   
+var section = new Array(5);
+ section[0] = "home";
+ section[1] = "bancos";
+ section[2] = "arqueo";
+ section[3] = "mail";
+ section[4] = "utilidades";
+   
+ var search;
+ var show;
+for (var i=0;  i<5; i++) { 
+     search = document.getElementById(section[i]);
+     search.style.display ="none"; //oculta todas las seciones
+
+     if (section[i] == nav) { 
+      search.style.display = "block";
+      }<!-- //del if -->
+    }  <!-- //del for -->
+
+ }<!-- //del function -->
+</script>  
+
+
 
 
 
 </body>
 </html>
+
+
