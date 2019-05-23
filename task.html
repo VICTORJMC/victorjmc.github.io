@@ -1,203 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>HTML5 LocalStorage Tareas</title>
-  <link rel="stylesheet" href="listaCompra_reset.min.css">
-  <style type="text/css">
-  @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
- * {
-    padding:0;
-    margin:0;
-}
-body {
- 
-    background-color:#2a2a2a;
-    font-family:'Josefin Sans', sans-serif;
-}
-#container {
-    background-color: grey;
-    color:#999999;
-    width:80%;
-    margin: 50px auto auto auto;
-    padding-bottom:12px;
-    opacity: 0.9;
-    box-shadow: 0px 0px 8px  white;
-}
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 
-footer {
-    
-    color:white;
-    width:80%;
-    margin: 50px auto auto auto;
-    padding-bottom:12px;
-    opacity: 0.9;
-    }
+<link rel="stylesheet"  href="css\icomoon.css">
+<link rel="stylesheet"  href="css\desing.css">
+<link rel="stylesheet"  href="css\normalize.css">
+<link rel="stylesheet"  href="css\aldo.css">
+<link rel="stylesheet"  href="css\task.css">
+
+<link rel="stylesheet" href="style.css">
 
 
-#formContainer {
-    padding-top:12px
-}
-#taskIOSection {
-}
-#taskInput {
- 
-    font-size:18px;
-    font-family:'Josefin Sans', sans-serif;
-    height:36px;
-    width:100%;
-    border-radius:100px;
-    background-color:#696969;
-    border:0;
-    color:white;
-    display:block;
-    padding-left:15px;
-   -webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  -ms-transition: all 0.30s ease-in-out;
-  -o-transition: all 0.30s ease-in-out;
-}
-#taskInput:focus{
-  box-shadow: 0px 0px 1pt 1pt white;
-  background-color:gray; 
-  outline:none;
-}
-::-webkit-input-placeholder {
-    color: black;
-    font-style:italic;
-    /* padding-left:10px; */
-}
-:-moz-placeholder {
-    /* Firefox 18- */
-    color: #101010;
-    font-style:italic;
-}
-::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #101010;
-    font-style:italic;
-}
-:-ms-input-placeholder {
-    color: #101010;
-    font-style:italic;
-}
-header {
-    margin-top:0;
-    width:90%;
-    height:48px;
-    padding-left:12px;
-    
-}
-header h1,#clear{
-    font-size:25px;
-    font-weight:300;
-    color:#fff;
-    line-height:48px;
-    width:70%;
-    display:inline;
-}
-header a{
-  
-  width:40%;
-  display:inline;
-  line-height:48px;
-  padding-left:312px;
-  text-decoration: none;
-}
-
-a:hover {
-  color: hotpink;
-}
 
 
-#taskEntryForm {
-    
-    width:90%;
-    height: 48px;
-    border-width:2px;
-    padding: 0px 12px 0px 12px;
-    font-size:0px;
-}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+<script src="js/modernizr-custom.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
-#taskList {
-   
-    width: 100%;
-    margin:auto;
-    font-size:15px;
-    font-weight:600;
-}
 
-ul li {
-    margin-left: 20px;
-    margin-bottom: 10px;
-    color: #101010;
-    height:48px;
-    width:70%;
-    line-height:48px;
-    list-style:none;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    background:    #696969;
-    
- 
-}
-p{
-  color: white;
-  font-size: 12px;
-  float: right;
-}
-
-  </style>
 </head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 <body>
 
-  <div id="container">
-    <header>
-         <h1>TAREAS PENDIENTES</h1>
-      <!--<a href="#" id="clear">Clear all</a>-->
+<header>
+  <ul>
+       <li><a class="active" onClick="navSection('home')" href="#">Inicio</a></li>
+       <li><a onClick="navSection('bancos')"href="#">Vuelos</a></li>
+       <li><a onClick="navSection('arqueo')"href="#">Tiempo</a></li>
+       <li id="logo"><a href="#"><img src="IMG/dron.jpg" style="max-height: 200px; max-width: 200px;" /></a></li>
+       <li><a onClick="navSection('mail')"href="#">Biblio</a></li>
+       <li><a onClick="navSection('utilidades')"href="#">Agenda</a></li>
+       <li><a href="recetas.html">Recetas</a></li>
+  </ul>
+</header>
 
-    </header>
-    <section id="taskIOSection">
-        <div id="formContainer">
-            <form id="taskEntryForm">
-                <input id="taskInput" placeholder="Escribe y añade la lista" />
-            </form>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <ul id="taskList"></ul>
-    </section>
+<section id="global">
+     <div id="container">
+             <h1>TAREAS PENDIENTES</h1>
+             <section id="taskIOSection">
+                 <div id="formContainer">
+                     <form id="taskEntryForm">
+                         <input id="taskInput" placeholder="Escribe y añade la lista" />
+                     </form>
+                 </div>
+                 <br>
+                 <hr>
+                 <br>
+                 <ul id="taskList"></ul>
+             </section>
     
-</div>
+           
 
-  <script src='listaCompra_jquery.min.js'></script>
-
+             <script src='listaCompra_jquery.min.js'></script>
+      </div>
   
 
     <script>
@@ -223,7 +81,29 @@ p{
             i++;
         }
         return false;
-    });
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
 
     $('#taskList').on("click", "li", function (event) {
         self = $(this);
@@ -265,7 +145,63 @@ p{
     }
 </script>
 
-<footer>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral</footer> 
-</body>
 
+</section><!--id="global"-->
+
+
+
+<footer>
+       
+        <div class="rrss">
+           <a target="_blank" href="https://www.google.com/drive/"></a>
+           <a target="_blank" href="https://www.FACEBOOK.com"></a>
+           <a target="_blank" href="https://github.com/VICTORJMC"></a>
+           <a target="_blank" href="https://www.blogger.com/blogger.g?blogID=4156816467598907901#allposts"></a>
+           <a target="_blank" href="https://gastronomiaycia.republica.com/2016/08/18/50-recetas-de-cocina-casera-faciles-ricas-y-sanas/">
+           <a target="_blank" href="https://es.khanacademy.org/computing/computer-programming/html-js-jquery"></a>
+           <a target="_blank" href="https://www.documaniatv.com/documentales-historia-videos-1-date.html"></a>
+           <a target="_blank" href="http://watchwrestling.uno/"></a>
+           <a target="_blank" href="listaComprab&w.html" title="Lista de la Compra"></a>
+           <a target="_blank" href="task.html" title="Tareas"></a>
+           <a href="#" class="subir" ></a> 
+           <br><br>
+           <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral </p>
+        </div>
+
+    
+</footer> 
+
+
+<script>                            
+
+function navSection(nav){
+   
+var section = new Array(5);
+ section[0] = "home";
+ section[1] = "bancos";
+ section[2] = "arqueo";
+ section[3] = "mail";
+ section[4] = "utilidades";
+   
+ var search;
+ var show;
+for (var i=0;  i<5; i++) { 
+     search = document.getElementById(section[i]);
+     search.style.display ="none"; //oculta todas las seciones
+
+     if (section[i] == nav) { 
+      search.style.display = "block";
+      }<!-- //del if -->
+    }  <!-- //del for -->
+
+ }<!-- //del function -->
+</script>  
+
+
+
+
+
+</body>
 </html>
+
+
