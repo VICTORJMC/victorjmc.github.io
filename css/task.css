@@ -1,0 +1,99 @@
+#container {
+    background-color: grey;
+    color:#999999;
+    width:80%;
+    margin: 50px auto auto auto;
+    padding-bottom:12px;
+    opacity: 0.9;
+    box-shadow: 0px 0px 8px  white;
+}
+
+
+
+
+#formContainer {
+    padding-top:12px
+}
+#taskIOSection {
+}
+#taskInput {
+ 
+    font-size:28px;
+    font-family:'Josefin Sans', sans-serif;
+    height:36px;
+    width:100%;
+    border-radius:100px;
+    background-color:#696969;
+    border:0;
+    color:white;
+    display:block;
+    padding-left:15px;
+   -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+#taskInput:focus{
+  box-shadow: 0px 0px 1pt 1pt white;
+  background-color:gray; 
+  outline:none;
+}
+::-webkit-input-placeholder {
+    color: black;
+    font-style:italic;
+    /* padding-left:10px; */
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #101010;
+    font-style:italic;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #101010;
+    font-style:italic;
+}
+:-ms-input-placeholder {
+    color: #101010;
+    font-style:italic;
+}
+
+
+a:hover {
+  color: hotpink;
+}
+
+
+#taskEntryForm {
+    
+    width:90%;
+    height: 48px;
+    border-width:2px;
+    padding: 0px 12px 0px 12px;
+    font-size:0px;
+}
+
+#taskList {
+   
+    width: 100%;
+    margin:auto;
+    font-size:15px;
+    font-weight:600;
+}
+
+#container ul li {
+    font-size:28px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    color: #101010;
+    height:48px;
+    width:70%;
+    line-height:48px;
+    list-style:none;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    background:    #696969;
+    
+ 
+}
