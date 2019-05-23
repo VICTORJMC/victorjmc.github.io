@@ -117,7 +117,8 @@ header a:hover,
 }
 
 h1 {text-align: center;color:white;}
-
+.whitejustify {text-align:justify;color: #FAEBD7;}
+.whitejustify span {color: white;}
 
 #slider{
   top: 0px;
