@@ -9,6 +9,8 @@
 	src: url("fonts/finger.ttf");
 }
 
+
+
 /*Generales*/
 
 *{
@@ -167,6 +169,8 @@ position: relative;
 }
 
 
+
+
 #slider #arqueo{
 height: 800px;
 position: relative;
@@ -175,6 +179,14 @@ position: relative;
 #slider #mail{
 height: 800px;
 position: relative;
+}
+#biblio{
+font-family: 'Josefin Sans', sans-serif;
+background: url("../img/pattern.png");
+background: rgba(255, 255, 255, 0.2);
+}
+h2{
+color: white;
 }
 
 
