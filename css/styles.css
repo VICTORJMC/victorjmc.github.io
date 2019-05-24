@@ -85,6 +85,7 @@ header a:hover,
 .actived{
 	background: rgba(0,0,0,0.8);
 	color: white;
+        font-size: 29px;
 }
 
 /*Logotipo*/
