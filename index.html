@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/css3-text-animation.css">
+<link rel="stylesheet"  href="css\icomoon.css">
+<link rel="stylesheet"  href="css\desing.css">
+<link rel="stylesheet"  href="css\normalize.css">
+<link rel="stylesheet"  href="css\aldo.css">
+<link rel="stylesheet" href="style.css">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+<script src="js/modernizr-custom.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+<!--El orden es importante se debe cargar 1 jQUERY-->
+<script type="text/javascript"  src="jquery-3.3.1.min.js">  </script>
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css"> 
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css"> 
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.min.css"> 
+<script type="text/javascript"  src="jquery-ui-1.12.1/jquery-ui.min.js">  </script>
+<script type="text/javascript"  src="js/tabs.js">  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.css">
+<script type="text/javascript"  src="js/bxslider.js">  </script>
+<script type="text/javascript"  src="js/theme.js">  </script>
+
+</head>
+
+
+
+<body>
+
+<header>
+  <ul>
+       <li><a class="active" onClick="navSection('home')" href="#">Inicio</a></li>
+       <li><a onClick="navSection('bancos')"href="#">Vuelos</a></li>
+       <li><a onClick="navSection('arqueo')"href="#">Tiempo</a></li>
+       <li id="logo"><a href="#"><img src="IMG/dron.jpg" style="max-height: 200px; max-width: 200px;" /></a></li>
+       <li><a onClick="navSection('mail')"href="#">Biblio</a></li>
+       <li><a onClick="navSection('utilidades')"href="#">Agenda</a></li>
+       <li><a href="recetas.html">Recetas</a></li>
+  </ul>
+</header>
+
+<section id="global">
+    <h1>Bienvenidos hoy es 
+            <script>
+            var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","  Diciembre");
+            var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+            var f=new Date();
+            document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+            </script> 
+    </h1><br>
+
+  <div id="slider">
+       <section class="slide" id="home" style="display:block">
+          <div id="particles-js"></div>
+          <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+          <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+          <script  src="js/index.js"></script>
+          <div class="sp-container">
+               <div class="sp-content">
+                 <div class="sp-globe"></div>
+                 <h2 class="frame-1">AWESOME</h2>
+                 <h2 class="frame-2">TEXT ANIMATION EFFECT</h2>
+                 <h2 class="frame-3">BUILD WITH CSS3</h2>
+                 <h2 class="frame-4">TEST IT!</h2>
+                 <h2 class="frame-5">
+                   <span>FORK,</span>
+                   <span>CHANGE,</span>
+                   <span>EXPERIANCE.</span>
+                 </h2>
+                 <a class="sp-circle-link" href="https://nick.mkrtchyan.ga">by VJMC</a>
+               </div>
+             </div>
+          <script  src="js/textanimation.js"></script>
+
+       </section> <!--id="home"-->
+
+
+
+       <section class="slide" id="bancos" style="display:none">
+         <div id ="vuelos">
+           <ul>
+             <li><a href="#tabs-1">PEDRO BERNARDO</a></li>
+             <li><a href="#tabs-2">BALCÓN DEL TIETAR</a></li>
+             <li><a href="#tabs-3">PONTEVEDRA</a></li>
+             <li><a href="#tabs-4">ALCONCHEL DE LA ESTRELLA</a></li>
+           </ul>
+           <div id="tabs-1">
+        
+           <iframe  src="https://www.youtube.com/embed/tXgjP6CZ4oc" frameborder="0" allow="accelerometer; autoplay;      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div>
+
+           <div id="tabs-2">
+            <iframe  src="https://www.youtube.com/embed/ngEy-Eky_Y0" frameborder="0" allow="accelerometer; autoplay;      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div>
+
+           <div id="tabs-3">
+             <iframe  src="https://www.youtube.com/embed/xNsuUWuIUeg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div>
+
+           <div id="tabs-4">
+            <iframe  src="https://www.youtube.com/embed/dPnb7TZPpSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      
+        </div>
+       </section> <!--id="bancos"-->
+
+
+
+
+
+       <section class="slide" id="arqueo" style="display:none">
+         <div id ="pestanas">
+           <ul>
+             <li><a href="#tabs-1">S.S.REYES</a></li>
+             <li><a href="#tabs-2">PONTEVEDRA</a></li>
+             <li><a href="#tabs-3">PEDRO BERNARDO</a></li>
+             <li><a href="#tabs-4">ALCONCHEL DE LA ESTRELLA</a></li>
+             <li><a href="#tabs-5">NEW YORK</a></li>
+           </ul>
+
+              <div id="tabs-1"><div id="TT3638ca5"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/3638/ca5/800"></script>
+              </div>
+
+              <div id="tabs-2"><div id="TT2778ca5"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/2778/ca5/800"></script>
+              </div>
+
+              <div id="tabs-3"><div id="TT7498ca5"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/7498/ca5/800"></script>
+              </div>
+
+              <div id="tabs-4"><div id="TT5820ca5"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/5820/ca5/800"></script>
+              </div>
+
+              <div id="tabs-5"><div id="TT29065ca5"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/full/29065/ca5/800"></script>
+              </div>
+        
+          </div>
+          
+       </section> <!--id="arqueo"-->
+
+
+
+
+       <section class="slide" id="mail" style="display:none">
+         <h2 class="demoHeaders">Novelas por Autor</h2>
+  
+         <div id ="biblio">
+            <ul>
+              <li><a href="#tabs-1">Valerio Massimo Manfredi</a></li>
+              <li><a href="#tabs-2">Ken Follett</a></li>
+              <li><a href="#tabs-3">Colleen McCullough</a></li>
+              <li><a href="#tabs-4">Steven Pressfield</a></li>
+              <li><a href="#tabs-5">Javier Negrete</a></li>
+              <li><a href="#tabs-6">Pedro Santamaría</a></li>
+              <li><a href="#tabs-7">Luis Villalón</a></li>
+              <li><a href="#tabs-8">Juan Eslava Galán</a></li>
+              <li><a href="#tabs-9">Nicholas Guild</a></li>
+              <li><a href="#tabs-10">Massimiliano Colombo</a></li>
+              <li><a href="#tabs-11">Gisbert Haefs</a></li>
+              <li><a href="#tabs-12">José Luis Corral</a></li>
+              <li><a href="#tabs-13">Arturo Gonzalo Aizpiri</a></li>
+              <li><a href="#tabs-14">Marcos Chicot</a></li>
+              <li><a href="#tabs-15">Javier Pellicer</a></li>
+              <li><a href="#tabs-16">Antonio Cabanas</a></li>
+              <li><a href="#tabs-17">Santiago Posteguillo</a></li>
+            </ul>
+
+            <div id="tabs-1" >
+             <h2>AKRÓPOLIS</h2> 
+             <h2>ALEXANDROS: EL HIJO DEL SUEÑO</h2>
+             <h2>ALEXANDROS:LAS ARENAS DE AMON</h2>
+             <h2>ALEXANDROS:EL CONFIN DEL MUNDO</h2>
+            </div>
+
+            <div id="tabs-2" >
+             <h2>LOS PILARES DE LA TIERRA</h2> 
+             <h2>UN MUNDO SIN FIN</h2>
+            </div>
+
+            <div id="tabs-3" >
+             <h2>EL PRIMER HOMBRE DE ROMA</h2> 
+             <h2>LA CORONA DE HIERBA</h2>
+             <h2>FAVORITOS DE LA FORTUNA</h2>
+             <h2>LAS MUJERES DE CESAR</h2>
+             <h2>CESAR</h2>
+             <h2>EL CABALLO DE CESAR </h2>
+             <h2>ANTONIO Y CLEOPATRA </h2>
+             <h2>LA CANCIÓN DE TROYA </h2>
+            </div>
+
+            <div id="tabs-4">
+             <h2>LAS PUERTAS DE FUEGO<h2>
+             <h2>VIENTOS DE GUERRA<h2>
+            </div>
+
+
+            <div id="tabs-5">
+             <h2>LA HIJA DEL NILO</h2>
+             <h2>SALAMINA</h2>
+             <h2>EL ESPARTANO<h2>
+            </div>
+
+            <div id="tabs-6">
+             <h2>REBELDES<h2>
+             <h2>PEÑA AMAYA<h2>
+            </div>
+     
+
+            <div id="tabs-7">
+             <h2>HELLENIKON</h2>
+            </div>
+
+            <div id="tabs-8">
+             <h2>ULTIMAS PASIONES DEL CABALLERO ALMAFIERA</h2>
+            </div>
+
+            <div id="tabs-9">
+             <h2>EL HERRERO DE GALILEA</h2>
+             <h2>EL MACEDONIO</h2>
+             <h2>EL ASIRIO</h2>
+            </div>
+
+            <div id="tabs-10">
+             <h2>CENTURIO</h2>
+             <h2>LA LEGION DE LOS INMORTALES</h2>
+            </div>
+
+            <div id="tabs-11">
+             <h2>ANÍBAL</h2>
+             <h2>ALEJANDRO MAGNO I</h2>
+             <h2>LIBRO ALEJANDRO MAGNO II. EL CONQUISTADOR DE UN IMPERIO</h2>
+            </div>
+
+            <div id="tabs-12">
+             <h2>NUMANCIA</h2>
+            </div>
+
+            <div id="tabs-13">
+             <h2> EL HEREDERO DE TARTESOS</h2>
+             <h2>EL CÁLIZ DE MELQART</h2>
+            </div>
+
+            <div id="tabs-14">
+             <h2>EL ASESINATO DE SOCRATES</h2>
+             <h2>EL ASESINATO DE PITÁGORAS</h2>
+             <h2>LA HERMANDAD</h2>
+            </div>
+
+            <div id="tabs-15">
+            <h2>EL ESPIRITU DEL LINCE</h2>
+            </div>
+
+           <div id="tabs-16">
+            <h2> EL HIJO DEL DESIERTO</h2>
+           </div>
+
+           <div id="tabs-17">
+            <h2> AFRICANUS: EL HIJO DEL CÓNSUL</h2>
+            <h2> LAS LEGIONES MALDITAS</h2>
+            <h2>LA TRAICIÓN DE ROMA</h2>
+            <h2>YO, JULIA</h2>
+            <h2>LOS ASESINOS DEL EMPERADOR</h2>
+            <h2>CIRCO MÁXIMO</h2>
+           </div>
+      
+         </div>
+          
+       </section> <!--id="mail"-->
+
+
+
+
+
+       <section class="slide" id="utilidades" style="display:none">
+         <div class="googleCalendar">
+         <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=victor.es%40gmail.com&amp;color=%23691426E&amp     ;src=uss5e23crvfgl5fni23qec7bjo%40group.calendar.google.com&amp;color=%2328754E&amp;src=rfb69oo50jaij8oossdv2hm4d8%40group.calendar.google.com&amp;     color=%23691426&amp;ctz=Europe%2FMadrid" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+         </div>
+          
+       </section> <!--id="utilidades"-->
+
+
+        
+
+
+
+
+
+
+
+
+
+
+ </div> <!id="slider"-->
+</section><!--id="global"-->
+
+
+
+<footer>
+       
+        <div class="rrss">
+           <a target="_blank" href="https://www.google.com/drive/"></a>
+           <a target="_blank" href="https://www.FACEBOOK.com"></a>
+           <a target="_blank" href="https://github.com/VICTORJMC"></a>
+           <a target="_blank" href="https://www.blogger.com/blogger.g?blogID=4156816467598907901#allposts"></a>
+           <a target="_blank" href="https://gastronomiaycia.republica.com/2016/08/18/50-recetas-de-cocina-casera-faciles-ricas-y-sanas/">
+           <a target="_blank" href="https://es.khanacademy.org/computing/computer-programming/html-js-jquery"></a>
+           <a target="_blank" href="https://www.documaniatv.com/documentales-historia-videos-1-date.html"></a>
+           <a target="_blank" href="http://watchwrestling.uno/"></a>
+           <a target="_blank" href="listaComprab.html" title="Lista de la Compra"></a>
+           <a href="task.html" title="Tareas"></a>
+           <a href="#" class="subir" ></a> 
+           <br><br>
+           <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral </p>
+        </div>
+
+    
+</footer> 
+
+
+<script>                            
+function navSection(nav){
+   
+var section = new Array(5);
+ section[0] = "home";
+ section[1] = "bancos";
+ section[2] = "arqueo";
+ section[3] = "mail";
+ section[4] = "utilidades";
+   
+ var search;
+ var show;
+for (var i=0;  i<5; i++) { 
+     search = document.getElementById(section[i]);
+     search.style.display ="none"; //oculta todas las seciones
+     if (section[i] == nav) { 
+      search.style.display = "block";
+      }<!-- //del if -->
+    }  <!-- //del for -->
+ }<!-- //del function -->
+</script>  
+
+
+
+
+
+</body>
+</html>
