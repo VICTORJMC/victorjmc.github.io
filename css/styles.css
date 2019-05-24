@@ -150,58 +150,15 @@ position: relative;
 }
 
 	
-#tabs-1{
+#tabs-1,#tabs-2,#tabs-3,#tabs-4{
 	position: relative;
 	padding-bottom: 60.25%; /*16:9*/
 	padding-top: 25px;
 	height: 0;
 }
 
-#tabs-2{
-	position: relative;
-	padding-bottom: 60.25%; /*16:9*/
-	padding-top: 25px;
-	height: 0;
-}
-#tabs-3{
-	position: relative;
-	padding-bottom: 60.25%; /*16:9*/
-	padding-top: 25px;
-	height: 0;
-}
 
-#tabs-4{
-	position: relative;
-	padding-bottom: 60.25%; /*16:9*/
-	padding-top: 25px;
-	height: 0;
-}
-
-#tabs-1 iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-#tabs-2 iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-#tabs-3 iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-#tabs-4 iframe {
+#tabs-1 iframe,#tabs-2 iframe,#tabs-3 iframe,#tabs-4 iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
