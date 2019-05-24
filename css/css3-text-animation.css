@@ -6,7 +6,7 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	font-family: 'Barlow', sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
 }
 .container {
 	width: 100%;
