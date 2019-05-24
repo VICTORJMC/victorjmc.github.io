@@ -1,7 +1,8 @@
 #container {
     background-color: grey;
+    font-family:'Josefin Sans', sans-serif;
     color:#999999;
-    width:80%;
+    width:98%;
     margin: 50px auto auto auto;
     padding-bottom:12px;
     opacity: 0.9;
