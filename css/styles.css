@@ -152,7 +152,7 @@ position: relative;
 }
 
 	
-#tabs-1,#tabs-2,#tabs-3,#tabs-4,#tabs-5{
+#tabs-1,#tabs-2,#tabs-3,#tabs-4,#tabs-5 {
 	position: relative;
 	padding-bottom: 60.25%; /*16:9*/
 	padding-top: 25px;
