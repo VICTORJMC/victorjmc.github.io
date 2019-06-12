@@ -5,11 +5,14 @@
     width:98%;
     margin: 50px auto auto auto;
     padding-bottom:12px;
-    opacity: 0.9;
-    box-shadow: 0px 0px 8px  white;
+    opacity: 0.6;
+    
 }
 
-
+hr{
+  border: 10px solid black;
+  border-radius: 5px;
+}
 
 
 #formContainer {
