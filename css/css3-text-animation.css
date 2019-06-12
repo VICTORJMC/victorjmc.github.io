@@ -151,7 +151,7 @@ h1.main, p.demos {
 	transform: scale(1) rotate(0deg);
 }
 .sp-circle-link:hover {
-	background: #85373b;
+	background: black;
 	color: #fff;
 }
 /**/
