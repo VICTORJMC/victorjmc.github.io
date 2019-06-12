@@ -110,7 +110,7 @@ header a:hover,
 /*Contenedor principal*/
 
 #global{
-	min-height: 1100px;
+	min-height: 1300px;
 	height: auto;
 	width: 90%;
 	margin: 0px auto;
@@ -124,6 +124,9 @@ header a:hover,
 h1 {text-align: center;color:white;}
 .whitejustify {text-align:justify;color: #FAEBD7;}
 .whitejustify span {color: white;}
+
+
+
 
 #slider{
   top: 0px;
@@ -152,7 +155,7 @@ position: relative;
 }
 
 	
-#tabs-1,#tabs-2,#tabs-3,#tabs-4,#tabs-5 {
+#tabs-1,#tabs-2,#tabs-3,#tabs-4{
 	position: relative;
 	padding-bottom: 60.25%; /*16:9*/
 	padding-top: 25px;
@@ -160,7 +163,7 @@ position: relative;
 }
 
 
-#tabs-1 iframe,#tabs-2 iframe,#tabs-3 iframe,#tabs-4 iframe,#tabs-5 iframe {
+#tabs-1 iframe,#tabs-2 iframe,#tabs-3 iframe,#tabs-4 iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
