@@ -134,7 +134,7 @@ h1.main, p.demos {
 	line-height: 100px;
 	width: 100px;
 	height: 100px;
-	
+	background: #fff;
 	color: #3f1616;
 	font-size: 25px;
 	-webkit-border-radius: 50%;
