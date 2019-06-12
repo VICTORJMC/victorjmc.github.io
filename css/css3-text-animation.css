@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow');
 
 body {
-	background: #310404 url(https://i.ytimg.com/vi/wOvQAhzWCrM/maxresdefault.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-        font-family: 'Josefin Sans', sans-serif;
+	
+
+	font-family: 'Barlow', sans-serif;
 }
 .container {
 	width: 100%;
@@ -29,10 +26,7 @@ h1.main, p.demos {
 	width: 100%;
 	height: 100%;
 	z-index: 0;
-	background: -webkit-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
-	background: -moz-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
-	background: -ms-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
-	background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+	
 }
 .sp-content {
 	position: absolute;
