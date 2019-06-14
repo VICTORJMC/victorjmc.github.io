@@ -112,6 +112,7 @@ header a:hover,
 /*Contenedor principal*/
 
 #global{
+	min-height: 1300px;
 	height: auto;
 	width: 90%;
 	margin: 0px auto;
