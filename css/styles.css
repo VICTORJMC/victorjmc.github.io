@@ -89,7 +89,7 @@ header a:hover,
 .actived{
 	background: rgba(0,0,0,0.8);
 	color: white;
-        font-size: 29px;
+        font-size: 27px;
 }
 
 /*Logotipo*/
@@ -106,7 +106,7 @@ header a:hover,
 #logo a:hover{
 	background: transparent;
 	color: black;
-	transform:scale(1.50,1.50);
+	transform:scale(1.40,1.40);
 }
 
 /*Contenedor principal*/
