@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Clipboard</title>
+  <style>
+body {
+              background-color:#999999;
+              font-family: 'Oswald', sans-serif;
+      }
+p
+{
+  color:#000000;
+  font-size:20px;
+}
+
+.textBox
+{
+  height:60px;
+  width:800px;
+font-size:30px;
+}
+
+button
+{
+  height:70px;
+  width:350px;
+  border-radius:8px;
+  padding:1px;
+  font-size:30px;
+  font-family: 'Oswald', sans-serif;
+  height:52px;
+  cursor:pointer;
+  background-color:wheat;
+}
+#p3{
+    display:none;
+}
+  </style>
+</head>
+
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <p style="color:wheat;font-size:55px;text-align:center;">Como copiar texto a Memoria con un CLICK</p>
+
+<center>
+<h1 id="p1">HOLA POLLITO</h1>
+<h1 id="p2"> MUEVE EL CULITO</h1><br/>
+
+<button onclick="copyToClipboard('#p1')">Copia TEXT 1</button>
+<button onclick="copyToClipboard('#p2')">Copia TEXT 2</button>
+  
+<br/><br/><input class="textBox" type="text" id="" placeholder="Pega el texto AQUI................;)" /><br>
+<h1 id="p3">Clave 12345678</h1><br>
+<button onclick="copyToClipboard('#p3')">Copia CLAVE oculta</button>
+  
+</center>
+</body>
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
+
+
+</html>
