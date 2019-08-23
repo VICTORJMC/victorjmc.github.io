@@ -13,7 +13,10 @@ $(document).ready(function(){
     });
 
 
-
+    $('#bajar').click(function(){
+        $('html, body').animate({scrollTop:$(document).height()}, 6000);
+        return false;
+    });
 
     
 
