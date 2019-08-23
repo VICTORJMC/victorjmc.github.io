@@ -316,6 +316,15 @@ content: "\ea41";
 }
 
 
+.bajar img{
+-webkit-filter: invert(1);
+   filter: invert(1);
+
+}
+
+
+
+
 #arriba{
 color: white;
 font-size: 1.3em;
