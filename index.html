@@ -24,10 +24,11 @@
 <script type="text/javascript"  src="jquery-ui-1.12.1/jquery-ui.min.js">  </script>
 <script type="text/javascript"  src="js/tabs.js">  </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="css\jquery.bxslider.css">
 <script type="text/javascript"  src="js/bxslider.js">  </script>
 <script type="text/javascript"  src="js/theme.js">  </script>
 <script type="text/javascript"  src="js/loto.js">  </script>
+
 
 </head>
 
@@ -56,9 +57,12 @@
             document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
             </script> 
     </h1><br>
+    
 
   <div id="slider">
        <section class="slide" id="home" style="display:block">
+
+
           <div id="particles-js"></div>
           <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
           <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
@@ -169,8 +173,10 @@
 
 
        <section class="slide" id="mail" style="display:none">
-         <h2 class="demoHeaders">Novelas por Autor</h2>
-  
+         
+         
+         
+          <h2 class="demoHeaders">Novelas por Autor</h2>
          <div id ="biblio">
             <ul>
               <li><a href="#tabs-1">PRIMITIVA</a></li>
@@ -192,6 +198,8 @@
               <li><a href="#tabs-17">Santiago Posteguillo</a></li>
               <li><a href="#tabs-18">ENLACES</a></li>
               <li><a href="#tabs-19">Valerio Massimo Manfredi</a></li>
+              <li><a href="#tabs-20">CITAS CÉLEBRES</a></li>
+              
             </ul>
 
             <div id="tabs-19" >
@@ -226,7 +234,7 @@
             <div id="tabs-5">
              <h2>LA HIJA DEL NILO</h2><br>
              <h2>SALAMINA</h2><br>
-             <h2>EL ESPARTANO<h2><br>
+             <h2>EL ESPARTANO<h2>
             </div>
 
             <div id="tabs-6">
@@ -318,9 +326,22 @@
            <h1 class="neon"><a onclick="reintegro()">Reintegro</a></h1>
            <h1 id="reintegro" ></h1>
           </div>
-      
+
+
+          <div id="tabs-20">
+              <h1 id="buttonCite" style="cursor:pointer;" class="neon1">COMO DIJO...</h1>
+              <div class="citeOutput">
+                <h1 id="author"></h1>
+                <h1 id="cite"></h1>
+              </div>
+          </div>
+
+
+
+
          
        </div>   
+
        </section> <!--id="mail"-->
 
 
@@ -395,6 +416,7 @@ for (var i=0;  i<5; i++) {
  }<!-- //del function -->
 </script>  
 
+<script type="text/javascript"  src="js/citas.js" async>  </script>
 
 
 
