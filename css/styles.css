@@ -216,7 +216,7 @@ position: relative;
 
 .neon {
   color: #fff;
-  font-family: Monoton;
+  font-family: Press+Start+2P;
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
 }
