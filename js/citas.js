@@ -3,12 +3,12 @@ const citeOutput = document.querySelector('#cite');
 const authorOutput = document.querySelector('#author');
 
 let cites = [
-  'Qué maravilloso es que nadie necesita un solo momento antes de comenzar a mejorar el mundo.',
+  'La mayor declaración de amor es la que no se hace; el hombre que siente mucho, habla poco.',
   'La muerte destroza al hombre: la idea de la muerte le salva.',
   'Todo lo que escuchamos es una opinión, no un hecho. Todo lo que vemos es una perspectiva, no es la verdad.',
   'De todos los animales de la creación el hombre es el único que bebe sin tener sed, come sin tener hambre y habla sin tener nada que decir.',
   'Educación es lo que queda después de olvidar lo que se ha aprendido en la escuela.',
-  'La gente se rie de mi por que soy diferente, yo me rio de ellos por que son todos iguales.',
+  'El sabio no dice nunca todo lo que piensa, pero siempre piensa todo lo que dice.',
   'Solo hay una felicidad en la vida – amar y ser amado.',
   'El placer y la acción hacen que las horas parezcan cortas.',
   'El éxito depende del esfuerzo.',
@@ -24,16 +24,20 @@ let cites = [
   'La envidia es una declaración de inferioridad.',
   'La inteligencia es la habilidad de adaptarse al cambio.',
   'Solo existe un bien, el conocimiento. Solo hay un mal, la ignorancia.',
-  'Los hombres tienden a creer aquello que les conviene.'
+  'Los hombres tienden a creer aquello que les conviene.',
+  'De humanos es errar y de necios permanecer en el error',
+  'Hace falta toda una vida para aprender a vivir (Séneca)',
+  'La política es el arte de buscar problemas, encontrarlos, realizar un diagnóstico falso y aplicar después remedios equivocados.'
+
 ];
 
 let authors = [
-  'Ana Frank',
+  'Platón',
   'Howards End',
   'Marco Aurelio',
   'John Steinbeck',
   'Albert Einstein',
-  'Kurt Cobain',
+  'Aristóteles',
   'George Sand',
   'William Shakespeare',
   'Sófocles',
@@ -49,7 +53,11 @@ let authors = [
   'Napoleón',
   'Stephen Hawking',
   'Sócrates',
-  'Cayo Julio César'
+  'Cayo Julio César',
+  'Marco Tulio Cicerón',
+  'Séneca',
+  'Groucho Marx'
+
 
 ];
 
