@@ -23,7 +23,8 @@ let cites = [
   'Una buena cabeza y un buen corazón son siempre combinaciones formidables.',
   'La envidia es una declaración de inferioridad.',
   'La inteligencia es la habilidad de adaptarse al cambio.',
-  'Solo existe un bien, el conocimiento. Solo hay un mal, la ignorancia.'
+  'Solo existe un bien, el conocimiento. Solo hay un mal, la ignorancia.',
+  'Los hombres tienden a creer aquello que les conviene.'
 ];
 
 let authors = [
@@ -47,7 +48,8 @@ let authors = [
   'Nelson Mandela',
   'Napoleón',
   'Stephen Hawking',
-  'Sócrates'
+  'Sócrates',
+  'Cayo Julio César'
 
 ];
 
