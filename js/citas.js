@@ -22,7 +22,8 @@ let cites = [
   'El fracaso es simplemente una nueva oportunidad de empezar de nuevo, esta vez de forma más inteligente.',
   'Una buena cabeza y un buen corazón son siempre combinaciones formidables.',
   'La envidia es una declaración de inferioridad.',
-  'La inteligencia es la habilidad de adaptarse al cambio.'
+  'La inteligencia es la habilidad de adaptarse al cambio.',
+  'Solo existe un bien, el conocimiento. Solo hay un mal, la ignorancia.'
 ];
 
 let authors = [
@@ -45,7 +46,9 @@ let authors = [
   'Henry Ford',
   'Nelson Mandela',
   'Napoleón',
-  'Stephen Hawking'
+  'Stephen Hawking',
+  'Sócrates'
+
 ];
 
 let lastNumber = 0;
