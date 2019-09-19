@@ -209,12 +209,11 @@ position: relative;
   animation: neon4 1s ease-in-out infinite alternate;
 }
 
-.neon1 {
-	src: url('https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap');
-	font-family: 'Vollkorn SC', serif;
-  color: #228DFF;
- 
-  font-size: 2.5em;
+.neon1,#cite {
+	/*src: url('https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap');*/
+	font-family: 'Merienda', cursive;
+    color: #228DFF;
+    font-size: 2.5em;
 }
 
 .neon1:hover {
