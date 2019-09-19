@@ -26,7 +26,7 @@ let cites = [
   'Solo existe un bien, el conocimiento. Solo hay un mal, la ignorancia.',
   'Los hombres tienden a creer aquello que les conviene.',
   'De humanos es errar y de necios permanecer en el error',
-  'Hace falta toda una vida para aprender a vivir (Séneca)',
+  'Hace falta toda una vida para aprender a vivir.',
   'La política es el arte de buscar problemas, encontrarlos, realizar un diagnóstico falso y aplicar después remedios equivocados.'
 
 ];
