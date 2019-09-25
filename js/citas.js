@@ -4,7 +4,7 @@ const authorOutput = document.querySelector('#author');
 
 let cites = [
   'La mayor declaración de amor es la que no se hace; el hombre que siente mucho, habla poco.',
-  'La muerte destroza al hombre: la idea de la muerte le salva.',
+  'La felicidad consiste en saber unir el final con el principio.',
   'Todo lo que escuchamos es una opinión, no un hecho. Todo lo que vemos es una perspectiva, no es la verdad.',
   'De todos los animales de la creación el hombre es el único que bebe sin tener sed, come sin tener hambre y habla sin tener nada que decir.',
   'Educación es lo que queda después de olvidar lo que se ha aprendido en la escuela.',
@@ -33,7 +33,7 @@ let cites = [
 
 let authors = [
   'Platón',
-  'Howards End',
+  'Pitágoras',
   'Marco Aurelio',
   'John Steinbeck',
   'Albert Einstein',
