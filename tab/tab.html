@@ -1,0 +1,508 @@
+﻿<!-- code by webdevtrick ( https://webdevtrick.com ) -->
+<html>
+ 
+<head>
+<meta charset="UTF-8">
+<title>Modelario</title>
+<link rel="stylesheet" href="tab.css">
+<link rel="stylesheet" href="BaseHeaderContenedor.css">
+<link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One|Merienda|Josefin+Sans' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript"  src="form.js">  </script>
+<script type="text/javascript"  src="firma.js">  </script>
+<script type="text/javascript"  src="addtextos.js">  </script>
+<script type="text/javascript"  src="blinker.js">  </script>
+
+</head>
+ 
+<body onload="blinker()">
+ 
+  <div class="tabs">
+  <input type="radio" name="tabs" id="tabone" checked="checked">
+  <label class="label" for="tabone"><img class="icon" src="icons/truck.png" /></label>
+  <div class="tab">
+    <div id="contenedor1">
+       <a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+       <h1>Certificado de estar al corriente del pago de IVTM</h1>
+       <header id="main-header">
+         <a id="contacto" >
+         <h2 >Recaudación Municipal</h2>
+          <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+          <span class="site-desc">28100 ALCOBENDAS</span></br>
+          <span class="site-desc">Tel.916510658</span></br>
+          <span class="site-desc">Fax.916540206</span>
+         </a> 
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+       </header></br></br></br>
+       
+        <p><h9 id="nombre2"></h9>, con NIF/CIF <h9 id="dni2"></h9>, titular del vehículo modelo 
+         <h9 id="dir2"></h9>, con matrícula <h9 id="ref2"></h9>, está acogido a la modalidad de domiciliación APLAZA6; por lo que tiene concedido un fraccionamiento de pago del recibo del Impuesto de Vehículos de Tracción Mecánica correspondiente al presente ejercicio en 6 meses, que se inicia en mayo y finaliza en octubre, y ello en virtud de lo dispuesto en el artículo 62 de la Ordenanza General de Gestión, Recaudación e Inspección de los Ingresos Propios de Derecho Público.</p>
+
+        <p>Sin que, a fecha de hoy, conste devolución alguna de los plazos que se han girado en pago de la deuda tributaria.</p> 
+        <p>Lo que se hace constar a los efectos oportunos.</p> 
+
+      
+        <h3 >En Alcobendas a <script type="text/javascript"  src="fecha.js"></script>.</h3>
+
+        <div id="desapareceDiv"><img id="clic" img src="clic.jpg" alt=""></div>
+      
+
+           <form id="myform" method="post" action="#">
+           <ul>
+           <li>
+             <label class="titulo">DATOS DEL TITULAR</label>
+  
+             <div class="controles">
+               <span class="completo">
+                 <input id="nombre"  />
+                 <label >Nombre Titular</label>
+               </span>
+ 
+               <span class="completo">
+                 <input id="dni"  />
+                 <label >DNI / CIF</label>
+               </span>
+ 
+               <span class="completo">
+                 <input id="dir"  />
+                 <label >Modelo</label>
+               </span>
+
+              <span class="completo">
+                 <input id="ref"  />
+                 <label >Matrícula</label>
+                 <a id="alta" href="#" class="a">Clic para Validar</a>
+               </span>
+             </div>
+           </li>
+           </ul>
+           </form>
+    </div><!--contenedor-->
+  </div><!--tab-->
+  
+
+
+
+  
+  <input type="radio" name="tabs" id="tabtwo">
+  <label class="label" for="tabtwo"><img class="icon" src="icons/office.png" /></label>
+  <div class="tab">
+    <div id="contenedor2">
+       <a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+       <h1>Certificado de estar al corriente del pago de IBI</h1>
+       <header id="main-header">
+         <a id="contacto" >
+         <h2 >Recaudación Municipal</h2>
+          <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+          <span class="site-desc">28100 ALCOBENDAS</span></br>
+          <span class="site-desc">Tel.916510658</span></br>
+          <span class="site-desc">Fax.916540206</span>
+         </a> 
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+       </header></br></br></br>
+       
+        <p><h9 id="name"></h9>, con NIF/CIF <h9 id="ind"></h9>, , titular del inmueble sito
+        en <h9 id="rid"></h9>, con referencia catastral <h9 id="fer"></h9>, está acogido a la modalidad de domiciliación APLAZA6; por lo que tiene     concedido un fraccionamiento de pago del recibo del Impuesto sobre Bienes Inmuebles correspondiente al presente ejercicio en 6 meses, que     se inicia en mayo y finaliza en octubre, y ello en virtud de lo dispuesto en el artículo 62 de la Ordenanza General de Gestión, Recaudación     e Inspección de los Ingresos Propios de Derecho Público.
+        </p>
+
+        <p>Sin que, a fecha de hoy, conste devolución alguna de los plazos que se han girado en pago de la deuda tributaria.</p> 
+        <p>Lo que se hace constar a los efectos oportunos.</p> 
+
+      
+        <h3 >En Alcobendas a <script type="text/javascript"  src="fecha.js"></script>.</h3>
+
+        <div id="desapareceDiv2"><img id="clic2" img src="clic.jpg" alt=""></div>
+      
+
+           <form id="myform2" method="post" action="#">
+           <ul>
+           <li>
+             <label class="titulo">DATOS DEL TITULAR</label>
+  
+             <div class="controles">
+               <span class="completo">
+                 <input id="name1"  />
+                 <label >Nombre Titular</label>
+               </span>
+ 
+               <span class="completo">
+                 <input id="ind1"  />
+                 <label >DNI / CIF</label>
+               </span>
+ 
+               <span class="completo">
+                 <input id="rid1"  />
+                 <label >Modelo</label>
+               </span>
+
+              <span class="completo">
+                 <input id="fer1"  />
+                 <label >Matrícula</label>
+                 <a id="alta2" href="#" class="a">Clic para Validar</a>
+               </span>
+             </div>
+           </li>
+           </ul>
+           </form>
+    </div><!--contenedor-->
+  </div><!--tab-->
+
+
+
+
+  <input type="radio" name="tabs" id="tabfour">
+  <label class="label" for="tabfour"><img class="icon" src="icons/drawer.png" /></label>
+  <div class="tab">
+    <div id="contenedor3">
+      <a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+        <header id="main-header">
+         <a id="contacto" >
+         <h2 >Recaudación Municipal</h2>
+          <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+          <span class="site-desc">28100 ALCOBENDAS</span></br>
+          <span class="site-desc">Tel.916510658</span></br>
+          <span class="site-desc">Fax.916540206</span>
+         </a> 
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+       </header></br></br></br>
+
+       <table>
+         <tr>
+           <th colspan=2 ><span>COMUNICADO INTERIOR</span></th>
+    
+         </tr>
+         <tr>
+           <td>&nbsp;Fecha: <script type="text/javascript"  src="fecha.js">  </script>
+            </td>
+            <td>&nbsp;Referencia: <spam id="refci2"></spam></td>
+          </tr>
+          <tr>
+            <td>&nbsp;DE: RECAUDACIÓN MUNICIPAL</td>
+            <td>&nbsp;A:<spam id="desci2"></spam></td>
+          </tr>
+        </table><br>
+       <strong>ASUNTO:</strong>    <strong id="asuci2"></strong>
+
+       <div id="menu"></div>
+       
+         <p align=left><b><h3>Atentamente.</h3></b></p>
+
+         <p align=left><b><h3>Recaudación Municipal.</h3></b></p>
+
+
+          <form id="myform3" method="post" action="#">
+           <ul>
+           <li>
+              
+             
+              <span class="completo">
+              <input id="refci"  value=""  /><br>
+              <label>REFERENCIA</label>
+              </span><br>
+ 
+               <span class="completo">
+                 <input id="desci"  /><br>
+                 <label>DESTINATARIO</label><br>
+               </span>
+ 
+               
+              <span class="completo">
+                 <input id="asuci"  /><br>
+                 <label >ASUNTO</label><br>
+                 <textarea type="texto" id="add_p" placeholder="AÑADE TEXTO" required/></textarea> <button id="add_button">Añadir Texto</button><br>
+                 <a id="alta3" href="#" class="a">Clic para Validar</a>
+               </span>
+            
+           </li>
+           </ul>
+           </form>
+
+    </div><!--contenedor-->
+  </div><!--tab-->
+
+
+
+
+
+  <input type="radio" name="tabs" id="tabfive">
+  <label class="label" for="tabfive"><img class="icon" src="icons/user-check.png" /></label>
+  <div class="tab">
+    <div id="contenedor3">
+       <a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+       <h1>Certificado Negativo</h1>
+       <header id="main-header">
+         <a id="contacto" >
+         <h2 >Recaudación Municipal</h2>
+          <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+          <span class="site-desc">28100 ALCOBENDAS</span></br>
+          <span class="site-desc">Tel.916510658</span></br>
+          <span class="site-desc">Fax.916540206</span>
+         </a> 
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+       </header></br></br></br>
+
+       <input type="text" name="valor1"  placeholder="ELIGE FIRMA" style="width: 600px;font-size: 1.05em;text-align:left;" onkeyup="fAgrega();"/><br>
+         <p> 
+          <select name="color1" style="margin-left:-5px;">
+          <option value="ELIGE FIRMA">ELIGE FIRMA</option>
+          <option value="NATALIA LÓPEZ SACRISTÁN">Recaudadora en funciones</option>
+          <option value="ISIDRO VALENZUELA VILLARRUBIA">Tesorero del Ayuntamiento de Alcobendas</option>
+         </select>
+        </p>
+       
+        <p>Hago constar:</p><br>
+
+        <p>Que según los antecedentes contables obrantes en la aplicación de ingresos de esta Recaudación Municipal, <h9  id="negname2"/></h9>, con NIF/CIF - <h9 placeholder="NIF/CIF" id="negdni2" /></h9>, está al corriente en el pago de las liquidaciones/recibos emitidos a su nombre en concepto de impuestos, tasas o precios públicos municipales, gestionados por esta unidad recaudatoria.</p> 
+
+        <p>La presente certificación no se hace extensiva a liquidaciones que se encuentren en periodo voluntario de pago ni a otras obligaciones exigibles pendientes de liquidar, por lo que no producirá los efectos de exención de responsabilidades a los que se refiere el articulo 175.2 de la Ley General Tributaria, para los supuestos de sucesión en la responsabilidad de pago de las deudas tributarias por adquisición de explotaciones o actividades económicas y herencia.</p>
+
+        <h3 >Y para que conste a los efectos oportunos expido la presente certificación, en Alcobendas a <script type="text/javascript"  src="fecha.js">  </script>.</h3><br><br>
+        <script type="text/javascript">
+        $(document).ready(function(){
+        $("select[name=color1]").change(function(){
+            
+            $('input[name=valor1]').val($(this).val());
+            $('input[name=valor2]').val("FDO. "+$(this).val());
+    
+               });
+            });
+         </script>
+      
+
+           <form id="myform4" method="post" action="#">
+           <ul>
+           <li>
+             <label class="titulo">DATOS DEL TITULAR</label>
+  
+             <div class="controles">
+               <span class="completo">
+                 <input id="negname"  />
+                 <label >Nombre Titular</label>
+               </span>
+ 
+               <span class="completo">
+                 <input id="negdni"  />
+                 <label >DNI / CIF</label>
+               </span>
+ 
+               
+                 <a id="alta4" href="#" class="a">Clic para Validar</a>
+               
+             </div>
+           </li>
+           </ul>
+           </form>
+    </div><!--contenedor-->
+  </div><!--tab-->
+
+
+
+
+
+  <input type="radio" name="tabs" id="tabsix">
+  <label class="label" for="tabsix"><img class="icon" src="icons/unlocked.png" /></label>
+  <div class="tab">
+    <div id="contenedor1">
+       <a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+       <h1>Cancelación de Precinto</h1>
+       <header id="main-header">
+         <a id="contacto" >
+         <h2 >Recaudación Municipal</h2>
+          <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+          <span class="site-desc">28100 ALCOBENDAS</span></br>
+          <span class="site-desc">Tel.916510658</span></br>
+          <span class="site-desc">Fax.916540206</span>
+         </a> 
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+       </header></br></br></br>
+       
+       <table>
+       <tr>
+            <td style="width:23%;">Expediente:<input onclick="blinker()" type="text" placeholder="COMPLETA"></td>
+            <td style="width:53%;">Deudor: <input  type="text" style="width:100%;" placeholder="COMPLETA"></td>
+            <td style="width:23%;">DNI/CIF:<input  type="text" style="width:100%;" placeholder="COMPLETA"></td>
+       </tr>
+        </table>
+       <h2>MANDAMIENTO DE CANCELACION DE PRECINTO DE VEHICULOS</h2>  
+       <h2>A la Jefatura Provincial de Tráfico de Madrid.</h2>
+
+
+       <p>Isidro Valenzuela Villarrubia, Tesorero del Ayuntamiento de Alcobendas,</br>
+       HAGO SABER: Que con fecha de hoy he dictado la siguiente resolución en el expediente que en ella misma se expresa:</p>
+       <p id="cur"><b>“DILIGENCIA.-</b>  En el expediente administrativo de apremio seguido en esta Recaudación Municipal a nombre de <b id="nombre3">       </b>, que dio lugar a la Diligencia de embargo de vehículos de fecha <b id="date2"></b>, se ha procedido a satisfacer el importe perseguido        por lo que, de conformidad con lo establecido en el artículo 172.4 de la Ley 58/2003, General Tributaria, <b>PROCEDO A ALZAR EL EMBARGO Y        PRECINTO</b> de los referidos bienes, que responden al siguiente detalle:</p>
+       <table>
+       <tr>
+            <td style="width:20%;">Matrícula:<input  type="text" style="width:100%;" placeholder="COMPLETA"></td>
+            <td style="width:20%;">Marca: <input  type="text" placeholder="COMPLETA"></td>
+            <td style="width:20%;">Modelo: <input  type="text" placeholder="COMPLETA"></td>
+            <td style="width:40%;">Tipo de vehículo: <input  type="text" style="width:100%;" placeholder="COMPLETA"></td>
+       </tr>
+       </table>
+
+       <div id="cur">
+       <p>Notifíquese al deudor así como al Registro de Bienes Muebles, Sección de Automóviles y otros Vehículos de Motor para la cancelación del        embargo y, en su caso, a la Policía Local que corresponda para levantamiento del precinto y salida del vehículo antes detallado, todo ello en        cumplimiento de lo dispuesto en los artículos 169.5 de la Ley 58/2003, General Tributaria, y 76.4 del Reglamento General de Recaudación (R.D.        939/2OOS, de 29 de julio)."</p>
+       </div>
+  </div><!--contenedor-->
+  </div><!--tab-->
+
+
+
+
+
+  <input type="radio" name="tabs" id="tabseven">
+  <label class="label" for="tabseven"><img class="icon" src="icons/coin-euro.png" /></label>
+  <div class="tab">
+    <div id="contenedor4">
+       <a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+       <h1>Embargo de Recaudación Diaria</h1>
+       <header id="main-header">
+         <a id="contacto" >
+         <h2 >Recaudación Municipal</h2>
+          <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+          <span class="site-desc">28100 ALCOBENDAS</span></br>
+          <span class="site-desc">Tel.916510658</span></br>
+          <span class="site-desc">Fax.916540206</span>
+         </a> 
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+       </header></br></br>
+       <a id="alta5" href="#" class="a">Clic para Validar</a>
+      <table>
+        <tr>
+            <td style="width:33%;">REF.:<h9 id="rediref2"></h9><input type="text" id="rediref"></td>
+            <td style="width:33%;">EXP.:<h9 id="rediexp2"></h9><input type="text" id="rediexp"></td>
+            <td style="width:33%;">CIF.:<h9 id="redinif2"></h9><input type="text" id="redinif"></td>
+        </tr>
+       </table>
+       <table>
+        <tr>
+            <td>Deudor: <h9 id="rediname3"></h9><input type="text" id="rediname"></td>
+            
+        </tr>
+         <tr>
+            <td>Dirección:<h9 id="redidir3"></h9><input type="text" id="redidir"></td>
+         </tr>
+       </table>
+
+
+       
+      <p>HAGO SABER: Que con fecha de hoy he dictado la siguiente Diligencia en el expediente que en ella misma se
+        expresa:</p>
+
+      <p id="cur">"<h9>DILIGENCIA.-</h9> Tramitándose en esta Recaudación Municipal de mi cargo expediente administrativo de apremio contra el deudor <h9 id="rediname2"></h9> con domicilio en <h9 id="redidir2"></h9>, por débitos contraídos ante este Ayuntamiento por los conceptos de <h9 id="redicon2"><input type="text" id="redicon"></h9>, descubiertos que en la actualidad ascienden a <h9 id="redides2"><input id="redides" type="text"  placeholder="COMPLETAR"/></h9> - por principal <h9 id="rediprin2"><input id="rediprin" type="text"  placeholder="COMPLETAR"/></h9>, recargo de apremio <h9 id="rediapr2"><input id="rediapr" type="text"  placeholder="COMPLETAR"/></h9> y costas e intereses devengados y presupuestados del procedimiento <h9 id="redipro2"><input id="redipro" type="text" placeholder="COMPLETAR"/></h9>-, <h9><u>DECLARO EMBARGADA</u></h9> por el total importe de la deuda anteriormente señalado, la recaudación diaría que tenga en el local, en el cual el deudor ejerce su actividad</p> 
+
+      <p id="cur">Dése conocimiento de la presente al deudor y requiérasele para que todos los viernes de cada semana, hasta la total cancelación de los débitos, proceda a ingresar en la cuenta del <b>Banco Santander</b> de la que es titular este Ayuntamiento de Alcobendas, <b>IBAN ES73-0049-5176-16-2416840867</b>, indicando sus datos personales, así como el número y titular del expediente, la recaudación que durante la semana en cuestión haya tenido lugar. Adviértasele respecto a la responsabilidad solidaria de la deuda que, en tal caso, asumirían las personas que incumpliesen la presente orden de embargo o colaborasen o consintiesen en el levantamiento de bienes embargables de conformidad con lo dispuesto en el artículo 42.2 de la Ley 58/2003, General Tributaria, que más abajo se reproduce.” </p>
+
+      <p>Lo que notifico para su conocimiento y efectos requiriéndole para que proceda conforme arriba se expresa y con las advertencias que igualmente constan.</p>
+
+      <p>El referido embargo será levantado una vez que se haya ingresado el importe total de la deuda. A tal fin se acompaña carta de pago en la que se indica el último día para su ingreso y las Entidades  de Crédito donde el mismo puede efectuarse.</p>
+
+      <p>Contra el presente acto cabe recurso de reposición ante el órgano que lo dictó en el plazo de un mes a contar desde el día siguiente al de su notificación.</p>
+      <br>
+      <div id="art42">Artículo 42.2 LGT.- “También serán responsables solidarios del pago de la deuda tributaria pendiente y, en su caso, del de las sanciones tributarias, incluidos el recargo y el interés de demora del período ejecutivo, cuando procedan, hasta el importe del valor de los bienes o derechos que se hubieran podido embargar o enajenar por la Administración tributaria, las siguientes personas o entidades: a) Las que sean causantes o colaboren en la ocultación o transmisión de bienes o derechos del obligado al pago con la finalidad de impedir la actuación de la Administración tributaria. b) Las que, por culpa o negligencia, incumplan las órdenes de embargo. c) Las que, con conocimiento del embargo, la medida cautelar o la constitución de la garantía, colaboren o consientan en el levantamiento de los bienes o derechos embargados, o de aquellos bienes o derechos sobre los que se hubiera constituido la medida cautelar o la garantía. d) Las personas o entidades depositarias de los bienes del deudor que, una vez recibida la notificación del embargo, colaboren o consientan en el levantamiento de aquéllos.”
+      </div>
+         <!--
+           <form id="myform5" method="post" action="#">
+           <ul>
+           <li>
+             <label class="titulo">DATOS DEL DEUDOR</label>
+  
+             <div class="controles">
+               <span class="completo">
+                 <input id="rediref"  />
+                 <label >REFERENCIA</label>
+               </span>
+ 
+               <span class="completo">
+                 <input id="rediexp"  />
+                 <label >EXPEDIENTE</label>
+               </span>
+ 
+               <span class="completo">
+                 <input id="rediname"  />
+                 <label >DEUDOR</label>
+               </span>
+
+               <span class="completo">
+                 <input id="redinif"  />
+                 <label >DNI/CIF</label>
+               </span>
+
+               <span class="completo">
+                 <input id="redidir"  />
+                 <label >Dirección</label>
+               </span>
+
+              <span class="completo">
+                 <input id="redicon"  />
+                 <label >En concepto de</label>
+                 <a id="alta5" href="#">Clic para Validar</a>
+               </span>
+             </div>
+           </li>
+           </ul>
+           </form>-->
+    </div><!--contenedor-->
+  </div><!--tab-->
+
+
+
+
+
+  <input type="radio" name="tabs" id="tabeight">
+  <label class="label" for="tabeight"><img class="icon" src="icons/file-word.png" /></label>
+  <div class="tab">
+    <div id="contenedor5">
+       <a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+       <h1>Responsable Solidario</h1>
+       <header id="main-header">
+         <a id="contacto" >
+         <h2 >Recaudación Municipal</h2>
+          <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+          <span class="site-desc">28100 ALCOBENDAS</span></br>
+          <span class="site-desc">Tel.916510658</span></br>
+          <span class="site-desc">Fax.916540206</span>
+         </a> 
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+       </header></br></br></br>
+       
+      <table>
+        <tr>
+            <td style="width:33%;">EXP.:<input  type="text" style="width:100%;"></td>
+            <td style="width:33%;">DNI/CIF:<input  type="text" style="width:100%;"></td>
+            <td style="width:33%;">Importe Principal:<input  type="text" style="width:100%;"></td>
+        </tr>
+       </table>
+       <table>
+        <tr>
+            <td>Responsable Solidario:<input  type="text" style="width:100%;"></td>
+            
+        </tr>
+        <tr>
+            <td>Concepto/s: Derivación responsabilidad de fecha &nbsp;<input type="text" placeholder="FECHA" style="width:120px;"/>&nbsp;  según artículo 42.2, letra b) de la Ley 58/2003 General Tributaria.</td>
+            
+        </tr>
+       </table><br>
+       <h3>Isidro Valenzuela Villarrubia, Tesorero del Ayuntamiento de Alcobendas,</h3>
+        <p>HAGO CONSTAR: Que el deudor a que se refieren los anteriores datos ha dejado transcurrir el plazo reglamentario para el pago en período voluntario de la deuda expresada, según se le tenía requerido al darle traslado de la resolución por la que se le declaraba responsable de la deuda, habiendo finalizado el plazo mencionado el día <input type="text" placeholder="FECHA" style="width:100px;"/>.</p>
+
+        <p>Por lo que a la vista de lo anterior, procedo a dictar la siguiente:</p>
+
+        <p id="cur">“PROVIDENCIA.- Al haber finalizado, en la fecha que se indica, el plazo de ingreso en período voluntario, sin que los obligados al pago citados hayan satisfecho la deuda por los conceptos, importes y períodos que se detallan, se inició al día siguiente el período ejecutivo y el devengo de intereses de demora. Por ello, haciendo uso de la facultad que al efecto me confiere el artículo 5.3 (c) del Real Decreto 1174/87, de 18 de septiembre, y el artículo 70.3 del Reglamento General de Recaudación, y de conformidad con lo dispuesto en el artículo 167 de la Ley General Tributaria (LGT), dicto la presente PROVIDENCIA DE APREMIO, como título que lleva aparejada la ejecución, liquidando los recargos  a los que se refiere el artículo 28 de la LGT (recargo ejecutivo del 5% si la totalidad de la deuda se ingresa antes de la notificación de la providencia de apremio, recargo de apremio reducido del 10% cuando se ingrese la totalidad de la deuda y el propio recargo antes de la finalización del plazo previsto en el artículo 62.5 de la LGT para las deudas apremiadas, y recargo de apremio ordinario de 20% cuando no concurran las anteriores circunstancias), con requerimiento expreso para que efectúen el pago de la deuda, incluido el recargo de apremio reducido del 10%, en el plazo señalado en el artículo 62.5 de la LGT. De no efectuar el ingreso del importe total de la deuda pendiente en dicho plazo, se procederá al embargo de sus bienes y derechos o a la ejecución de las garantías existentes para su cobro con inclusión del recargo de apremio ordinario del 20% y de las costas e intereses de demora que se devenguen hasta la fecha de cancelación de la deuda.”</p>
+   </div><!--contenedor-->
+  </div><!--tab-->
+
+  <input type="radio" name="tabs" id="tabnine">
+  <label class="label" for="tabnine"><img class="icon" src="icons/file-empty.png" /></label>
+  <div class="tab">
+    <h1>Notificación Electrónica Vacía</h1>
+    <img src="building.gif" style="background-attachment: fixed;background-size: cover;" />
+  </div>
+
+</div>
+<footer>
+ <h3>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral </h3>
+</footer> 
+ 
+</body>
+ 
+</html>
