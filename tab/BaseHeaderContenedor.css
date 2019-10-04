@@ -340,15 +340,7 @@ color: gray;
 h9{
   font-weight: bold;
 }
-p,h1{
-          -webkit-transform: scale(0.70);  /* Saf3.1+, Chrome */
-             -moz-transform: scale(0.70);  /* FF3.5+ */
-              -ms-transform: scale(0.70);  /* IE9 */
-               -o-transform: scale(0.70);  /* Opera 10.5+ */
-                  transform: scale(0.70);
-                 
-       
-    }
+p{font-size: 20px;}
 
 
   @page { 
