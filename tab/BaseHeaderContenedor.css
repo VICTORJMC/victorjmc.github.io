@@ -2,7 +2,8 @@
 body {
   font-size: 12px;
   font-family: Arial, sans-serif;
-  
+  textarea{
+  font-size: 25px;}
 }
 h1{
   color:white;
