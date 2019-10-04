@@ -381,7 +381,9 @@ content: "\e9b8";
 footer .rrss a:nth-child(11):before{ 
 content: "\ea41";
 }
-
+footer .rrss a:nth-child(12):before{ 
+  content: "\e920";
+}
 
 .bajar img{
 -webkit-filter: invert(1);
