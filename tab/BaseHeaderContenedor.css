@@ -96,12 +96,12 @@ h9{text-align: left;}
   }
 
 /* El contenedor define la zona principal de contenido */
-/*#contenedor1,#contenedor2,#contenedor3,#contenedor4,#contenedor5 {
+#contenedor1,#contenedor2,#contenedor3,#contenedor4,#contenedor5 {
   
   margin: 1em auto;
   padding: 1em;
   width: 90%;
-}*/
+}
 
 /* El formulario está definido como una lista */
 ul {
@@ -340,7 +340,7 @@ color: gray;
 h9{
   font-weight: bold;
 }
-
+p,h1{font-size: 10px;}
 
 
   @page { 
