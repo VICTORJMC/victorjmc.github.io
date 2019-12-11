@@ -1,0 +1,374 @@
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  height: 100vh;
+}
+html body {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  width: 45rem;
+  padding: 1rem;
+  font-family: 'Permanent Marker', cursive;
+}
+html body .break {
+  width: 100%;
+}
+html body .wincondition .letter {
+  display: none;
+}
+html body .hangman .lose {
+  display: none;
+}
+html body .hangman .lose div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+html body .hangman .lose div .bottom {
+  font-size: 5vmin;
+}
+html body .win, html body .lose {
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 10vmin;
+}
+html body .win.win, html body .lose.win {
+  color: #2ECC71;
+}
+html body .win.lose, html body .lose.lose {
+  color: #D8334A;
+}
+html body input {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #F5F7FA;
+  border-radius: .5rem;
+  opacity: .75;
+  width: 3rem;
+  height: 3rem;
+  padding: 0 .5rem;
+  margin: .2rem;
+  -webkit-transform: scale(1) rotate(-4deg);
+          transform: scale(1) rotate(-4deg);
+  transition: .25s -.1s;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Permanent Marker', cursive;
+  line-height: 3rem;
+}
+html body input:not(:checked) {
+  cursor: pointer;
+}
+html body input:not(:checked):hover {
+  -webkit-transform: scale(1.25) rotate(0deg);
+          transform: scale(1.25) rotate(0deg);
+  opacity: 1;
+}
+html body input:before {
+  content: attr(letter);
+}
+html body input:checked {
+  color: #D8334A;
+  background: transparent;
+  opacity: 1;
+}
+html body input[correct]:checked {
+  background: #2ECC71;
+  color: #F5F7FA;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+html body input[letter="A"]:checked ~ .hint .letter[value="A"] {
+  border-bottom: transparent;
+}
+html body input[letter="A"]:checked ~ .hint .letter[value="A"]:before {
+  opacity: 1;
+}
+html body input[letter="A"]:checked ~ .wincondition .letter[value="A"] {
+  display: block;
+}
+html body input[letter="B"]:checked ~ .hint .letter[value="B"] {
+  border-bottom: transparent;
+}
+html body input[letter="B"]:checked ~ .hint .letter[value="B"]:before {
+  opacity: 1;
+}
+html body input[letter="B"]:checked ~ .wincondition .letter[value="B"] {
+  display: block;
+}
+html body input[letter="C"]:checked ~ .hint .letter[value="C"] {
+  border-bottom: transparent;
+}
+html body input[letter="C"]:checked ~ .hint .letter[value="C"]:before {
+  opacity: 1;
+}
+html body input[letter="C"]:checked ~ .wincondition .letter[value="C"] {
+  display: block;
+}
+html body input[letter="D"]:checked ~ .hint .letter[value="D"] {
+  border-bottom: transparent;
+}
+html body input[letter="D"]:checked ~ .hint .letter[value="D"]:before {
+  opacity: 1;
+}
+html body input[letter="D"]:checked ~ .wincondition .letter[value="D"] {
+  display: block;
+}
+html body input[letter="E"]:checked ~ .hint .letter[value="E"] {
+  border-bottom: transparent;
+}
+html body input[letter="E"]:checked ~ .hint .letter[value="E"]:before {
+  opacity: 1;
+}
+html body input[letter="E"]:checked ~ .wincondition .letter[value="E"] {
+  display: block;
+}
+html body input[letter="F"]:checked ~ .hint .letter[value="F"] {
+  border-bottom: transparent;
+}
+html body input[letter="F"]:checked ~ .hint .letter[value="F"]:before {
+  opacity: 1;
+}
+html body input[letter="F"]:checked ~ .wincondition .letter[value="F"] {
+  display: block;
+}
+html body input[letter="G"]:checked ~ .hint .letter[value="G"] {
+  border-bottom: transparent;
+}
+html body input[letter="G"]:checked ~ .hint .letter[value="G"]:before {
+  opacity: 1;
+}
+html body input[letter="G"]:checked ~ .wincondition .letter[value="G"] {
+  display: block;
+}
+html body input[letter="H"]:checked ~ .hint .letter[value="H"] {
+  border-bottom: transparent;
+}
+html body input[letter="H"]:checked ~ .hint .letter[value="H"]:before {
+  opacity: 1;
+}
+html body input[letter="H"]:checked ~ .wincondition .letter[value="H"] {
+  display: block;
+}
+html body input[letter="I"]:checked ~ .hint .letter[value="I"] {
+  border-bottom: transparent;
+}
+html body input[letter="I"]:checked ~ .hint .letter[value="I"]:before {
+  opacity: 1;
+}
+html body input[letter="I"]:checked ~ .wincondition .letter[value="I"] {
+  display: block;
+}
+html body input[letter="J"]:checked ~ .hint .letter[value="J"] {
+  border-bottom: transparent;
+}
+html body input[letter="J"]:checked ~ .hint .letter[value="J"]:before {
+  opacity: 1;
+}
+html body input[letter="J"]:checked ~ .wincondition .letter[value="J"] {
+  display: block;
+}
+html body input[letter="K"]:checked ~ .hint .letter[value="K"] {
+  border-bottom: transparent;
+}
+html body input[letter="K"]:checked ~ .hint .letter[value="K"]:before {
+  opacity: 1;
+}
+html body input[letter="K"]:checked ~ .wincondition .letter[value="K"] {
+  display: block;
+}
+html body input[letter="L"]:checked ~ .hint .letter[value="L"] {
+  border-bottom: transparent;
+}
+html body input[letter="L"]:checked ~ .hint .letter[value="L"]:before {
+  opacity: 1;
+}
+html body input[letter="L"]:checked ~ .wincondition .letter[value="L"] {
+  display: block;
+}
+html body input[letter="M"]:checked ~ .hint .letter[value="M"] {
+  border-bottom: transparent;
+}
+html body input[letter="M"]:checked ~ .hint .letter[value="M"]:before {
+  opacity: 1;
+}
+html body input[letter="M"]:checked ~ .wincondition .letter[value="M"] {
+  display: block;
+}
+html body input[letter="N"]:checked ~ .hint .letter[value="N"] {
+  border-bottom: transparent;
+}
+html body input[letter="N"]:checked ~ .hint .letter[value="N"]:before {
+  opacity: 1;
+}
+html body input[letter="N"]:checked ~ .wincondition .letter[value="N"] {
+  display: block;
+}
+html body input[letter="O"]:checked ~ .hint .letter[value="O"] {
+  border-bottom: transparent;
+}
+html body input[letter="O"]:checked ~ .hint .letter[value="O"]:before {
+  opacity: 1;
+}
+html body input[letter="O"]:checked ~ .wincondition .letter[value="O"] {
+  display: block;
+}
+html body input[letter="P"]:checked ~ .hint .letter[value="P"] {
+  border-bottom: transparent;
+}
+html body input[letter="P"]:checked ~ .hint .letter[value="P"]:before {
+  opacity: 1;
+}
+html body input[letter="P"]:checked ~ .wincondition .letter[value="P"] {
+  display: block;
+}
+html body input[letter="Q"]:checked ~ .hint .letter[value="Q"] {
+  border-bottom: transparent;
+}
+html body input[letter="Q"]:checked ~ .hint .letter[value="Q"]:before {
+  opacity: 1;
+}
+html body input[letter="Q"]:checked ~ .wincondition .letter[value="Q"] {
+  display: block;
+}
+html body input[letter="R"]:checked ~ .hint .letter[value="R"] {
+  border-bottom: transparent;
+}
+html body input[letter="R"]:checked ~ .hint .letter[value="R"]:before {
+  opacity: 1;
+}
+html body input[letter="R"]:checked ~ .wincondition .letter[value="R"] {
+  display: block;
+}
+html body input[letter="S"]:checked ~ .hint .letter[value="S"] {
+  border-bottom: transparent;
+}
+html body input[letter="S"]:checked ~ .hint .letter[value="S"]:before {
+  opacity: 1;
+}
+html body input[letter="S"]:checked ~ .wincondition .letter[value="S"] {
+  display: block;
+}
+html body input[letter="T"]:checked ~ .hint .letter[value="T"] {
+  border-bottom: transparent;
+}
+html body input[letter="T"]:checked ~ .hint .letter[value="T"]:before {
+  opacity: 1;
+}
+html body input[letter="T"]:checked ~ .wincondition .letter[value="T"] {
+  display: block;
+}
+html body input[letter="U"]:checked ~ .hint .letter[value="U"] {
+  border-bottom: transparent;
+}
+html body input[letter="U"]:checked ~ .hint .letter[value="U"]:before {
+  opacity: 1;
+}
+html body input[letter="U"]:checked ~ .wincondition .letter[value="U"] {
+  display: block;
+}
+html body input[letter="V"]:checked ~ .hint .letter[value="V"] {
+  border-bottom: transparent;
+}
+html body input[letter="V"]:checked ~ .hint .letter[value="V"]:before {
+  opacity: 1;
+}
+html body input[letter="V"]:checked ~ .wincondition .letter[value="V"] {
+  display: block;
+}
+html body input[letter="W"]:checked ~ .hint .letter[value="W"] {
+  border-bottom: transparent;
+}
+html body input[letter="W"]:checked ~ .hint .letter[value="W"]:before {
+  opacity: 1;
+}
+html body input[letter="W"]:checked ~ .wincondition .letter[value="W"] {
+  display: block;
+}
+html body input[letter="X"]:checked ~ .hint .letter[value="X"] {
+  border-bottom: transparent;
+}
+html body input[letter="X"]:checked ~ .hint .letter[value="X"]:before {
+  opacity: 1;
+}
+html body input[letter="X"]:checked ~ .wincondition .letter[value="X"] {
+  display: block;
+}
+html body input[letter="Y"]:checked ~ .hint .letter[value="Y"] {
+  border-bottom: transparent;
+}
+html body input[letter="Y"]:checked ~ .hint .letter[value="Y"]:before {
+  opacity: 1;
+}
+html body input[letter="Y"]:checked ~ .wincondition .letter[value="Y"] {
+  display: block;
+}
+html body input[letter="Z"]:checked ~ .hint .letter[value="Z"] {
+  border-bottom: transparent;
+}
+html body input[letter="Z"]:checked ~ .hint .letter[value="Z"]:before {
+  opacity: 1;
+}
+html body input[letter="Z"]:checked ~ .wincondition .letter[value="Z"] {
+  display: block;
+}
+html body svg {
+  width: 30rem;
+}
+html body svg * {
+  fill: none;
+  stroke: #EEEEEE;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  transition: .25s;
+}
+html body input:not([correct]):checked ~ .hangman .stage1,
+html body input:not([correct]):checked ~ input:not([correct]):checked ~ .hangman .stage2,
+html body input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ .hangman .stage3,
+html body input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ .hangman .stage4,
+html body input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ .hangman .stage5,
+html body input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ .hangman .stage6,
+html body input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ .hangman .stage7,
+html body input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ .hangman .stage8,
+html body input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ .hangman .stage9,
+html body input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ input:not([correct]):checked ~ .hangman .stage10 {
+  stroke: black;
+  display: grid;
+}
+html body .hint {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+html body .hint .letter {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.25rem;
+  border-bottom: 0.125rem solid black;
+  font-size: 3rem;
+  text-align: center;
+}
+html body .hint .letter, html body .hint .letter:before {
+  transition: .25s;
+}
+html body .hint .letter:before {
+  opacity: 0;
+  content: attr(value);
+}
