@@ -22,14 +22,14 @@ hr{
 }
 #taskInput {
  
-    font-size:38px;
+    font-size:48px;
     font-family:'Josefin Sans', sans-serif;
-    height:50px;
+    height:80px;
     width:100%;
-    border-radius:100px;
+    
     
     border:0;
-    color:white;
+    color:black;
     display:block;
     padding-left:15px;
    -webkit-transition: all 0.30s ease-in-out;
