@@ -22,7 +22,7 @@ hr{
 }
 #taskInput {
  
-    font-size:28px;
+    font-size:38px;
     font-family:'Josefin Sans', sans-serif;
     height:50px;
     width:100%;
@@ -86,7 +86,7 @@ a:hover {
 }
 
 #container ul li {
-    font-size:58px;
+    font-size:50px;
     margin-left: 20px;
     margin-bottom: 30px;
     color: white;
