@@ -86,10 +86,10 @@ a:hover {
 }
 
 #container ul li {
-    font-size:28px;
+    font-size:58px;
     margin-left: 20px;
     margin-bottom: 30px;
-    color: #101010;
+    color: white;
     height:48px;
     width:70%;
     line-height:48px;
@@ -97,7 +97,7 @@ a:hover {
     overflow:hidden;
     white-space:nowrap;
     text-overflow:ellipsis;
-    background:    white;
+    
     
  
 }
