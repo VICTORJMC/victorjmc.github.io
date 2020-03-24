@@ -15,6 +15,7 @@ button.onclick = function() {
      document.body.style.backgroundRepeat = "no-repeat";
      document.getElementById("demo").style.fontSize = "68pt";
      document.getElementById("demo").style.color = "red";
+     document.getElementById("hide").style.display = "block";
  
  }
  else{
