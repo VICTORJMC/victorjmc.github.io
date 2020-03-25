@@ -18,7 +18,8 @@ button.onclick = function() {
      document.getElementById("myText").style.color = "red";
      document.getElementById("demo").style.color = "red";
      document.getElementById("hide").style.display = "block";
-     document.getElementById("none").style.display = "none";
+     document.getElementById("img").style.display = "none";
+     
  }
  else{
      if(numeroUsuario < numeroCPU)
