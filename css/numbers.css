@@ -3,40 +3,31 @@ body {
   padding: 0;
   font-family: "Lato", sans-serif;
   font-size: 20pt;
-  font-weight: normal;
-  background: lightblue; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(
-    -90deg,
-    lightblue,
-    black
-  ); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(
-    -90deg,
-    lightblue,
-    black
-  ); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(
-    -90deg,
-    lightblue,
-    black
-  ); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-90deg, lightblue, black); /* Standard syntax */
+  background:  url(https://lh3.googleusercontent.com/proxy/cmM-AHfVWPwGGkh_V1Ljo2FEqdwx_RzVEvhU2bguAWZ9BI_BkVGKetBA08RHEN35DSuBeaPeWRQdOcM4g_xjMJlLnrJZXyyk0NABiIE) no-repeat center fixed;
+  background-size: 40%;
+  
 }
+
 
 .main {
   margin: 100px auto;
   text-align: center;
-}
+ }
 
 button, input {
-  padding: 20px;
+  
   background: transparent;
   text-shadow: 1px 1px 1px #202020;
   font-family: "Lato", sans-serif;
-  font-size: 38pt;
-  border: 1px solid lightblue;
-  color: lightblue;
+  font-size: 58pt;
+  border: 3px solid black;
+  color: black;
   text-align:center;
+  
+}
+
+#clickme{
+  margin-top:600px;
 }
 
 @-webkit-keyframes neon1 {
