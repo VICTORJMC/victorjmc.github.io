@@ -13,12 +13,14 @@ button.onclick = function() {
      document.getElementById("demo").innerHTML = 'ACERTASTE';
      document.body.style.backgroundImage = "url('img/simpson.gif')";
      document.body.style.backgroundRepeat = "no-repeat";
+     document.body.style.backgroundSize = "110%";
      document.getElementById("demo").style.fontSize = "68pt";
      document.getElementById("myText").style.fontSize = "68pt";
      document.getElementById("myText").style.color = "red";
      document.getElementById("demo").style.color = "red";
      document.getElementById("hide").style.display = "block";
      document.getElementById("img").style.display = "none";
+     document.getElementById("none").style.display = "none";
      
  }
  else{
