@@ -42,7 +42,7 @@ button, input {
 
 
 #hide {
-	color: blue;
+	color: #FF1177;
     
     font-size: 2.5em;
      -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
