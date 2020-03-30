@@ -22,9 +22,9 @@ button.onclick = function() {
  }
  else{
      if(numeroUsuario < numeroCPU)
-     document.getElementById("demo").innerHTML = 'EL Nº ES MAYOR';
+     document.getElementById("demo").innerHTML = 'EL Nº ES MAYOR - PON OTRO NÚMERO';
      else{
-     document.getElementById("demo").innerHTML = 'EL Nº ES MENOR';
+     document.getElementById("demo").innerHTML = 'EL Nº ES MENOR - PON OTRO NÚMERO';
      }
  }
  
