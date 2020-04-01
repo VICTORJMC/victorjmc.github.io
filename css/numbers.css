@@ -56,3 +56,15 @@ button, input {
    -webkit-animation: neon4 1s ease-in-out infinite alternate;
   animation: neon4 1s ease-in-out infinite alternate;
 }
+
+@media screen and (min-width: 601px) {
+  body {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 30px;
+  }
+}
