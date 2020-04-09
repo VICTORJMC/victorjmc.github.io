@@ -15,6 +15,7 @@ button.onclick = function() {
      document.getElementById("demo").style.fontSize = "68pt";
      document.getElementById("myText").style.fontSize = "68pt";
      document.getElementById("myText").style.color = "red";
+     document.getElementById("myText").style.borderStyle = "none";
      document.getElementById("demo").style.color = "red";
      document.getElementById("hide").style.display = "block";
      document.getElementById("none").style.display = "none";
