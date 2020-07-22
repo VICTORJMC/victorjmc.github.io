@@ -1,208 +1,232 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  min-width: 250px;
+}
 
-<link rel="stylesheet"  href="css\icomoon.css">
-<link rel="stylesheet"  href="css\desing.css">
-<link rel="stylesheet"  href="css\normalize.css">
-<link rel="stylesheet"  href="css\aldo.css">
-<link rel="stylesheet"  href="css\task.css">
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+   font-family: 'Josefin Sans', sans-serif;
+}
 
-<link rel="stylesheet" href="style.css">
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+  border :5px solid;
+}
 
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
 
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
-<script src="js/modernizr-custom.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
 
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
 
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: black;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  border :5px solid;
+  border-color:#353535;
+}
+
+h1 {
+font-size: 46px;
+}
+p {
+font-size: 10px;
+float: right;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input{
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: black;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+  color:white;
+}
+</style>
 </head>
-
-
-
 <body>
 
-<header>
-  <ul>
-       <li><a href="index.html">Inicio</a></li>
-       <li><a href="index.html">Vuelos</a></li>
-       <li><a href="index.html">Tiempo</a></li>
-       <li id="logo"><a href="#"><img src="img/dron.jpg" style="max-height: 200px; max-width: 200px;" /></a></li>
-       <li><a href="index.html">Biblio</a></li>
-       <li><a href="index.html">Agenda</a></li>
-       <li><a href="recetas.html">Recetas</a></li>
-  </ul>
-</header>
-
-<section id="global">
-     <div id="container">
-             <h1>TAREAS PENDIENTES</h1>
-             <section id="taskIOSection">
-                 <div id="formContainer">
-                     <form id="taskEntryForm">
-                         <input id="taskInput" placeholder="Escribe y añade la lista" />
-                     </form>
-                 </div>
-                 <br>
-                 <hr>
-                 <br>
-                 <ul id="taskList"></ul>
-             </section>
-    
-           
-
-             <script src='listaCompra_jquery.min.js'></script>
-      </div>
+<div id="myDIV" class="header">
   
+  <h1 style="margin:5px">Lista de Viaje</h1>
+  <input type="text" id="myInput" placeholder="Artículo...">
+  <span onclick="newElement()" class="addBtn">AÑADE</span>
+  <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral</p> 
+</div>
 
-    <script>
-    $(document).ready(function () {
-    var i = 0;
-    for (i = 0; i < localStorage.length; i++) {
-        var taskID = "task-" + i;
-        $('#taskList').append("<li id='" + taskID + "'>" + localStorage.getItem(taskID) + "</li>");
-    }
-    $('#clear').dblclick(function () {
-        localStorage.clear();
-    });
-    $('#taskEntryForm').submit(function () {
-        if ($('#taskInput').val() !== "") {
-            var taskID = "task-" + i;
-            var taskMessage = $('#taskInput').val();
-            localStorage.setItem(taskID, taskMessage);
-            $('#taskList').append("<li class='task' id='" + taskID + "'>" + taskMessage + "</li>");
-            var task = $('#' + taskID);
-            task.css('display', 'none');
-            task.slideDown();
-            $('#taskInput').val("");
-            i++;
-        }
-        return false;
-    
+
+<ul id="myUL">
+ 
+  <li>MOVIL</li>
+  <li>CARGADOR MOVIL</li>
+  <li>DRON</li>
+  <li>LLAVES</li>
+  <li>PORTATIL CON USB Y USB WIFI</li>
+  <li>NECESER</li>
+  <li>CHANCLAS</li>
+  <li>CALZADO</li>
+ 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
-
-    $('#taskList').on("click", "li", function (event) {
-        self = $(this);
-        taskID = self.attr('id');
-        localStorage.removeItem(taskID);
-        self.slideUp('slow', function () {
-            self.remove();
-        });
-
-    });
-
-
-});
-    </script>
+</ul>
 
 <script>
-    var itemsExist = true;
-    var indexNum = 0;
-    var unorderedList = document.getElementById('taskList');
-    var alphabet= new Array("DRON", "DESODORANTE",
-                           "LLAVE","PORTAIL","USB-WIFI","cargador","CHAMPU","portabici","sudadera");
-    var myElement;
 
-    function write_letters(){
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
 
-        for (i = 0; i < alphabet.length; i++ ) {
-            // Create the <LI> element
-            myElement = document.createElement("LI");
-            // Add the letter between the <LI> tags
-            myElement.innerHTML = alphabet[indexNum++];
-            // Append the <LI> to the bottom of the <UL> element
-            unorderedList.appendChild(myElement);
-        }
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("NO HAS ESCRITO NADA!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
     }
-
-    if (itemsExist){
-        write_letters();
-    } else {
-        document.write("error!");
-    }
+  }
+}
 </script>
-
-
-</section><!--id="global"-->
-
-
-
-<footer>
-       
-        <div class="rrss">
-           <a target="_blank" href="https://www.google.com/drive/"></a>
-           <a target="_blank" href="https://www.FACEBOOK.com"></a>
-           <a target="_blank" href="https://github.com/VICTORJMC"></a>
-           <a target="_blank" href="https://www.blogger.com/blogger.g?blogID=4156816467598907901#allposts"></a>
-           <a target="_blank" href="https://gastronomiaycia.republica.com/2016/08/18/50-recetas-de-cocina-casera-faciles-ricas-y-sanas/">
-           <a target="_blank" href="https://es.khanacademy.org/computing/computer-programming/html-js-jquery"></a>
-           <a target="_blank" href="https://www.documaniatv.com/documentales-historia-videos-1-date.html"></a>
-           <a target="_blank" href="http://watchwrestling.uno/"></a>
-           <a target="_blank" href="listaComprab.html" title="Lista de la Compra"></a>
-           <a href="task.html" title="Tareas"></a>
-           <a href="#" class="subir" ></a> 
-           <br><br>
-           <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral </p>
-        </div>
-
-    
-</footer> 
-
-
-<script>                            
-
-function navSection(nav){
-   
-var section = new Array(5);
- section[0] = "home";
- section[1] = "bancos";
- section[2] = "arqueo";
- section[3] = "mail";
- section[4] = "utilidades";
-   
- var search;
- var show;
-for (var i=0;  i<5; i++) { 
-     search = document.getElementById(section[i]);
-     search.style.display ="none"; //oculta todas las seciones
-
-     if (section[i] == nav) { 
-      search.style.display = "block";
-      }<!-- //del if -->
-    }  <!-- //del for -->
-
- }<!-- //del function -->
-</script>  
-
-
-
-
 
 </body>
 </html>
-
-
