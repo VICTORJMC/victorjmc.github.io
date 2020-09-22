@@ -21,11 +21,27 @@
 body{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 20px;
-	background: url("../img/source.gif");
+	/*background: url("../img/source.gif");*/
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: repeat;
+	  -webkit-animation: image 10s infinite alternate;
+          animation: image 10s infinite alternate;
 }
+
+
+@-webkit-keyframes image {
+  0% {
+    background-image: url("../img/source.gif");
+  }
+  33% {
+    background-image: url("https://unsplash.it/600/600");
+  }
+  100% {
+    background-image: url("https://unsplash.it/601/601");
+  }
+}
+
 
 .clearfix{
 	float:none;
@@ -125,8 +141,8 @@ header a:hover,
 }
 
 h1 {text-align: center;color:white;}
-.whitejustify {text-align:justify;color: #FAEBD7;}
-.whitejustify span {color: white;}
+.whitejustify {text-align:justify;color: #FF8C00;}
+.whitejustify span {color: orange;}
 
 
 
