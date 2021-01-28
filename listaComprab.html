@@ -16,6 +16,43 @@ body {
   box-sizing: border-box;
    font-family: 'Josefin Sans', sans-serif;
 }
+	
+/* Style the header */
+.header {
+  background-color: #778899;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  border :5px solid;
+  border-color:#353535;
+}
+
+h1 {
+font-size: 36px;
+}
+p {
+font-size: 10px;
+float: right;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input{
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
 a{
 	color: #fff;
 	text-decoration: none;
@@ -89,41 +126,6 @@ ul li.checked::before {
   color: white;
 }
 
-/* Style the header */
-.header {
-  background-color: black;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-  border :5px solid;
-  border-color:#353535;
-}
-
-h1 {
-font-size: 46px;
-}
-p {
-font-size: 10px;
-float: right;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
-input{
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
 
 /* Style the "Add" button */
 .addBtn {
