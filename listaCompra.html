@@ -95,6 +95,11 @@ span::after {
 
 .done {
     text-decoration: line-through;
+ 
+}
+.done span {
+    
+    background:gray;
 }
 
 .delete {
@@ -107,6 +112,9 @@ span::after {
 li:hover .delete {
     opacity: 1;
 }
+.N {
+    display: none;
+}
   </style>
 
 </head>
@@ -118,7 +126,7 @@ li:hover .delete {
         <input id="userinput" type="text" placeholder="enter items">
         <button id="enter">Add</button>
         <ul>
-            <li><span>CHOCOLATE</span></li>
+            <li><span class="Y">CHOCOLATE</span></li>
             <li><span>GELATINA</span></li>
             <li><span>COCA-COLA</span></li>
             <li><span>CAPSULAS-CAFE-INFUSIÓN</span></li>
