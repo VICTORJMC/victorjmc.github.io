@@ -1,281 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+  <meta charset="UTF-8">
+  <title>Lista de la Compra</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
 body {
-  margin: 0;
-  min-width: 250px;
-  background: url("img/carrito.jpg") no-repeat fixed center;width: 100%;
-  
+    background: url(https://images.unsplash.com/photo-1463490093487-b0ffe9b8e140?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd7561cb19fe69d1809ff2df9b7ddf39&auto=format&fit=crop&w=1350&q=80) center center;
+    background-size: cover;
+    font-family: 'Lobster', cursive;
 }
 
-/* Include the padding and border in an element's total width and height */
-* {
-  box-sizing: border-box;
-   font-family: 'Josefin Sans', sans-serif;
-}
-	
-/* Style the header */
-.header {
-  background-color: #2F4F4F;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-  border :5px solid;
-  border-color:#353535;
+.container {
+    width: 500px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, .6);
+    text-align: center;
+    padding: 15px;
 }
 
 h1 {
-font-size: 18px;
-}
-p {
-font-size: 10px;
-float: right;
+    font-size: 3em;
+    text-shadow: 5px 3px 2px #556;
 }
 
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
+#intro {
+    font-size: 1.1em;
+    color: #753;
+    font-weight: bold;
 }
 
-/* Style the input */
-input{
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
+#userinput {
+    height: 2em;
+    padding: 0 5px;
 }
 
-a{
-	color: #fff;
-	text-decoration: none;
+#userinput:hover {
+    background: #110;
+    color: #fff;
 }
-/* Remove margins and padding from the list */
+
+#enter {
+    height: 2em;
+    width: 6em;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #986;
+    font-weight: bold;
+}
+
+#enter:hover {
+    background: #011112;
+    color: #fff;
+}
+
 ul {
-  margin: 0;
-  padding: 0;
-  border :5px solid;
+    list-style: none;
+    font-family: 'Odibee Sans', cursive;
 }
 
-/* Style the list items */
-ul li {
-  text-transform: uppercase;
-  cursor: pointer;
-  position: relative;
-  padding: 20px;
-  list-style-type: none;
-  background: #eee;
-  font-size: 12px;
-  transition: 0.92s;
-  
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+span {
+    font-size: 1.5em;
+    line-height: 1.8em;
+    position: relative;
+
 }
 
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
+span::before,
+span::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
 }
 
-/* Darker background-color on hover */
-ul li:hover {
-  background: #ddd;
+span::before {
+    background: rgba(255, 255, 255, .7);
+    border-radius: 10px;
+    padding: 3px 5px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
+span::after {
+    background: #433;
+    height: 50%;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-51%);
+    z-index: -3;
+    top: 0.2em;
 }
 
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
+.done {
+    text-decoration: line-through;
 }
 
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
+.delete {
+    border-radius: 35px;
+    cursor: cell;
+    opacity: 0;
+    transition: opacity ease-in-out 500ms;
 }
 
-.close:hover {
-  background-color: #f44336;
-  color: white;
+li:hover .delete {
+    opacity: 1;
 }
+  </style>
 
-
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: black;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
-  
-}
-
-.addBtn:hover {
-  background-color: #bbb;
-  color:white;
-}
-.N {
-display:none;
-}
-</style>
 </head>
 <body>
+<!-- partial:index.partial.html -->
+<div class="container">
+        <h1>Lista de la Compra</h1>
+        <p id="intro">Acuerdate de comprar lo siguiente</p>
+        <input id="userinput" type="text" placeholder="enter items">
+        <button id="enter">Add</button>
+        <ul>
+            <li><span>CHOCOLATE</span></li>
+            <li><span>GELATINA</span></li>
+            <li><span>COCA-COLA</span></li>
+            <li><span>CAPSULAS-CAFE-INFUSIÓN</span></li>
+            <li><span>FRUTOS SECOS</span></li>
+            <li><span>FRUTAS-Platanos</span></li>
+            <li><span>FRUTAS-Limones</span></li>
+            <li><span>FRUTAS-Naranjas</span></li>
+            <li><span>ACEITE DE OLIVA</span></li>
+            <li><span>VERDURAS-Aguacate</span></li>
+            <li><span>VERDURAS-Cebolla</span></li>
+            <li><span>VERDURAS-Pimiento verde/rojo</span></li>
+            <li><span>VERDURAS-Tomates</span></li>
+            <li><span>VERDURAS-Champiñones</span></li>
+            <li><span>VERDURAS-Jalapeños</span></li>
+            <li><span>VERDURAS-Patatas</span></li>
+            <li><span>LEGUMBRES-Lentejas</span></li>
+            <li><span>LEGUMBRES-Guisantes</span></li>
+            <li><span>HUEVOS</span></li>
+            <li><span>POLLO</span></li>
+            <li><span>PAVO</span></li>
+            <li><span>AVENA</span></li>
+            <li><span>FONTANEDA DIGESTIVE FINA</span></li>
+            <li><span>PAN INTEGRAL</span></li>
+            <li><span>PASTA</span></li>
+            <li><span>LECHE</span></li>
+            <li><span>YOGURT</span></li>
+            <li><span>QUESO</span></li>
+            <li><span>ASEO-Papel Hijiénico</span></li>
+            <li><span>ASEO-CHAMPÚ</span></li>
+            <li><span>ASEO-BOLSA BASURA</span></li>
+            <li><span>ASEO-PAÑALES</span></li>
+        </ul>
+    </div>
+<!-- partial -->
+  <script>
+  var button = document.getElementById("enter");
+var input = document.getElementById("userinput");
+var ul = document.querySelector("ul");
+//Select all the initial lis
+var lis = document.querySelectorAll("li");
+//Create a variable for future delete buttons
+var deleteButton;
 
-<div id="myDIV" class="header">
-  
-  <h1 style="margin:5px">Lista de la Compra - <a href="https://github.com/VICTORJMC/victorjmc.github.io/edit/master/listaCompra.html">Modifica Lista</a></h1>
-
-  <input type="text" id="myInput" placeholder="Artículo...">
-  <span onclick="newElement()" class="addBtn">AÑADE</span>
-  <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral</p> 
-  <!--<a href="https://docs.google.com/spreadsheets/d/19Umkui4PDaGBbPjKxoM0Yd95kXMElo36SmxIrM8Rvl8/edit#gid=0">COMPRA-SHEET</a><br>
-  <a href="https://script.google.com/d/1EgwwdQtPI_nY6-FLBJ9fjITSU67g0Owws5EX1TopxpnGSBWxSuT_we0D/edit?mid=ACjPJvEUb0VG7g-iqUOxZ7QkhbaTF-vTa-W5GyqSCGAE7KeGB7tBVZkVLJrsTn1ULDu1mGrNbE8Rqshkzarq6LaD1atkhIP8nRFAjpfolGjbfm5u6o7XPANnB8NsYSJi1f2U5zP9Ev6fwO0&uiv=2">MACRO</a>  
-  -->
-</div>
-  
-
-<ul id="myUL">
-  <li class="S">CHOCOLATE</li>
-  <li class="N">GYOZAS</li>
-  <li class="N">MULTIFRUTAS</li>
-  <li class="S">GELATINA</li>
-  <li class="N">TABULE</li>
-  <li class="S">COCA-COLA</li>
-  <li class="S">CAPSULAS-CAFE-INFUSIÓN</li>
-  <li class="N">FRUTOS SECOS</li>
-  <li class="N">FRUTAS-Platanos</li>
-  <li class="N">FRUTAS-Limones</li>
-  <li class="N">FRUTAS-Naranjas</li>
-  <li class="N">GRASAS SALUDABLES-Nueces</li>
-  <li class="N">GRASAS SALUDABLES-Aceite de Oliva</li>
-  <li class="S">VERDURAS-Aguacate</li>
-  <li class="N">VERDURAS-Cebolla</li>
-  <li class="N">VERDURAS-Pimiento verde/rojo</li>
-  <li class="N">VERDURAS-Tomates</li>
-  <li class="N">VERDURAS-Champiñones</li>
-  <li class="N">VERDURAS-Jalapeños</li>
-  <li class="N">VERDURAS-Patatas</li>
-  <li class="N">LEGUMBRES-Lentejas</li>
-  <li class="N">LEGUMBRES-Guisantes</li>
-  <li class="N">huevos</li>
-  <li class="N">Claras de Huevo Pascual</li>
-  <li class="N">Pollo</li>
-  <li class="N">Pavo</li>
-  <li class="N">Avena</li>
-  <li class="N">Harina de Avena</li>
-  <li class="S"p>Fontaneda Digestive fina</li>
-  <li class="N">Pan integral</li>
-  <li class="N">Pasta integral</li>
-  <li class="S">Leche  semidesnatada</li>
-  <li class="N">Yogurt</li>
-  <li class="N">Queso lonchas o de pasta</li>
-  <li class="N">ASEO-Don Limpio</li>
-  <li class="N">ASEO-Legia Baño</li>  
-  <li class="N">ASEO-Balletas</li>
-  <li class="N">ASEO-Papel Hijiénico</li>
-  <li class="S">ASEO-CHAMPÚ</li>
-  <li class="S">ASEO-BOLSA BASURA</li>
-  <li class="S">ASEO-PAÑAL</li>
-	
-	
-
-
-
-
-</ul>
-
-<script>
-
-// Create a "close" button and append it to each list item
-//alert("INSTRUCCIONES. Hay un truco muy sencillo para llevar un dieta equilibrada: llenar la despensa con comida sana y versátil. Por defecto aparecen estos alimentos en la lista, pero puedes eliminarlos con la X de su izquierda y agregar elementos nuevos en el campo Articulo. Además una vez confecciones la lista puedes tachar el artículo comprado pulsando sobre él ");
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+//Return Length of input
+function inputLength() {
+    return input.value.length;
 }
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
+//Create delete buttons and append it to their parents(li)
+function createDeleteButton(parent) {
+    //Create element button
+    var button = document.createElement("button");
+    // Create and append text inside button
+    button.appendChild(document.createTextNode("X"));
+    // Give class=delete to buttons - Its's going to be used to select them in the future
+    button.className = "delete";
+    // append or insert the button to the parent element(li)
+    parent.appendChild(button);
 }
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+//Toggle class=done when you invoke the function - use "this" to toggle only the one you selected
+function toggleDoneClass() {
+    this.classList.toggle("done");
+}
 
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("NO HAS ESCRITO NADA!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
+//Create the "li" with everything it needs inside of it(text ,button, class)
+function createListElement() {
+    //Create "li"
+    var li = document.createElement("li");
+    var span = document.createElement("span");
+    // Create text for the li according to what you put in the input
+    li.appendChild(span);
+    span.appendChild(document.createTextNode(input.value));
+    // Append or insert the new li to the ul
+    ul.appendChild(li);
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+    //Create the delete button calling the funtion with the new li
+    createDeleteButton(li);
+    //Updates the selector to the new number of buttons with class=delete
+    deleteButton = document.querySelectorAll(".delete")
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+    //Applies the functionality to remove the li
+    updateDeleteButtons()
+
+    //add the click listener to toggle class=done
+    li.addEventListener('click', toggleDoneClass)
+
+    //Makes the input go back to blank when this function is done
+    input.value = "";
+}
+
+
+function addListAfterClick() {
+    if (inputLength() > 0) {
+        createListElement();
     }
-  }
 }
-</script>
+
+function addListAfterKeypress(event) {
+    if (inputLength() > 0 && event.keyCode === 13) {
+        createListElement();
+    }
+}
+
+//Applies the functionality to remove the li to all the buttons(new and old)
+function updateDeleteButtons() {
+    for (var i = 0; i < deleteButton.length; i++) {
+        deleteButton[i].addEventListener("click", function() {
+            this.parentNode.remove()
+        })
+    }
+}
+
+button.addEventListener("click", addListAfterClick);
+
+input.addEventListener("keypress", addListAfterKeypress);
+//INIT
+//Add the event listener and create the delete buttons to the initial lis
+for (var i = 0; i < lis.length; i++) {
+    lis[i].addEventListener('click', toggleDoneClass);
+
+    createDeleteButton(lis[i])
+}
+//Selector of initial buttons with class=delete
+deleteButton = document.querySelectorAll(".delete")
+//It gives the buttons with class the function to remove the li(todo)
+updateDeleteButtons()
+  </script>
 
 </body>
 </html>
