@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Modelario</title>
+  <link rel="stylesheet" href="./text-carousel.css">
+  <link rel="stylesheet" href="./font-awesome.css">
+  <link rel="stylesheet" href="./normalize.min">
+  <link rel="stylesheet" href="./print.css">
+  <script src='./jquery.min.js'></script>
+  <script  src="./input.js"></script>
+
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Head tags to include FontAwesome -->
+
+
+<div class="container">
+  <img class='logo' src="logo.jpg"><br><br><br><br>
+  <a href="javascript:location.reload()"><i class="fa fa-refresh fa-spin fa-3x fa-fw" style="color:black"></i></a>
+  <a href="javascript:window.print()"  ><i class="fa fa-print fa-3x" style="color:black"></i></a>
+
+  <div class='row'>
+    
+    <div class='col-md-offset-2 col-md-8'>
+      
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        
+        <!-- Bottom Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#quote-carousel" data-slide-to="1"></li>
+          <li data-target="#quote-carousel" data-slide-to="2"></li>
+          <li data-target="#quote-carousel" data-slide-to="3"></li>
+        </ol>
+        
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner">
+        
+          <!-- Quote 1 -->
+          <div class="item active">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-7">
+                  <h2>JUSTIFICANTE DE PAGO DE IBI</h2>
+                  <p><input class="nombre" type="text" onfocus="this.value=' '"><strong class="nombre2"></strong>, con NIF/CIF <input class="dni" type="text" onfocus="this.value=' '"><strong class="dni2"></strong>, titular del inmueble sito en <input class="dir" type="text" onfocus="this.value=' '"><strong class="dir2"></strong> , con referencia catastral <input class="tributo" type="text" onfocus="this.value=' '"><strong class="tributo2"></strong>, está acogido a la modalidad de domiciliación APLAZA6; por lo que tiene concedido un fraccionamiento de pago del recibo del Impuesto sobre Bienes Inmuebles correspondiente al presente ejercicio en 6 meses, que se inicia en mayo y finaliza en octubre, y ello en virtud de lo dispuesto en el artículo 62 de la Ordenanza General de Gestión, Recaudación e Inspección de los Ingresos Propios de Derecho Público.</p>
+                  <p>Sin que, a fecha de hoy, conste devolución alguna de los plazos que se han girado en pago de la deuda tributaria.</p>
+                  <p>Lo que se hace constar a los efectos oportunos.</p>
+                  <br>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 2 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-7">
+                  <h2>JUSTIFICANTE DE PAGO DE IVTM</h2>
+                  <p><input class="nombre" type="text" onfocus="this.value=' '"><strong class="nombre2"></strong>, con NIF/CIF <input class="dni" type="text" onfocus="this.value=' '"><strong class="dni2"></strong>, titular del vehículo modelo <input class="dir" type="text" onfocus="this.value=' '"><strong class="dir2"></strong>, con matrícula <input class="tributo" type="text" onfocus="this.value=' '"><strong class="tributo2"></strong>, está acogido a la modalidad de domiciliación APLAZA6; por lo que tiene concedido un fraccionamiento de pago del recibo del Impuesto de Vehículos de Tracción Mecánica correspondiente al presente ejercicio en 6 meses, que se inicia en mayo y finaliza en octubre, y ello en virtud de lo dispuesto en el artículo 62 de la Ordenanza General de Gestión, Recaudación e Inspección de los Ingresos Propios de Derecho Público.</p>
+                  <p>Sin que, a fecha de hoy, conste devolución alguna de los plazos que se han girado en pago de la deuda tributaria.</p>
+                  <p>Lo que se hace constar a los efectos oportunos.</p>
+                  <br>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-7">
+                  <h2>INFORME NEGATIVO DE DEUDA</h2>
+                  <p>Isidro Valenzuela Villarrubia, Tesorero del Ayuntamiento de Alcobendas, hago constar:</p>
+                  <p>Que según los antecedentes contables obrantes en la aplicación de ingresos de esta Recaudación Municipal, <input class="nombre" type="text" onfocus="this.value=' '"><strong class="nombre2"></strong>, con NIF/CIF <input class="dni" type="text" onfocus="this.value=' '"><strong class="dni2"></strong>, está al corriente en el pago de las liquidaciones/recibos emitidos a su nombre en concepto de impuestos, tasas o precios públicos municipales, gestionados por esta unidad recaudatoria.</p>
+                  <p>La presente certificación no se hace extensiva a liquidaciones que se encuentren en periodo voluntario de pago ni a otras obligaciones exigibles pendientes de liquidar, por lo que no producirá los efectos de exención de responsabilidades a los que se refiere el articulo 175.2 de la Ley General Tributaria, para los supuestos de sucesión en la responsabilidad de pago de las deudas tributarias por adquisición de explotaciones o actividades económicas y herencia.</p>
+                  <br>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-7">
+                  <h3>MANDAMIENTO DE CANCELACION DE PRECINTO DE VEHICULOS<br>A la Jefatura Provincial de Tráfico de Madrid.</h3>  
+                 
+                  <table style="width:100%;"border=2>
+                   <tr>
+                   <td style="width:20%;">Expediente:<input style="width:100%" class="exp" type="text" onfocus="this.value=' '"><strong class="exp2 print08"></strong></td>
+                   <td style="width:20%;">Deudor:<input style="width:100%" style="width:100%" class="nombre" type="text" onfocus="this.value=' '"><strong class="nombre2"></strong></td>
+                   <td style="width:20%;">DNI/CIF:<input style="width:100%" class="dni" type="text" onfocus="this.value=' '"><strong class="dni2"></strong></td>
+                   </tr>
+                 </table>
+                  <p>Isidro Valenzuela Villarrubia, Tesorero del Ayuntamiento de Alcobendas, hago constar:</p>
+                  <p>Que con fecha de hoy he dictado la siguiente resolución en el expediente que en ella misma se expresa:</p>
+                  <p><i>DILIGENCIA.- En el expediente administrativo de apremio seguido en esta Recaudación Municipal a nombre de , que dio lugar a la Diligencia de embargo de vehículos de fecha , se ha procedido a satisfacer el importe perseguido por lo que, de conformidad con lo establecido en el artículo 172.4 de la Ley 58/2003, General Tributaria, PROCEDO A ALZAR EL EMBARGO Y PRECINTO de los referidos bienes, que responden al siguiente detalle:</i></p>
+                  <table style="width:100%;"border=2>
+                   <tr>
+                   <td >Matrícula:<input style="width:100%" class="dir" type="text" onfocus="this.value=' '"><strong class="dir2"></strong></td>
+                   <td >Marca:<input style="width:100%" class="marca" type="text" onfocus="this.value=' '"><strong class="marca2"></strong></td>
+                   <td >Modelo:<input style="width:100%" class="modelo" type="text" onfocus="this.value=' '"><strong class="modelo2"></strong></td>
+                   <td >Tipo de vehículo: <input style="width:100%" class="tributo" type="text" onfocus="this.value=' '"><strong class="tributo2"></strong></td>
+                  </tr>
+                 </table>
+                 <p><i>Notifíquese al deudor así como al Registro de Bienes Muebles, Sección de Automóviles y otros Vehículos de Motor para la cancelación del embargo y, en su caso, a la Policía Local que corresponda para levantamiento del precinto y salida del vehículo antes detallado, todo ello en cumplimiento de lo dispuesto en los artículos 169.5 de la Ley 58/2003, General Tributaria, y 76.4 del Reglamento General de Recaudación (R.D. 939/2OOS, de 29 de julio)."</i></p>
+                  
+                </div>
+              </div>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- Carousel Buttons Next/Prev  -->
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>  
+        
+      </div> 
+       
+                           
+    </div>
+  </div>
+</div>
+<!-- partial -->
+<div id="contenedor">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En Alcobendas a <script type="text/javascript"  src="fecha.js"></script>.</p>
+<img src="sello.jpg" alt="Sello"> 
+</div>
+
+
+<script  src="./text-carousel.js"></script>
+ 
+  
+
+</body>
+</html>
