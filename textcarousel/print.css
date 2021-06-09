@@ -1,9 +1,0 @@
-@page{size:auto;margin: 0mm 10mm 0mm 10mm;}
-
-@media print{
-.carousel-control,.carousel-indicators,.fa{display:none}
-p{font-size: 1em;  }
-.print08{font-size: 1em;  }
-
-
-}
