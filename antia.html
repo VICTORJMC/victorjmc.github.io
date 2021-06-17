@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Antía Carousel</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.4/tailwind.min.css'><link rel="stylesheet" href="./antia.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="flex flex-col max-w-5xl mx-auto my-4" x-data="imagesCarousel()">
+	<h1 class="align-middle text-center text-lg-left">Antía Martínez González</h1>
+    <h2 class="display-2 text-center text-lg-left ">Nací el 12 de Marzo a las 15:40<h2>
+	<div class="relative flex flex-no-wrap w-full mx-auto overflow-auto transition-all  snap" x-ref="slider" x-on:scroll.debounce="active = Math.round($event.target.scrollLeft / ($event.target.scrollWidth / photos.length))">
+		<template x-for="photo in photos" :key="photo.id">
+			<div class="relative flex flex-col items-center justify-center flex-shrink-0 w-full text-gray-800 bg-gray-200 ">
+				<img x-bind:src="photo.src" loading="lazy" decoding="async" x-bind:alt="photo.title" x-bind:title="photo.alt" class="object-cover object-center w-full rounded-lg shadow-md" />
+				<span class="absolute w-full p-2 text-lg text-center text-gray-900 bg-gray-200 rounded  bottom-3 opacity-70" x-text="photo.alt"></span>
+			</div>
+		</template>
+	</div>
+	<div class="relative flex items-center justify-center flex-1 p-4 mt-2">
+		<button class="flex items-center justify-center w-8 h-8 mr-1 bg-gray-200 rounded-full  focus:outline-none focus:ring-2 focus:ring-gray-300" x-on:click=" $refs.slider.scrollLeft = $refs.slider.scrollLeft - ($refs.slider.scrollWidth / photos.length)">
+			<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+				<path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+			</svg>
+		</button>
+
+		
+
+		<button class="flex items-center justify-center w-8 h-8 mr-1 bg-gray-200 rounded-full  focus:outline-none focus:ring-2 focus:ring-gray-300" x-on:click="$refs.slider.scrollLeft = $refs.slider.scrollLeft + ($refs.slider.scrollWidth / photos.length)">
+			<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+				<path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+			</svg>
+		</button>
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script><script  src="./antia.js"></script>
+
+</body>
+</html>
