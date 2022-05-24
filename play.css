@@ -1,0 +1,283 @@
+:root {
+  --tileSize: 90px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+html, body {
+  
+  background-color: #010a01;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+
+h1, h2 {
+  text-align: center;
+  font-weight: 400;
+}
+  
+h1 {
+  font-size: 18px;
+  font-family: "Sacramento", sans-serif;
+  font-size: 4rem;
+  animation: pulsate 1.5s infinite alternate;  
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.1em;
+  box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #bc13fe,
+            0 0 0.8rem #bc13fe,
+            0 0 2.8rem #bc13fe,
+            inset 0 0 1.3rem #bc13fe; 
+}
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.SlotMachine {
+  border-radius: 5px;
+  margin-top: -650px;
+}
+.SlotMachine-reels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.SlotMachine-shadow {
+  border-radius: 4px 4px 0 0;
+  pointer-events: none;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 
+    inset 0 25px 30px -5px gray(0,.1),
+    inset 0 5px 10px -2px gray(0,.2),
+    inset 0 -25px 30px -5px gray(0,.1),
+    inset 0 -5px 10px -2px gray(0,.2);
+          box-shadow: 
+    inset 0 25px 30px -5px gray(0,.1),
+    inset 0 5px 10px -2px gray(0,.2),
+    inset 0 -25px 30px -5px gray(0,.1),
+    inset 0 -5px 10px -2px gray(0,.2);
+}
+.SlotMachine-payline {
+  position: absolute;
+  top: calc(90px * 1 * 1.1666);
+  top: calc(var(--tileSize) * 1 * 1.1666);
+  height: 1px;
+  width: 100%;
+  background: gray(0, 0.3);
+}
+
+
+.SlotMachine-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #000;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px 0;
+}
+.SlotMachine-coin {
+  width: 6px;
+  height: 38px;
+  background: rgb(48,48,48);
+  border: 3px solid rgb(94,94,94);
+  border-radius: 6px;
+  margin: 12px 10px 0 10px;
+}
+.SlotMachine-coin:hover {
+  background: rgb(255,255,255);
+}
+.SlotMachine-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.SlotMachine-statTitle {
+  font-size: 12px;
+  color: rgb(145,145,145);
+}
+.SlotMachine-statValue {
+  padding: 5px 10px;
+  background: rgba(255,0,0,0.15);
+  border-radius: 2px;
+  border: 1px solid rgb(0,0,0);
+  font-size: 25px;
+  text-align: right;
+  color: rgba(255, 0, 0, 0.8);
+  text-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+}
+.SlotMachine-statSub {
+  font-size: 9px;
+  color: rgb(119,119,119);
+  text-align: right;
+}
+
+
+
+.SlotMachine-actions {
+  padding: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: rgb(48,48,48);
+  border-radius: 0 0 4px 4px;
+}
+.SlotMachine-button {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 14px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px 2px rgb(0,0,0);
+          box-shadow: 0 1px 2px 2px rgb(0,0,0);
+}
+.SlotMachine-button:focus {
+  outline: none;
+}
+.SlotMachine-button:active {
+  -webkit-box-shadow: 0 0 2px 1px rgb(0,0,0);
+          box-shadow: 0 0 2px 1px rgb(0,0,0);
+}
+
+.SlotMachine-button.is-spin {
+  background: rgba(0, 255, 0, 0.4);
+  border: 1px solid rgba(0, 255, 0, 0.4);
+}
+.SlotMachine-button.is-spin:hover {
+  background: rgba(0, 255, 0, 0.43);
+}
+.SlotMachine-button.is-spin:active {
+  background: rgba(0, 255, 0, 0.46);
+}
+
+.SlotMachine-button.is-win {
+  background: rgba(255, 0, 0, 0.4);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+.SlotMachine-button.is-win.has-win {
+  background: rgba(255, 0, 0, 0.99);
+}
+.SlotMachine-button.is-win:hover {
+  background: rgba(255, 0, 0, 0.65);
+}
+.SlotMachine-button.is-win:active {
+  background: rgba(255, 0, 0, 0.7);
+}
+
+
+
+
+
+
+.Reel {
+  width: 90px;
+  width: var(--tileSize);
+  height: calc(90px * 2.333);
+  height: calc(var(--tileSize) * 2.333);
+  overflow: hidden;
+}
+.Reel.is-locked {
+/*   opacity: 0.8; */
+  background: rgba(0,0,0,0.1);
+}
+.Reel:not(:last-child) {
+  border-right: 1px solid gray(0, 0.1);
+}
+.Reel-inner {
+  position: relative;
+  top: calc(90px * -1 * 1.333);
+  top: calc(var(--tileSize) * -1 * 1.333);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.Reel.move .Reel-inner{
+  -webkit-transition: margin-top 0.04s linear;
+  -o-transition: margin-top 0.04s linear;
+  transition: margin-top 0.04s linear;
+  margin-top: 90px;
+  margin-top: var(--tileSize);
+}
+.Reel-image {
+  width: 90px;
+  width: var(--tileSize);
+  width: 90px;
+  width: var(--tileSize);
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;
+}
+  
+
+
+
+@keyframes pulsate {
+    
+  100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #bc13fe,
+      0 0 80px #bc13fe,
+      0 0 90px #bc13fe,
+      0 0 100px #bc13fe,
+      0 0 150px #bc13fe;
+  
+  }
+  
+  0% {
+
+    text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #bc13fe,
+    0 0 45px #bc13fe,
+    0 0 55px #bc13fe,
+    0 0 70px #bc13fe,
+    0 0 80px #bc13fe;
+
+}
