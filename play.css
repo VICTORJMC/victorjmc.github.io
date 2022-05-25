@@ -46,7 +46,7 @@ h1 {
 }
 .SlotMachine {
   border-radius: 5px;
-  margin-top: -450px;
+  margin-top: -650px;
 }
 .SlotMachine-reels {
   display: -webkit-box;
@@ -226,6 +226,9 @@ h1 {
   -webkit-transition: margin-top 0.04s linear;
   -o-transition: margin-top 0.04s linear;
   transition: margin-top 0.04s linear;
+  -moz-transition: margin-top 0.04s linear;
+  -ms-transition: margin-top 0.04s linear;
+  -o-transition: margin-top 0.04s linear;
   margin-top: 90px;
   margin-top: var(--tileSize);
 }
