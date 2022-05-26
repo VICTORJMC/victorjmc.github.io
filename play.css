@@ -2,6 +2,8 @@
   --tileSize: 90px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+
 html, body {
   
   background-color: #010a01;
@@ -14,6 +16,7 @@ html, body {
 h1, h2 {
   text-align: center;
   font-weight: 400;
+  width: 400px;
 }
   
 h1 {
@@ -46,7 +49,7 @@ h1 {
 }
 .SlotMachine {
   border-radius: 5px;
-  margin-top: -650px;
+  margin-top: -450px;
 }
 .SlotMachine-reels {
   display: -webkit-box;

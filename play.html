@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta charset="UTF-8">
-  <title>CodePen - VueJS Slot Machine</title>
+  <title>Martinez Game</title>
   <link rel="stylesheet" href="./play.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +11,16 @@
 </head>
 <body>
 <center>
+<div id="contenedor">
 	<h1 class="neonText">Familia Martínez</h1>
 	
-<!-- partial:index.partial.html -->
+
 <div id="app">
   <slot-machine></slot-machine>
 </div>
 </center>
-<!-- partial -->
+
+</div><!-- id contenedor -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script><script  src="./script.js"></script>
 
 </body>
