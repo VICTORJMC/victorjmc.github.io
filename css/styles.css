@@ -298,7 +298,10 @@ position: relative;
 }
 
 
-
+.icons{
+	height: 50px; 
+	width: 50px;
+}
 
 
 
@@ -356,6 +359,7 @@ footer .rrss a:before{
 text-decoration: none;
 position: absolute;
 top: 5px;
+
 
 
 .bajar img{
