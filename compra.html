@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="app.css">
+    <style>
+    b{
+       padding-right:80px;
+
+    }
+    li{
+    list-style:none;
+    text-transform: uppercase;
+    }
+    body {
+  margin: 0;
+  background-color: #2f3238;
+  font-family: sans-serif;
+  color: #ccc;
+  user-select: none;
+  }
+  input {
+  background: orangered;
+  border: none;
+  padding: 0.2rem 0.8rem;
+  border-radius: 15px;
+  color: #ccc;
+  cursor: pointer;
+  margin: 1rem 0;
+  font-size: 2em;
+}
+
+    </style>
+    <title>Local Storage Exercise</title>
+</head>
+<body>
+
+<div class="container">
+    <ul class="myTasks">
+
+    </ul>
+
+    <form class="taskAdder">
+         <input type="submit" class="button" value="COMPRAR">
+        <input list="browsers" name="task"  placeholder="Artículos" required>
+         <datalist id="browsers">
+             <option value="CHOCOLATE">
+             <option value="COCA-COLA">
+             <option value="AGUA">
+             <option value="LECHE">
+             <option value="CAPSULAS-CAFE-INFUSIÓN">
+             <option value="FRUTOS SECOS">
+             <option value="FRUTAS-Manzanas">
+             <option value="FRUTAS-Platanos">
+             <option value="FRUTAS-Limones">
+             <option value="FRUTAS-Naranjas">
+             <option value="ACEITE DE OLIVA">
+             <option value="VERDURAS-Aguacate">
+             <option value="VERDURAS-Cebolla">
+             <option value="VERDURAS-Pimiento verde/rojo">
+             <option value="VERDURAS-Tomates">
+             <option value="VERDURAS-Champiñones">
+             <option value="VERDURAS-Jalapeños">
+             <option value="VERDURAS-Patatas">
+             <option value="ACEITUNAS NEGRAS">
+             <option value="LEGUMBRES-Lentejas">
+             <option value="LEGUMBRES-Guisantes">
+             <option value="HUEVOS">
+             <option value="POLLO">
+             <option value="PAVO">
+             <option value="AVENA">
+             <option value="FONTANEDA DIGESTIVE FINA">
+             <option value="PAN INTEGRAL">
+             <option value="ARROZ">
+             <option value="PASTA">
+             <option value="YOGURT">
+             <option value="QUESO">
+             <option value="QUESO PARMESANO">
+             <option value="ASEO-Rollo Cocina">
+             <option value="ASEO-Papel Hijiénico">
+             <option value="ASEO-CHAMPÚ">
+             <option value="ASEO-BOLSA BASURA">
+             <option value="ASEO-PAÑALES">
+             <option value="ASEO-TOALLITAS">
+         </datalist>
+       
+    </form>
+
+</div>
+  
+    
+    <script>
+const taskAdder = document.querySelector('.taskAdder');
+const myTasks = document.querySelector('.myTasks');
+// or || ou
+const tasks = JSON.parse(localStorage.getItem('taskList')) || [];
+
+taskAdder.addEventListener('submit', addTask);
+myTasks.addEventListener('click', toggleDone);
+outputTasks();
+
+
+function addTask(e){
+    e.preventDefault();
+    const textTask = this.querySelector('[name=task]').value;
+    const task = {
+        textTask,done:false
+    }
+//    console.log(textTask);
+    tasks.push(task);
+    saveStorage();
+    outputTasks();
+//    console.log(tasks);
+    this.reset();
+}
+
+function saveStorage(){
+    // espera dois parametros, nome e valor
+    localStorage.setItem('taskList',JSON.stringify(tasks));
+}
+
+function outputTasks() {
+    let html = tasks.map(function(data,i) {
+        let myClass = data.done ? 'done' : '';
+        return '<h2><li data-index='+i+'><div class="'+myClass+'">'+'<b class="remove">✔ </b>'+
+            data.textTask+'</div></li></h2>';
+    })
+//    html = html.join('');
+//    console.log(html);
+    myTasks.innerHTML = html.join('');
+}
+
+function toggleDone(e) {
+    //console.log(e);
+    // mudar o dom - para nao realizar reload sempre do dom todo
+    const myEl = e.target;
+    const mySel = myEl.parentElement;
+    if(myEl.className === 'remove') {
+        let index = mySel.parentElement.dataset.index;
+        let temp = tasks.splice(index,1);
+        console.log(temp);
+    } else {
+    //    console.log(e);
+    //    console.log(tasks[mySel]);
+        myEl.classList.toggle('done');
+    //    console.log(myEl);
+        tasks[mySel.dataset.index].done = !tasks[mySel.dataset.index].done;
+    }
+//    console.log(tasks);
+    // reload to propagate
+    // recarregar para propagar as mudanças
+    //outputTasks();
+    saveStorage();
+    outputTasks();
+}
+
+
+// exemplo de map
+//var testArray = [3,5,7];
+//var testDouble = testArray.map(function(data){
+//    console.log(data);
+//    return data * 5;
+//})
+//console.log(testDouble);
+    </script>
+</body>
+</html>
