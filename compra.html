@@ -122,8 +122,8 @@ function saveStorage(){
 function outputTasks() {
     let html = tasks.map(function(data,i) {
         let myClass = data.done ? 'done' : '';
-        return '<h2><li data-index='+i+'><div class="'+myClass+'">'+'<b class="remove">✔ </b>'+
-            data.textTask+'</div></li></h2>';
+        return '<h1><li data-index='+i+'><div class="'+myClass+'">'+'<b class="remove">✔ </b>'+
+            data.textTask+'</div></li></h1>';
     })
 //    html = html.join('');
 //    console.log(html);
