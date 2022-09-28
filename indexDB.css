@@ -35,8 +35,7 @@ input {
   font-size: 2.5em;
 }
 
-button {
-  font-size: 4em;
+.button {
   font-size: 4em;
   backgroundkground: orangered;
 }
