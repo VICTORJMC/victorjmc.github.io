@@ -399,7 +399,7 @@ const App = () => {
       onChange: noteHandler,
       placeholder: "Cantidad (opcional)" }), /*#__PURE__*/
 
-    React.createElement("button", { onClick: addNewNote }, "🛒"),
+    React.createElement("button", { onClick: addNewNote }, "COMPRA 🛒"),
     list.length > 0 ? /*#__PURE__*/
     React.createElement("table", null, /*#__PURE__*/
     React.createElement("thead", null, /*#__PURE__*/
