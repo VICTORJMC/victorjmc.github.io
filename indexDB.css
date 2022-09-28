@@ -35,13 +35,13 @@ input {
   font-size: 2.5em;
 }
 
-.button {
+button {
   font-size: 4em;
-  backgroundkground: orangered;
+  background: orangered;
 }
 h1{
- color:orangened;
- border:1px solid orangened;
+ color:orangered;
+ border:1px solid orangered;
 }
 table {
   font-family: arial, sans-serif;
