@@ -20,6 +20,7 @@
 .no-data {
   text-align: center;
   color: red;
+ font-size:2.5em;
 }
 
 input {
@@ -38,10 +39,12 @@ input {
 button {
   font-size: 4em;
   background: orangered;
+  
 }
 h1{
  color:orangered;
  border:1px solid orangered;
+ font-size: 4em
 }
 table {
   font-family: arial, sans-serif;
