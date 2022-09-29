@@ -2,9 +2,215 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - indexedDB, react, redux</title>
+  <title>Compra en indexedDB</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./indexDB.css">
+  <!--<link rel="stylesheet" href="./indexDB.css">-->
+  <style>
+
+ body {
+  margin: 0;
+  background-color: #2f3238;
+  font-family: sans-serif;
+  color: #6a6a6a;
+  user-select: none;
+  }
+.container {
+  width: calc(100% - 1rem);
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.note {
+  font-size: 1.5em;
+  color: grey;
+}
+
+.no-data {
+  text-align: center;
+  color: orangered;
+  font-size:3em;
+}
+
+input {
+  outline: none;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  font: inherit;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 2.5em;
+}
+
+button {
+  font-size: 4em;
+  background: orangered;
+  
+}
+h1{
+ color:orangered;
+ border:2px solid orangered;
+ font-size: 4em
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 5px 0;
+}
+table tr td,
+table tr th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 2.5em;
+}
+table tr td i,
+table tr th i {
+  margin-right: 5px;
+}
+table tr td i:hover,
+table tr th i:hover {
+  cursor: pointer;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+table tbody tr:nth-child(odd) td,
+table tbody tr:nth-child(odd) th {
+  border: 1px solid #000000;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+#app {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.modal-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 101;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.modal-window * {
+  box-sizing: border-box;
+}
+.modal-window.inactive-modal {
+  transition: height 0s 0.3s, opacity 0.3s;
+  height: 0;
+  opacity: 0;
+}
+.modal-window .modal-wrapper {
+  padding: 30px 0;
+  min-height: 100%;
+}
+.modal-window .modal {
+  margin: 0 auto;
+  z-index: 500;
+  background-color: white;
+  width: calc(100% - 1rem);
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  font-family: Arial;
+  cursor: initial;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.modal-window .modal * {
+  box-sizing: border-box;
+}
+.modal-window .modal.animate-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+.modal-window .modal .modal-header {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: 300;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.modal-window .modal .modal-header .modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+  text-transform: capitalize;
+}
+.modal-window .modal .modal-header .close-modal {
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  outline: none;
+  opacity: 0.2;
+  transition: opacity 0.15s;
+}
+.modal-window .modal .modal-header .close-modal:hover {
+  opacity: 0.9;
+}
+.modal-window .modal .modal-body {
+  position: relative;
+  padding: 10px;
+  text-align: left;
+}
+.modal-window .modal .modal-footer {
+  padding: 10px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-window .modal .modal-footer .close-modal {
+  color: #212529;
+  background-color: transparent;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid #212529;
+  padding: 0.175rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  text-transform: capitalize;
+}
+.modal-window .modal .modal-footer .close-modal:hover {
+  color: #212529;
+  background-color: #eff2f5;
+  border-color: #dae0e5;
+}   
+  </style>
 
 </head>
 <body>
@@ -13,47 +219,50 @@
 <div id="app"></div>
 <!-- partial -->
 <datalist id="elemento">
-           <option value="CHOCOLATE">
-             <option value="COCA-COLA">
-             <option value="AGUA">
-             <option value="LECHE">
-             <option value="GALLETAS">
-             <option value="CAPSULAS-CAFE-INFUSIÓN">
-             <option value="FRUTOS SECOS">
-             <option value="FRUTAS-Manzanas">
-             <option value="FRUTAS-Platanos">
-             <option value="FRUTAS-Limones">
-             <option value="FRUTAS-Naranjas">
-             <option value="FRUTAS-Limones">
-             <option value="FRUTAS-Lima">
-             <option value="FRUTAS-Melocoton">
-             <option value="ACEITE DE OLIVA">
-             <option value="VERDURAS-Aguacate">
-             <option value="VERDURAS-Cebolla">
-             <option value="VERDURAS-Pimiento verde/rojo">
-             <option value="VERDURAS-Tomates">
-             <option value="VERDURAS-Champiñones">
-             <option value="VERDURAS-Jalapeños">
-             <option value="VERDURAS-Patatas">
-             <option value="ACEITUNAS NEGRAS">
-             <option value="LEGUMBRES-Lentejas">
-             <option value="LEGUMBRES-Guisantes">
-             <option value="HUEVOS">
-             <option value="POLLO">
-             <option value="PAVO">
-             <option value="AVENA">
-             <option value="PAN INTEGRAL">
-             <option value="ARROZ">
-             <option value="PASTA">
-             <option value="YOGURT">
-             <option value="QUESO">
-             <option value="QUESO PARMESANO">
-             <option value="ASEO-Rollo Cocina">
-             <option value="ASEO-Papel Hijiénico">
-             <option value="ASEO-CHAMPÚ">
-             <option value="ASEO-BOLSA BASURA">
-             <option value="ASEO-PAÑALES">
-             <option value="ASEO-TOALLITAS">
+             <option value="🍫CHOCOLATE">
+             <option value="🥤COCA-COLA">
+             <option value="💧AGUA">
+             <option value="🥛LECHE">
+             <option value="🍪GALLETAS">
+             <option value="🥜FRUTOS SECOS">
+             <option value="🍏Manzanas">
+             <option value="🍌Platanos">
+             <option value="🍈Limones">
+             <option value="🍊Naranjas">
+             <option value="🍃Lima">
+             <option value="🍑Melocoton">
+             <option value="🍇Uvas">
+             <option value="🍍Piña">
+             <option value="🍉Sandia">
+             <option value="🫒ACEITE-AOVE">
+             <option value="🥑Aguacate">
+             <option value="🧅Cebolla">
+             <option value="🥬Lechuga">
+             <option value="🫑Pimiento">
+             <option value="🍅Tomates">
+             <option value="🥕Zanahorias">
+             <option value="🍄Champiñones">
+             <option value="🌶️Jalapeños">
+             <option value="🥔Patatas">
+             <option value="🫒ACEITUNAS NEGRAS">
+             <option value="🌰Lentejas">
+             <option value="🥦Guisantes">
+             <option value="🥚HUEVOS">
+             <option value="🍗POLLO">
+             <option value="🍖PAVO">
+             <option value="🍞PAN INTEGRAL">
+             <option value="🍚ARROZ">
+             <option value="🍝PASTA">
+             <option value="🧋YOGURT">
+             <option value="🧀QUESO">
+             <option value="🧻Rollo Cocina">
+             <option value="🧻Hijiénico">
+             <option value="🧴CHAMPÚ">
+             <option value="🚮BOLSA BASURA">
+             <option value="🧷PAÑALES">
+             <option value="📜TOALLITAS">
+             <option value="🥣AVENA">
+             <option value="☕CAFE">
          </datalist>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js'></script>
@@ -61,7 +270,469 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.0/react-redux.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/redux-thunk/2.3.0/redux-thunk.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js'></script><script  src="./indexDB.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js'></script>
+<!--<script  src="./indexDB.js">-->
+<script>
+function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}const { useEffect, useState, PureComponent, createRef } = React,
+{ Provider, connect, useDispatch, useSelector } = ReactRedux,
+{ applyMiddleware, createStore, combineReducers } = Redux,
+thunk = ReduxThunk.default;
+
+//constants
+const dbName = "personsNotesDB",
+tableName = "personalNotes";
+
+//update object immutably
+const updateObject = (oldObject, UpdatedValues) => {
+  return {
+    ...oldObject,
+    ...UpdatedValues };
+
+};
+
+//==================================
+// generic indexedDB methods
+//==================================
+const createIndexedDB = ({
+  indexedDBName,
+  indexedDBVersion,
+  objectStoreName,
+  primaryKey }) =>
+{
+  //create database
+  const request = window.indexedDB.open(indexedDBName, indexedDBVersion);
+  //will be executed only if the given indexedDBName doesn't exist or if we upgrade the version of it
+  request.onupgradeneeded = e => {
+    const db = e.target.result;
+    db.createObjectStore(objectStoreName, { keyPath: primaryKey }); //create table with the required primary key
+  };
+  return request;
+};
+
+//get the required object store after adding the required permissions
+const getTable = ({ db, objectStore, permission }) => {
+  const tx = db.transaction(objectStore, permission);
+  return tx.objectStore(objectStore);
+};
+
+//add entry to object store
+const addTableEntry = ({ objectStore, entry }) => {
+  objectStore.add(entry);
+};
+
+//get the selected entry from object store
+const getTableEntry = ({ objectStore, entry }) => {
+  objectStore.get(entry);
+};
+
+//get all entries from object store
+const getAllTableEntries = objectStore => {
+  return objectStore.getAll();
+};
+
+//count entries in object store
+const countTableEntries = objectStore => {
+  return objectStore.count();
+};
+
+//delete entry form object store
+const deleteEntryTable = ({ objectStore, id }) => {
+  return objectStore.delete(id);
+};
+
+//edit entry in object store
+const editTableEntry = ({ objectStore, entry }) => {
+  return objectStore.put(entry);
+};
+
+/*=====================end generic indexedDB methods====================*/
+
+//==================================
+// redux store
+//==================================
+//action types
+const SET_PERSONS_NOTES_LIST = "[PERSONS] SET_PERSONS_NOTES_LIST";
+const ADD_PERSONAL_NOTE = "[PERSONS] ADD_PERSONAL_NOTE";
+const EDIT_PERSONAL_NOTE = "[PERSONS] EDIT_PERSONAL_NOTE";
+const REMOVE_PERSONAL_NOTE = "[PERSONS] REMOVE_PERSONAL_NOTE";
+
+//actions
+const setPersonsNotesList = () => dispatch => {
+  const request = createIndexedDB({
+    indexedDBName: dbName,
+    indexedDBVersion: 1,
+    objectStoreName: tableName,
+    primaryKey: "id" });
+
+  request.onsuccess = e => {
+    const personsList = getTable({
+      db: e.target.result,
+      objectStore: tableName,
+      permission: "readonly" });
+
+
+    //get list of notes
+    getAllTableEntries(personsList).onsuccess = getAllEvent => {
+      const personsList = getAllEvent.target.result.reverse();
+      dispatch({
+        type: SET_PERSONS_NOTES_LIST,
+        list: personsList });
+
+    };
+  };
+};
+
+const addPersonalNote = ({ personName, note }) => dispatch => {
+  const request = createIndexedDB({
+    indexedDBName: dbName,
+    indexedDBVersion: 1,
+    objectStoreName: tableName,
+    primaryKey: "id" }),
+
+  noteEntry = {
+    id: 0,
+    date: new Date(),
+    name: personName,
+    note };
+
+
+  request.onsuccess = e => {
+    const personsList = getTable({
+      db: e.target.result,
+      objectStore: tableName,
+      permission: "readwrite" });
+
+
+    //get number of entries in table
+    countTableEntries(personsList).onsuccess = countEvent => {
+      //set unique id for each entry
+      noteEntry["id"] = countEvent.target.result + 1 + Math.random();
+
+      //add entry to table (redux)
+      dispatch({
+        type: ADD_PERSONAL_NOTE,
+        noteEntry });
+
+
+      //add entry to table (indexDB)
+      personsList.add(noteEntry).onsuccess = () => {
+        //count new number of entries after adding successfully
+        countTableEntries(personsList).onsuccess = countEventAfterAdd => {
+          if (countEventAfterAdd.target.result >= 20) {
+            //get current entries
+            getAllTableEntries(personsList).onsuccess = getEvent => {
+              const last = getEvent.target.result[0];
+              //remove the oldest entry from errors list table
+              deleteEntryTable({ objectStore: personsList, id: last.id });
+            };
+          }
+        };
+      };
+    };
+  };
+};
+
+const editPersonalNote = ({ id, note }) => (dispatch, getState) => {
+  const state = getState(),
+  list = getPersonsNotesList({ state }),
+  entry = list.find(el => el.id === id),
+  request = createIndexedDB({
+    indexedDBName: dbName,
+    indexedDBVersion: 1,
+    objectStoreName: tableName,
+    primaryKey: "id" });
+
+
+  entry.note = note;
+
+  request.onsuccess = e => {
+    const personsList = getTable({
+      db: e.target.result,
+      objectStore: tableName,
+      permission: "readwrite" });
+
+
+    editTableEntry({ objectStore: personsList, entry }).onsuccess = e => {
+      dispatch({ type: EDIT_PERSONAL_NOTE, id });
+    };
+  };
+};
+
+const removePersonalNote = id => dispatch => {
+  const request = createIndexedDB({
+    indexedDBName: dbName,
+    indexedDBVersion: 1,
+    objectStoreName: tableName,
+    primaryKey: "id" });
+
+
+  request.onsuccess = e => {
+    const personsList = getTable({
+      db: e.target.result,
+      objectStore: tableName,
+      permission: "readwrite" });
+
+
+    //remove the required entry from the table
+    deleteEntryTable({ objectStore: personsList, id }).onsuccess = e => {
+      dispatch({
+        type: REMOVE_PERSONAL_NOTE,
+        id });
+
+    };
+  };
+};
+
+//reducer
+const initialState = {
+  personsNotesList: [] };
+
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_PERSONS_NOTES_LIST:{
+        return updateObject(state, { personsNotesList: action.list });
+      }
+    case ADD_PERSONAL_NOTE:{
+        return updateObject(state, {
+          personsNotesList: [...state.personsNotesList, action.noteEntry] });
+
+      }
+    case REMOVE_PERSONAL_NOTE:{
+        const personsNotesList = _.cloneDeep(state.personsNotesList),
+        newList = personsNotesList.filter(el => el.id !== action.id);
+        return updateObject(state, { personsNotesList: newList });
+      }
+    default:
+      return state;}
+
+};
+
+//selectors
+const getPersonsNotesList = ({ state }) => state.persons.personsNotesList;
+
+//This is the final reducer that gets attached to our store.
+const rootReducer = combineReducers({
+  persons: reducer });
+
+
+//create the store
+let store = createStore(rootReducer, applyMiddleware(thunk));
+
+/*=====================end redux store====================*/
+
+// modal component
+class Modal extends PureComponent {constructor(...args) {super(...args);_defineProperty(this, "modalWrapper",
+    createRef());_defineProperty(this, "renderHeader",
+
+    () => {
+      const { useModalHeader, modalTitle, modalClosed } = this.props;
+      const headerMarkup = /*#__PURE__*/
+      React.createElement("div", { className: "modal-header" }, /*#__PURE__*/
+      React.createElement("h4", { className: "modal-title" }, modalTitle), /*#__PURE__*/
+      React.createElement("button", { className: "close-modal", onClick: modalClosed }, "\xD7"));
+
+
+
+
+
+      if (useModalHeader === false) {
+        return;
+      }
+      return headerMarkup;
+    });_defineProperty(this, "renderFooter",
+
+    () => {
+      const {
+        useModalFooter,
+        modalClosed,
+        footerBtnText,
+        footerBtnListener } =
+      this.props;
+
+      const footerMarkup = /*#__PURE__*/
+      React.createElement("div", { className: "modal-footer" }, /*#__PURE__*/
+      React.createElement("button", {
+        className: "close-modal",
+        onClick: () => {
+          footerBtnListener();
+        } }, "Submit"), /*#__PURE__*/
+
+
+
+      React.createElement("button", {
+        className: "close-modal",
+        onClick: () => {
+          modalClosed();
+        } },
+
+      footerBtnText ? footerBtnText : "close"));
+
+
+
+
+      if (useModalFooter === false) {
+        return;
+      }
+      return footerMarkup;
+    });}
+
+  render() {
+    const { show, modalClosed, children } = this.props;
+
+    return /*#__PURE__*/(
+      React.createElement("div", {
+        className: `modal-window ${!show ? "inactive-modal" : ""}`,
+        onClick: e => {
+          if (e.target === this.modalWrapper.current) {
+            modalClosed();
+          }
+        } }, /*#__PURE__*/
+
+      React.createElement("div", { className: "modal-wrapper", ref: this.modalWrapper }, /*#__PURE__*/
+      React.createElement("div", { className: `modal ${show ? "animate-modal" : ""}` },
+      this.renderHeader(), /*#__PURE__*/
+      React.createElement("div", { className: "modal-body" }, show ? children : null),
+      this.renderFooter()))));
+
+
+
+
+  }}
+
+
+//app component
+const App = () => {
+  const dispatch = useDispatch(),
+  list = useSelector(state => getPersonsNotesList({ state })),
+  [name, setName] = useState(""),
+  [note, setNote] = useState(""),
+  [editNoteInput, setEditNoteInput] = useState(""),
+  [noteToEditData, setNoteToEditData] = useState({}),
+  [isModal, setIsModal] = useState(false);
+
+  useEffect(() => {
+    dispatch(setPersonsNotesList());
+  }, []);
+
+  const openModal = el => {
+    setIsModal(true);
+    setEditNoteInput(el.note);
+    setNoteToEditData(el);
+  };
+
+  const closeModal = () => {
+    setIsModal(false);
+    setEditNoteInput("");
+    setNoteToEditData({});
+  };
+
+  const nameHandler = ({ target: { value } }) => {
+    setName(value);
+  };
+
+  const noteHandler = ({ target: { value } }) => {
+    setNote(value);
+  };
+
+  const editNoteHandler = ({ target: { value } }) => {
+    setEditNoteInput(value);
+  };
+
+  const addNewNote = () => {
+    dispatch(addPersonalNote({ personName: name, note }));
+    setName("");
+    setNote("");
+  };
+
+  const deleteNote = id => {
+    dispatch(removePersonalNote(id));
+  };
+
+  const editRequiredNote = () => {
+    dispatch(editPersonalNote({ id: noteToEditData.id, note: editNoteInput }));
+    setIsModal(false);
+  };
+
+  return /*#__PURE__*/(
+    React.createElement("div", { className: "container" }, /*#__PURE__*/
+    React.createElement("h1", null, "Lista de la Compra"), /*#__PURE__*/
+    React.createElement("button", { onClick: addNewNote }, "CLICK 🛒"),
+
+
+    React.createElement("p", { className: "note" }, "VJMC®"), /*#__PURE__*/
+
+
+    React.createElement("input", {
+      list: 'elemento',
+      value: name,
+      onChange: nameHandler,
+      placeholder: "Pulsa para elegir" }), /*#__PURE__*/
+
+    React.createElement("input", {
+      value: note,
+      onChange: noteHandler,
+      placeholder: "Cantidad (opcional)" }), /*#__PURE__*/
+
+    
+    list.length > 0 ? /*#__PURE__*/
+    React.createElement("table", null, /*#__PURE__*/
+    React.createElement("thead", null, /*#__PURE__*/
+    React.createElement("tr", null, /*#__PURE__*/
+    React.createElement("th", null, "Artículo"), /*#__PURE__*/
+    React.createElement("th", null, "Cant."), /*#__PURE__*/
+    React.createElement("th", null, "Fecha"), /*#__PURE__*/
+    React.createElement("th", null, "Sup."))), /*#__PURE__*/
+
+
+    React.createElement("tbody", null,
+    list.map((el) => /*#__PURE__*/
+    React.createElement("tr", { key: el.id }, /*#__PURE__*/
+    React.createElement("td", null, el.name), /*#__PURE__*/
+    React.createElement("td", null, el.note), /*#__PURE__*/
+    React.createElement("td", null, moment(el.date).format("YYYY-MM-DD HH:mm:ss")), /*#__PURE__*/
+    React.createElement("td", null, /*#__PURE__*/
+    React.createElement("i", {
+      className: "fas fa-trash-alt",
+      onClick: () => deleteNote(el.id) }), /*#__PURE__*/
+
+    React.createElement("i", { onClick: () => openModal(el) })))))) : /*#__PURE__*/
+
+
+
+
+
+
+    React.createElement("p", { className: "no-data" }, "No hay nada en la lista 🙈."), /*#__PURE__*/
+
+
+
+
+    React.createElement(Modal, {
+      modalClosed: closeModal,
+      show: isModal,
+      modalTitle: "Modal header",
+      footerBtnText: "close",
+      footerBtnListener: editRequiredNote,
+      useModalHeader: true,
+      useModalFooter: true }, /*#__PURE__*/
+
+    React.createElement("input", {
+      value: editNoteInput,
+      onChange: editNoteHandler,
+      placeholder: "Enter edited note" }))));
+
+
+
+
+};
+
+ReactDOM.render( /*#__PURE__*/
+React.createElement(Provider, { store: store }, /*#__PURE__*/
+React.createElement(App, null)),
+
+document.querySelector("#app"));
+</script>
 
 </body>
 </html>
