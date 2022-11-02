@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>OBJETIVOS</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
 
 <style type="text/css">
+h1{
+  font-size: 3em;
+
+}
 body {
   color:white;
   background: black;
+
 }
 
 .fa-trash-alt{
@@ -21,7 +26,6 @@ margin-right: 60px;
 }
 
 .note {
-  font-size: 12px;
   color: grey;
 }
 
@@ -40,6 +44,8 @@ input {
   display: block;
   width: 100%;
   box-sizing: border-box;
+  font-size: 2.5em;
+
 }
 
 table {
@@ -47,12 +53,15 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin: 5px 0;
+  
 }
 table tr td,
 table tr th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  font-size: 2.5em;
+
 }
 table tr td i,
 table tr th i {
@@ -75,6 +84,7 @@ html,
 body,
 #app {
   height: 100%;
+    font-weight: 2.5em;
 }
 
 #app {
@@ -622,13 +632,13 @@ const App = () => {
       placeholder: "Estado ❌ o ✔" }), /*#__PURE__*/
     
 
-    React.createElement("h2", { onClick: addNewNote }, "Añadir a la lista"),
+    React.createElement("h1", { onClick: addNewNote }, "Añadir a la lista"),
     list.length > 0 ? /*#__PURE__*/
     React.createElement("table", null, /*#__PURE__*/
     React.createElement("thead", null, /*#__PURE__*/
     React.createElement("tr", null, /*#__PURE__*/
     React.createElement("th", null, "Nombre Objetivo"), /*#__PURE__*/
-    React.createElement("th", null, "❌ o ✔"), /*#__PURE__*/
+    React.createElement("th", null, "❌✔"), /*#__PURE__*/
     React.createElement("th", null, "Creado el"), /*#__PURE__*/
     React.createElement("th", null, "Acciones"))), /*#__PURE__*/
 
