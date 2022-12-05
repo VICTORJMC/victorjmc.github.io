@@ -173,13 +173,18 @@ height: 800px;
 position: relative;
 }
 
-	
-#tabs-1,#tabs-2,#tabs-3,#tabs-4,#tabs-5{
-	position: relative;
-	padding-bottom: 60.25%; /*16:9*/
-	padding-top: 25px;
-	height: 0;
+#biblio{
+background: rgba(255, 255, 255, 0.5);
+text-align: center;
 }
+
+
+#biblio li {
+        float: none !important;
+        display: inline-block;
+       
+}
+	
 
 
 #tabs-1 iframe,#tabs-2 iframe,#tabs-3 iframe,#tabs-4 iframe,#tabs-5 iframe {
