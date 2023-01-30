@@ -87,20 +87,38 @@
 
 
        <section class="slide" id="bancos" style="display:none">
-          <center>
-       <form id="myform"method="post" style="font-size:1em;">
-            <input  type="radio" onchange="go('https://www.crtvg.es/camweb/cam3.php?c=pontevedra')" /><b>Pontevedra</b>
-            <input  type="radio" onchange="go('https://www.youtube.com/embed/pJcDyurhYqQ')" /><b>Madrigal de las Altas Torres</b> 
-            <input  type="radio" onchange="go('https://www.youtube.com/embed/YytXoVOZCcU')" /><b>Cabañeros - Berrea de ciervos</b>
-            <input  type="radio" onchange="go('https://www.youtube.com/embed/mrTOfg53hTI')" /><b>Sierra de Gredos</b>
-            <input  type="radio" onchange="go('https://www.youtube.com/embed/SmmwhlWmxvo')" /><b>Guisando</b>
-            <input  type="radio" onchange="go('https://www.youtube.com/embed/Rea5GSVaxpE')" /><b>Madrid</b>
-            <input  type="radio" onchange="go('https://webcam.cuenca.es/live_plazamayor/readImage.asp?1674224453752')" /><b>Cuenca</b>
-            <input  type="radio" onchange="go('https://rtsp.me/embed/hDyn688A')" /><b>Segovia</b>
-        </form><br>
-        <script> function go(loc) {    calendar.src = loc;document.getElementById('myform').reset(); }  </script>
-        <iframe id="calendar" src="https://www.crtvg.es/camweb/cam3.php?c=pontevedra" scrolling="no" style="border-width:0"  width="100%" height="800" frameborder="0"></iframe>
-        <center>
+          <div id ="pestanas">
+           <ul>
+             <li onclick="go('https://www.crtvg.es/camweb/cam3.php?c=pontevedra')"><a href="#tabs-1">PONTEVEDRA</a></li>
+             <li onclick="go('https://www.youtube.com/embed/pJcDyurhYqQ')"><a href="#tabs-2">MADRIGAL DE LAS ALTAS TORRES</a></li>
+             <li onclick="go('https://www.youtube.com/embed/6KAae2RgyEo')"><a href="#tabs-3">PORTILLA DE LA REINA LEÓN</a></li>
+             <li onclick="go('https://www.youtube.com/embed/mrTOfg53hTI')"><a href="#tabs-4">SIERRA DE GREDOS</a></li>
+             <li onclick="go('https://www.youtube.com/embed/SmmwhlWmxvo')"><a href="#tabs-5">GUISANDO</a></li>
+             <li onclick="go('https://www.youtube.com/embed/Rea5GSVaxpE')"><a href="#tabs-6">MADRID</a></li>
+             <li onclick="go('https://webcam.cuenca.es/live_plazamayor/readImage.asp?1674224453752')"><a href="#tabs-7">CUENCA</a></li>
+             <li onclick="go('https://rtsp.me/embed/hDyn688A')"><a href="#tabs-8">SEGOVIA</a></li>
+             <script> function go(loc) {    calendar.src = loc; }  </script>
+             <iframe id="calendar" src="https://www.crtvg.es/camweb/cam3.php?c=pontevedra" scrolling="no" style="border-width:0"  width="100%" height="800" frameborder="0"></iframe>
+             
+           </ul>
+
+              <div id="tabs-1"></div>
+
+              <div id="tabs-2"></div>
+
+              <div id="tabs-3"></div>
+
+              <div id="tabs-4"></div>
+
+              <div id="tabs-5"></div>
+
+              <div id="tabs-6"></div>
+
+              <div id="tabs-7"></div>
+
+              <div id="tabs-8"></div>
+        
+          </div>
        </section> <!--id="bancos"-->
 
 
