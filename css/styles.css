@@ -173,22 +173,7 @@ height: 800px;
 position: relative;
 font-size: 1.3em;
 }
-.content-input input[type=radio] + i:before{
-	content: '';
-	display: block;
-	height: 18px;
-	width: 18px;
-	background: red;
-	border-radius: 100%;
-	position: absolute;
-	z-index: 1;
-	top: 4px;
-	left: 4px;
-	background:#2AC176;
-	transition: all 0.25s ease; /* Todas las propiedades | tiempo | tipo movimiento */
-	transform: scale(0) /* Lo reducimos a 0*/ ;
-	opacity: 0; /* Lo ocultamos*/
-}
+
 
 #biblio{
 background: rgba(255, 255, 255, 0.5);
