@@ -85,8 +85,7 @@
        </section> <!--id="home"-->
 
 
-
-       <section class="slide" id="bancos" style="display:none">
+<section class="slide" id="bancos" style="display:none">
           <div id ="pestanas">
            <ul>
              <li onclick="go('https://www.crtvg.es/camweb/cam3.php?c=pontevedra')"><a href="#tabs-1">PONTEVEDRA</a></li>
@@ -95,17 +94,17 @@
              <li onclick="go('https://www.youtube.com/embed/mrTOfg53hTI')"><a href="#tabs-4">SIERRA DE GREDOS</a></li>
              <li onclick="go('https://www.youtube.com/embed/SmmwhlWmxvo')"><a href="#tabs-5">GUISANDO</a></li>
              <li onclick="go('https://www.youtube.com/embed/Rea5GSVaxpE')"><a href="#tabs-6">MADRID</a></li>
-             <li onclick="alertMe()"><a href="#tabs-7">CUENCA</a></li>
+             <li ><a href="#tabs-7">CUENCA</a></li>
              <li onclick="go('https://rtsp.me/embed/hDyn688A')"><a href="#tabs-8">SEGOVIA</a></li>
-             <script> function go(loc) {    calendar.src = loc; }  </script>
-             <iframe id="calendar" src="https://www.crtvg.es/camweb/cam3.php?c=pontevedra" scrolling="no" style="border-width:0"  width="100%" height="800" frameborder="0"></iframe>
-             <script>
-function alertMe() {
-  setInterval(function(){
-   document.getElementById("calendar").src = "https://webcam.cuenca.es/live_plazamayor/readImage.asp?1674224453752";
-  },200);
-}
-</script>
+             <script> 
+            function go(loc) {
+            document.getElementById("calendar").src = " ";
+            calendar.src = loc; 
+            
+            } 
+            </script>
+             
+        
 
            </ul>
 
@@ -121,11 +120,36 @@ function alertMe() {
 
               <div id="tabs-6"></div>
 
-              <div id="tabs-7"></div>
+              <div id="tabs-7"><button type="button" id="startBtn">Play</button>
+              <button type="button" id="stopBtn" style="margin-left:45px;">Stop</button>
+              <div id="myDiv"></div></div>
 
               <div id="tabs-8"></div>
         
           </div>
+         <iframe id="calendar" src="https://www.crtvg.es/camweb/cam3.php?c=pontevedra" scrolling="no" style="border-width:0"  width="100%" height="800" frameborder="0"></iframe>
+         <script>
+         var intervalID;
+
+         // Function to call repeatedly 
+         function sayHello(){
+         document.getElementById("calendar").src = "https://webcam.cuenca.es/live_plazamayor/readImage.asp?1674224453752";
+         
+         }
+      
+         // Function to start setInterval call
+         function start(){
+         intervalID = setInterval(sayHello, 1000);
+         }
+
+         // Function to stop setInterval call
+         function stop(){
+         clearInterval(intervalID);
+         }
+
+         document.getElementById("startBtn").addEventListener("click", start);
+         document.getElementById("stopBtn").addEventListener("click", stop);
+         </script>
        </section> <!--id="bancos"-->
 
 
