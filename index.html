@@ -95,15 +95,14 @@
              <li onclick="go('https://www.youtube.com/embed/mrTOfg53hTI')"><a href="#tabs-4">SIERRA DE GREDOS</a></li>
              <li onclick="go('https://www.youtube.com/embed/SmmwhlWmxvo')"><a href="#tabs-5">GUISANDO</a></li>
              <li onclick="go('https://www.youtube.com/embed/Rea5GSVaxpE')"><a href="#tabs-6">MADRID</a></li>
-             <li ><a href="#tabs-7">CUENCA</a></li>
+             <li onclick="start()"><a href="#tabs-7">CUENCA</a></li>
              <li onclick="go('https://rtsp.me/embed/hDyn688A')"><a href="#tabs-8">SEGOVIA</a></li>
-             <script> 
-            function go(loc) {
-            document.getElementById("calendar").src = " ";
-            calendar.src = loc; 
+           
+          
+         
+           
             
-            } 
-            </script>
+
              
         
 
@@ -121,8 +120,8 @@
 
               <div id="tabs-6"></div>
 
-              <div id="tabs-7">
-              <span onclick="start()" style="font-size:2.5em;padding:50px;">Play</span><span onclick="stop()" style="font-size:2.5em;padding:50px;">Stop</span>
+              <div id="tabs-7"><h1>Cuenca es Única</h1></div>
+           
 
               <div id="tabs-8"></div>
         
@@ -146,6 +145,12 @@
          function stop(){
          clearInterval(intervalID);
          }
+         function go(loc) 
+            stop();
+            document.getElementById("calendar").src = " ";
+            calendar.src = loc; 
+            
+            } 
 
          </script>
        </section> <!--id="bancos"-->
