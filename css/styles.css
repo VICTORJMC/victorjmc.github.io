@@ -222,7 +222,6 @@ position: relative;
 .neon {
 	color: #fff;
     font-family: Pacifico;
-    font-size: 2.5em;
      -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
      animation: neon1 1.5s ease-in-out infinite alternate;
   }
@@ -237,7 +236,7 @@ position: relative;
 	/*src: url('https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap');*/
 	font-family: 'Merienda', cursive;
     color: #228DFF;
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 
 .neon1:hover {
