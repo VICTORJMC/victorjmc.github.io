@@ -175,13 +175,13 @@ font-size: 1.3em;
 }
 
 
-#biblio{
+#biblio, #bancos{
 background: rgba(255, 255, 255, 0.5);
 text-align: justify;
 }
 
 
-#biblio li {
+#biblio li, #bancos li {
         float: none !important;
         display: inline-block;
        
