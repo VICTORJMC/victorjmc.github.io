@@ -152,6 +152,7 @@ h1 {text-align: center;color:white;}
   width: 100%;
   position: relative;
   height: 800px;
+  color: white;
   }
 
 #slider .slide{
@@ -310,9 +311,60 @@ position: relative;
 }
 
 
+#recetas{
+font-size:2em;
+}
+
+#recetas b{
+color:#FFD700;
+}
 
 
+#recetas spam{
+font-weight: bold;
+margin-right: 100px;
+}
 
+.text {
+  font-family:helvetica;
+  font-weight:bold;
+  color:#FFD700;
+  text-transform:uppercase;
+}
+.parpadea {
+  
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration:1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 1.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+#recetas p{
+text-align: justify;
+}
 
 
 

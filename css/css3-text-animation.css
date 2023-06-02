@@ -112,7 +112,7 @@ h1.main, p.demos {
 	top: 50%;
 	margin: -137px 0 0 -141px;
 	background: transparent url(http://web-sonick.zz.mu/images/sl/globe.png) no-repeat top left;
-	-webkit-animation: fadeInBack 3.6s linear 14s backwards;
+	-webkit-animation: fadeInBack 60.6s linear 14s backwards;
 	-moz-animation: fadeInBack 3.6s linear 14s backwards;
 	-ms-animation: fadeInBack 3.6s linear 14s backwards;
 	animation: fadeInBack 3.6s linear 14s backwards;
