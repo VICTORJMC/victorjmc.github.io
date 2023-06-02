@@ -26,6 +26,7 @@
 <script type="text/javascript"  src="js/theme.js">  </script>
 <script type="text/javascript"  src="js/loto.js">  </script>
 <script type="text/javascript"  src="js/popup.js">  </script>
+<script type="text/javascript"  src="js/recetas.js">  </script>
 
 
 </head>
@@ -42,7 +43,7 @@
        <li id="logo"><a href="#"><img src="img/dron.jpg" style="max-height: 200px; max-width: 200px;" /></a></li>
        <li><a onClick="navSection('mail')"href="#">Biblio</a></li>
        <li><a onClick="navSection('utilidades')"href="#">Agenda</a></li>
-       <li><a href="recetas.html">Recetas</a></li>
+       <li><a onClick="navSection('recetas')"href="#">Recetas</a></li>
   </ul>
 </header>
 
@@ -478,7 +479,18 @@
 
 
         
+       <section class="slide" id="recetas" style="display:none">
+          <center><spam class="parpadea text" onclick="startSequence(pastas)">PASTAS</spam>
+          <spam class="parpadea text" onclick="startSequence(arroces)">ARROCES</spam>
+          <spam class="parpadea text" onclick="startSequence(verduras)">VERDURAS</spam></center><br><br>
+          <p id="demo"></p>
 
+
+           
+           
+        
+   
+       </section> <!--id="RECETAS"-->
 
 
 
@@ -526,10 +538,11 @@ var section = new Array(5);
  section[2] = "arqueo";
  section[3] = "mail";
  section[4] = "utilidades";
+ section[5] = "recetas";
    
  var search;
  var show;
-for (var i=0;  i<5; i++) { 
+for (var i=0;  i<6; i++) { 
      search = document.getElementById(section[i]);
      search.style.display ="none"; //oculta todas las seciones
      if (section[i] == nav) { 
