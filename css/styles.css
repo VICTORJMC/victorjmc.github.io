@@ -21,10 +21,11 @@
 body{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 20px;
-	/*background: url("../img/source.gif");*/
+	background: url("../img/source.gif");
 	background-attachment: fixed;
 	background-size: cover;
-	background-repeat: repeat;
+}
+/*	background-repeat: repeat;
 	  -webkit-animation: image 60s infinite alternate;
           animation: image 60s infinite alternate;
 }
@@ -40,7 +41,7 @@ body{
   100% {
     background-image: url("https://unsplash.it/601/601");
   }
-}
+}*/
 
 
 .clearfix{
@@ -51,7 +52,7 @@ body{
 /*Barra de navegacion / cabecera*/
 
 header{
-	font-size: 25px;
+	font-size: 1.5em;
 	display: block;
 	width: 100%;
 	height: 90px;
@@ -176,13 +177,13 @@ font-size: 1.3em;
 }
 
 
-#biblio, #bancos{
+#biblio, #bancos,#recetas{
 background: rgba(255, 255, 255, 0.5);
 text-align: justify;
 }
 
 
-#biblio li, #bancos li {
+#biblio li, #bancos li, #recetas li {
         float: none !important;
         display: inline-block;
        
@@ -312,7 +313,7 @@ position: relative;
 
 
 #recetas{
-font-size:2em;
+font-size:1.5em;
 }
 
 #recetas b{
@@ -320,70 +321,9 @@ color:#FFD700;
 }
 
 
-#recetas spam{
-font-weight: bold;
-margin-right: 100px;
-}
-
-.text {
-  font-family:helvetica;
-  font-weight:bold;
-  color:#FFD700;
-  text-transform:uppercase;
-}
-.parpadea {
-  
-  animation-name: parpadeo;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-
-  -webkit-animation-name:parpadeo;
-  -webkit-animation-duration:1s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-}
-
-@-moz-keyframes parpadeo{  
-  0% { opacity: 1.0; }
-  50% { opacity: 1.0; }
-  100% { opacity: 1.0; }
-}
-
-@-webkit-keyframes parpadeo {  
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-   100% { opacity: 1.0; }
-}
-
-@keyframes parpadeo {  
-  0% { opacity: 1.0; }
-   50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
-}
-
 #recetas p{
 text-align: justify;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
