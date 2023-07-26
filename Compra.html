@@ -255,14 +255,15 @@ body,
              <option value="🍝PASTA">
              <option value="🧋YOGURT">
              <option value="🧀QUESO">
+             <option value="🥣AVENA">
+             <option value="☕CAFE">
              <option value="🧻Rollo Cocina">
              <option value="🧻Hijiénico">
              <option value="🧴CHAMPÚ">
+             <option value="🧼GEL DUCHA">
              <option value="🚮BOLSA BASURA">
              <option value="🧷PAÑALES">
              <option value="📜TOALLITAS">
-             <option value="🥣AVENA">
-             <option value="☕CAFE">
          </datalist>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js'></script>
@@ -656,24 +657,26 @@ const App = () => {
 
   return /*#__PURE__*/(
     React.createElement("div", { className: "container" }, /*#__PURE__*/
-    React.createElement("h1", null, "Lista de la Compra"), /*#__PURE__*/
-    React.createElement("button", { onClick: addNewNote }, "CLICK 🛒"),
-
-
-    React.createElement("p", { className: "note" }, "VJMC®"), /*#__PURE__*/
-
+    React.createElement("h1", null, "Lista de la Compra"), /*#__PURE__*/  
 
     React.createElement("input", {
       list: 'elemento',
       value: name,
       onChange: nameHandler,
-      placeholder: "Pulsa para elegir" }), /*#__PURE__*/
+      placeholder: "Pulsa o Escribe para añadir" }), /*#__PURE__*/
 
     React.createElement("input", {
       value: note,
       onChange: noteHandler,
       placeholder: "Cantidad (opcional)" }), /*#__PURE__*/
 
+  
+    React.createElement("button", { onClick: addNewNote }, "AÑADIR 🛒"),
+    React.createElement("p", { className: "note" }, "VJMC®"), /*#__PURE__*/
+
+
+
+    
     
     list.length > 0 ? /*#__PURE__*/
     React.createElement("table", null, /*#__PURE__*/
@@ -704,6 +707,8 @@ const App = () => {
 
 
     React.createElement("p", { className: "no-data" }, "No hay nada en la lista 🙈."), /*#__PURE__*/
+
+
 
 
 
