@@ -1,245 +1,361 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+/* Basic Style */
+
 body {
-  margin: 0;
-  min-width: 250px;
+  background: #fff;
+  color: white;
+  font-family: Lato, sans-serif;
+  background-color:#680747;
+    font-size: 25px;
 }
 
-/* Include the padding and border in an element's total width and height */
-* {
-  box-sizing: border-box;
-   font-family: 'Josefin Sans', sans-serif;
+.container {
+  display: block;
+  width: 800px;
+  margin: 50px auto 10px;
+  background-color:#5c5470;
+  padding:0px 10px 10px 10px;
+  border-radius:10px;
+    
 }
 
-/* Remove margins and padding from the list */
+h2 {
+  text-align:center;
+  padding-top:10px;
+  margin-bottom:0px;
+}
+
 ul {
-  margin: 0;
+  margin: 50px;
   padding: 0;
-  border :5px solid;
 }
 
-/* Style the list items */
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
-  text-transform: uppercase;
-  
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+li * {
+  float: left;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: #ddd;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-/* Style the header */
-.header {
-  background-color: black;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-  border :5px solid;
-  border-color:#353535;
-}
-
-h1 {
-font-size: 46px;
-}
-p {
-font-size: 10px;
-float: right;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
+li,
+h3 {
   clear: both;
+  list-style: none;
 }
 
-/* Style the input */
-input{
+input,
+button {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 20px;
+  width: 60px;
+  margin: 10px 0px 0px 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #333;
+}
+
+
+/* Heading */
+
+h3,
+label[for='new-task'] {
+  color: #dbd8e3;
+  font-weight: 700;
+  font-size: 25px;
+  border-bottom: 2px solid #333;
+  padding: 20px 0 10px;
   margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
   text-transform: uppercase;
 }
 
-/* Style the "Add" button */
-.addBtn {
+input[type="text"] {
+  margin: 0;
+  font-size: 28px;
+  line-height: 18px;
+  height: 18px;
   padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: black;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+
+input[type="text"]:focus {
+  color: #333;
+}
+
+
+/* New Task */
+
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 10px;
+}
+
+input#new-task {
   float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
+  width: 318px;
+}
+
+p > button:hover {
+  color: #0FC57C;
+}
+
+
+/* Task list */
+
+li {
+  overflow: hidden;
+  
+  border-bottom: 1px solid #eee;
+}
+
+li > input[type="checkbox"] {
+  margin: -5px 5px;
+  position: relative;
+  top: 15px;
+    width: 20px;
+    height: 20px;
+    accent-color: #9b59b6;
+    
+}
+
+li > label {
+  font-size: 28px;
+  line-height: 40px;
+  width: 400px;
   
 }
 
-.addBtn:hover {
-  background-color: #bbb;
-  color:white;
+li > input[type="text"] {
+  width: 226px;
+}
+
+li > .delete:hover {
+  color: #CF2323;
+}
+
+
+/* Completed */
+
+#completed-tasks label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+
+/* Edit Task */
+
+ul li input[type=text] {
+  display: none;
+}
+
+ul li.editMode input[type=text] {
+  display: block;
+}
+
+ul li.editMode label {
+  display: none;
 }
 </style>
 </head>
 <body>
+  <div class="container">
+    <h2>REVISAR</h2>
+    <h3>Añadir</h3>
+    <p>
+      <input id="new-task" type="text"><button>➕</button>
+    </p>
 
-<div id="myDIV" class="header">
-  
-  <h1 style="margin:5px">REVISAR</h1>
-  <input type="text" id="myInput" placeholder="Artículo...">
-  <span onclick="newElement()" class="addBtn">AÑADE</span>
-  <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral</p> 
-</div>
+    <h3>Pendiente</h3>
+    <ul id="incomplete-tasks">
+  <li><input type="checkbox"><label>GAFAS</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>PIJAMA</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>MOVIL</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>CARGADOR MOVIL</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>MAQUINILLA PELO</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li> 
+  <li><input type="checkbox"><label>CARTERA</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>CLAVE ANTENAWIFI $ USB</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>DISCO USB</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>MUDA</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>ROPA RUNNING</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>ZAPAS</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>AURICULARES</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>LLAVES</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>PASTILLAS</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>NECESER</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>CHANCLAS</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>BAJAR TEMP FRIGO</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>APAGAR WIFI REGLETAS</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>CERRAR AGUA</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>VENTANAS</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>BASURA</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+  <li><input type="checkbox"><label>MESAS SUPERFICIE</label><input type="text"><button class="edit">🖍️</button><button class="delete">🗑️</button></li>
+    </ul>
 
+    <h3>Completado</h3>
+    <ul id="completed-tasks">
 
-<ul id="myUL">
-  <li>GAFAS</li>
-  <li>PIJAMA</li>
-  <li>MOVIL</li>
-  <li>CARGADOR MOVIL</li>
-  <li>MAQUINILLA PELO</li> 
-  <li>CARTERA-DOCUMENTACIÓN</li>
-  <li>CLAVE ANTENAWIFI $ USB</li>
-  <li>DISCO USB</li>
-  <li>MUDA</li>
-  <li>ROPA RUNNING</li>
-  <li>ZAPAS</li>
-  <li>AURICULARES</li>
-  <li>LLAVES Y LLAVES DE PONTEVEDRA</li>
-  <li>PASTILLAS</li>
-  <li>NECESER & COLONIA</li>
-  <li>CHANCLAS</li>
-  <li>BAJAR TEMP FRIGO</li>
-  <li>APAGAR WIFI REGLETAS</li>
-  <li>CERRAR AGUA</li>
-  <li>VENTANAS</li>
-  <li>BASURA</li>
-  <li>REVISAR MESAS SUPERFICIE</li>
-
-
-
-</ul>
-
-<script>
-
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("NO HAS ESCRITO NADA!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-</script>
+    </ul>
+  </div>
 
 </body>
+<script>
+var taskInput = document.getElementById("new-task"); //new-task
+var addButton = document.getElementsByTagName("button")[0]; //first button
+var incompleteTasksHolder = document.getElementById("incomplete-tasks"); //incomplete-tasks
+var completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
+
+//New Task List Item
+var createNewTaskElement = function(taskString) {
+  //Create List Item
+  var listItem = document.createElement("li");
+
+  //input (checkbox)
+  var checkBox = document.createElement("input"); // checkbox
+  //label
+  var label = document.createElement("label");
+  //input (text)
+  var editInput = document.createElement("input"); // text
+  //button.edit
+  var editButton = document.createElement("button");
+  //button.delete
+  var deleteButton = document.createElement("button");
+
+  //Each element needs modifying
+
+  checkBox.type = "checkbox";
+  editInput.type = "text";
+
+  editButton.innerText = "🖍️";
+  editButton.className = "edit";
+  deleteButton.innerText = "🗑️";
+  deleteButton.className = "delete";
+
+  label.innerText = taskString;
+
+  //Each element needs appending
+  listItem.appendChild(checkBox);
+  listItem.appendChild(label);
+  listItem.appendChild(editInput);
+  listItem.appendChild(editButton);
+  listItem.appendChild(deleteButton);
+
+  return listItem;
+}
+
+//Add a new task
+var addTask = function() {
+  console.log("Add task...");
+  //Create a new list item with the text from #new-task:
+  var listItem = createNewTaskElement(taskInput.value);
+  //Append listItem to incompleteTasksHolder
+  incompleteTasksHolder.appendChild(listItem);
+  bindTaskEvents(listItem, taskCompleted);
+
+  taskInput.value = "";
+}
+
+//Edit an existing task
+var editTask = function() {
+  console.log("Edit task...");
+
+  var listItem = this.parentNode;
+
+  var editInput = listItem.querySelector("input[type=text");
+  var label = listItem.querySelector("label");
+
+  var containsClass = listItem.classList.contains("editMode");
+
+  //if the class of the parent is .editMode
+  if (containsClass) {
+    //Switch from .editMode
+    //label text become the input's value
+    label.innerText = editInput.value;
+  } else {
+    //Switch to .editMode
+    //input value becomes the label's text
+    editInput.value = label.innerText;
+  }
+
+  //Toggle .editMode on the list item
+  listItem.classList.toggle("editMode");
+
+}
+
+//Delete an existing task
+var deleteTask = function() {
+  console.log("Delete task...");
+  var listItem = this.parentNode;
+  var ul = listItem.parentNode;
+
+  //Remove the parent list item from the ul
+  ul.removeChild(listItem);
+}
+
+//Mark a task as complete
+var taskCompleted = function() {
+  console.log("Task complete...");
+  //Append the task list item to the #completed-tasks
+  var listItem = this.parentNode;
+  completedTasksHolder.appendChild(listItem);
+  bindTaskEvents(listItem, taskIncomplete);
+}
+
+//Mark a task as incomplete
+var taskIncomplete = function() {
+  console.log("Task incomplete...");
+  //Append the task list item to the #incomplete-tasks
+  var listItem = this.parentNode;
+  incompleteTasksHolder.appendChild(listItem);
+  bindTaskEvents(listItem, taskCompleted);
+}
+
+var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
+  console.log("Bind list item events");
+  //select taskListItem's children
+  var checkBox = taskListItem.querySelector("input[type=checkbox]");
+  var editButton = taskListItem.querySelector("button.edit");
+  var deleteButton = taskListItem.querySelector("button.delete");
+
+  //bind editTask to edit button
+  editButton.onclick = editTask;
+
+  //bind deleteTask to delete button
+  deleteButton.onclick = deleteTask;
+
+  //bind checkBoxEventHandler to checkbox
+  checkBox.onchange = checkBoxEventHandler;
+}
+
+// var ajaxRequest = function() {
+//  console.log("AJAX request");
+// }
+
+//Set the click handler to the addTask function
+addButton.addEventListener("click", addTask);
+//addButton.addEventListener("click", ajaxRequest);
+
+//cycle over incompleteTasksHolder ul list items
+for (var i = 0; i < incompleteTasksHolder.children.length; i++) {
+  //bind events to list item's children (taskCompleted)
+  bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
+}
+
+//cycle over completedTasksHolder ul list items
+for (var i = 0; i < completedTasksHolder.children.length; i++) {
+  //bind events to list item's children (taskIncomplete)
+  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
+}
+</script>
 </html>
