@@ -324,7 +324,33 @@ color:grey;
 #recetas p{
 text-align: justify;
 }
+#recetas table {
+  width: 75%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+}
 
+#recetas td, th {
+  padding: 8px;
+
+}
+#recetas  th {
+background-color: grey;
+ border: 1px solid white;
+}
+
+th:hover {
+  color: black;
+}
+
+#n {
+color: white;
+}
+
+#recetas  p {
+  text-align: justify;
+  color: black;
+}
 
 
 
