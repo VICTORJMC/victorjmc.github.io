@@ -177,7 +177,7 @@ font-size: 1.3em;
 }
 
 
-#biblio, #bancos,#recetas{
+#biblio, #bancos{
 background: rgba(255, 255, 255, 0.5);
 text-align: justify;
 }
@@ -316,8 +316,8 @@ position: relative;
 font-size:1.5em;
 }
 
-#recetas b{
-color:grey;
+#recetas b {
+color:white;
 }
 
 
@@ -325,7 +325,7 @@ color:grey;
 text-align: justify;
 }
 #recetas table {
-  width: 75%;
+  width: 85%;
   border: none;
   background: rgba(255, 255, 255, 0.4);
 }
