@@ -27,6 +27,7 @@
 <script type="text/javascript"  src="js/loto.js">  </script>
 <script type="text/javascript"  src="js/popup.js">  </script>
 <script type="text/javascript"  src="js/recetas.js">  </script>
+<script type="text/javascript"  src="js/replyloop.js">  </script>
 
 
 </head>
@@ -490,23 +491,24 @@
 
 
 
-        <div id ="pestanas">
-           <ul>
-             <li onclick="startSequence(pastas)"><a href="#tabs-1">PASTAS</a></li>
-             <li onclick="startSequence(arroces)"><a href="#tabs-2">ARROZ</a></li>
-             <li onclick="startSequence(verduras)"><a href="#tabs-3">VERDURAS-ENSALDAS</a></li>
-             <li onclick="startSequence(gourmet)"><a href="#tabs-4">GOURMET</a></li>
+           <center>
+           <table>
+             <tr>
+               <th onclick="clic(pastas)">PASTAS</th>
+               <th onclick="clic(arroces)">ARROCES</th>
+               <th onclick="clic(verduras)">VERDURAS</th>
+               <th onclick="clic(gourmet)">GOURMET</th>
+              
+             </tr>
+             </table>
+             <table>
+             <tr>
+               <td ><b id="n"></b><br> <p id="print"></p></td>
+             </tr>
+             </table>
            
-           </ul>
-           <div id="tabs-1"></div>
-           <div id="tabs-2"></div>
-           <div id="tabs-3"></div>
-           <div id="tabs-4"></div>
-           <img id="Img"  width="300" height="220">
-           <p id="demo"></p>
-        </div>
-          
 
+           <center>
 
            
            
