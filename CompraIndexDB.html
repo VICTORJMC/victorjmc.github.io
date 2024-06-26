@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Artículos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button{font-size:0.7em;
+
+        }
+        input{font-size:0.8em;
+          }
+    </style>
+</head>
+<body>
+    <h2>Lista de la Compra</h2>
+    <h2><input type="text" id="nuevoArticulo" placeholder="Nuevo artículo">
+    <button onclick="agregarArticulo()">➕</button></h2>
+   
+    <table id="tablaArticulos">
+        <thead>
+            <tr>
+                <th>Artículo</th>
+                <th>Fecha</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los artículos se agregarán aquí -->
+        </tbody>
+    </table>
+    <h2>
+   
+<button onclick="comprar()">🛒</button></h2><script>
+let db;
+
+const articulos = ['🍫CHOCOLATE','🥤COCA-COLA','💧AGUA','🥛LECHE','🍪GALLETAS','🥜FRUTOS SECOS','🍏Manzanas','🍌Platanos','🍈Limones','🍊Naranjas','🍃Lima','🍑Melocoton','🍇Uvas','🍍Piña','🍉Sandia','🫒ACEITE-AOVE','🥑Aguacate','🧅Cebolla','🥬Lechuga','🫑Pimiento','🍅Tomates','🥕Zanahorias','🍄Champiñones','🌶️Jalapeños','🥔Patatas','🫒ACEITUNAS','🌰Lentejas','🥦Guisantes','🥚HUEVOS','🍗POLLO','🍖PAVO','🍞PAN','🍚ARROZ','🍝PASTA','🧋YOGURT','🧀QUESO','🥣AVENA','☕CAFE','🧻Rollo Cocina','🧻Hijiénico','🧴CHAMPÚ','🧼GEL DUCHA','🚮BOLSA BASURA','🧷PAÑALES','📜TOALLITAS'];
+
+// Abrir la base de datos
+const request = indexedDB.open('articulosDB', 1);
+
+request.onupgradeneeded = function(event) {
+    db = event.target.result;
+    if (!db.objectStoreNames.contains('articulos')) {
+        db.createObjectStore('articulos', { keyPath: 'id', autoIncrement: true });
+    }
+};
+
+request.onsuccess = function(event) {
+    db = event.target.result;
+    cargarTodos();
+};
+
+request.onerror = function(event) {
+    console.error('Error al abrir la base de datos', event);
+};
+
+function agregarArticulo() {
+    const articuloInput = document.getElementById('nuevoArticulo');
+    const articulo = articuloInput.value.trim();
+    if (articulo === '') return;
+    const fecha = new Date().toLocaleDateString();
+
+    const transaction = db.transaction(['articulos'], 'readwrite');
+    const objectStore = transaction.objectStore('articulos');
+    objectStore.add({ articulo, fecha });
+
+    transaction.oncomplete = function() {
+        console.log('Artículo añadido');
+        articuloInput.value = '';
+        cargarTodos();
+    };
+
+    transaction.onerror = function(event) {
+        console.error('Error al añadir el artículo', event);
+    };
+}
+
+function comprar() {
+    const fecha = new Date().toLocaleDateString();
+
+    const transaction = db.transaction(['articulos'], 'readwrite');
+    const objectStore = transaction.objectStore('articulos');
+
+    articulos.forEach(articulo => {
+        objectStore.add({ articulo, fecha });
+    });
+
+    transaction.oncomplete = function() {
+        console.log('Artículos añadidos');
+        cargarTodos();
+    };
+
+    transaction.onerror = function(event) {
+        console.error('Error al añadir los artículos', event);
+    };
+}
+
+function cargarTodos() {
+    const transaction = db.transaction(['articulos'], 'readonly');
+    const objectStore = transaction.objectStore('articulos');
+    const request = objectStore.getAll();
+
+    request.onsuccess = function(event) {
+        const articulos = event.target.result;
+        const tablaBody = document.querySelector('#tablaArticulos tbody');
+        tablaBody.innerHTML = '';
+
+        articulos.forEach(item => {
+            const fila = document.createElement('tr');
+
+            const celdaArticulo = document.createElement('td');
+            celdaArticulo.textContent = item.articulo;
+            fila.appendChild(celdaArticulo);
+
+            const celdaFecha = document.createElement('td');
+            celdaFecha.textContent = item.fecha;
+            fila.appendChild(celdaFecha);
+
+            const celdaBorrar = document.createElement('td');
+            const botonBorrar = document.createElement('button');
+            botonBorrar.textContent = '❌';
+            botonBorrar.onclick = function() {
+                borrarArticulo(item.id);
+            };
+            celdaBorrar.appendChild(botonBorrar);
+            fila.appendChild(celdaBorrar);
+
+            tablaBody.appendChild(fila);
+        });
+    };
+
+    request.onerror = function(event) {
+        console.error('Error al cargar los artículos', event);
+    };
+}
+
+function borrarArticulo(id) {
+    const transaction = db.transaction(['articulos'], 'readwrite');
+    const objectStore = transaction.objectStore('articulos');
+    objectStore.delete(id);
+
+    transaction.oncomplete = function() {
+        console.log('Artículo borrado');
+        cargarTodos();
+    };
+
+    transaction.onerror = function(event) {
+        console.error('Error al borrar el artículo', event);
+    };
+}
+
+window.onload = function() {
+    cargarTodos();
+};
+
+       
+    </script>
+</body>
+</html>
