@@ -28,7 +28,7 @@
 </head>
 <body>
     <h1>Lista de la Compra <b>®VJMC</b></h1>
-    <h2><input type="text" id="nuevoArticulo" placeholder="Nuevo artículo">
+<h2><input type="text" id="nuevoArticulo" placeholder="Nuevo artículo">
     <button onclick="agregarArticulo()">➕</button></h2>
    
     <table id="tablaArticulos">
@@ -43,12 +43,14 @@
             <!-- Los artículos se agregarán aquí -->
         </tbody>
     </table>
-    <h2>
    
-<button onclick="comprar()">🛒</button></h2><script>
+
+<h2><button onclick="comprar()">🛒</button>   <button onclick="borrarTodasLasFilas()">💣</button></h2> 
+
+<script>
 let db;
 
-const articulos = ['🍫CHOCOLATE','🥤COCA-COLA','💧AGUA','🥛LECHE','🍪GALLETAS','🥜FRUTOS SECOS','🍏Manzanas','🍌Platanos','🍈Limones','🍊Naranjas','🍃Lima','🍑Melocoton','🍇Uvas','🍍Piña','🍉Sandia','🫒ACEITE-AOVE','🥑Aguacate','🧅Cebolla','🥬Lechuga','🫑Pimiento','🍅Tomates','🥕Zanahorias','🍄Champiñones','🌶️Jalapeños','🥔Patatas','🫒ACEITUNAS','🌰Lentejas','🥦Guisantes','🥚HUEVOS','🐷JAMÓN','🍗POLLO','🍖PAVO','🍞PAN','🍚ARROZ','🍝PASTA','🧋YOGURT','🧀QUESO','🥣AVENA','☕CAFE','🧻Rollo Cocina','🧻Hijiénico','🧴CHAMPÚ','🧼GEL DUCHA','🚮BOLSA BASURA','🧷PAÑALES','📜TOALLITAS'];
+const articulos = ['🍫CHOCOLATE','🥤COCA-COLA','💧AGUA','🥛LECHE','🍪GALLETAS','🥜FRUTOS SECOS','🍏Manzanas','🍌Platanos','🍈Limones','🍊Naranjas','🍃Lima','🍑Melocoton','🍇Uvas','🍍Piña','🍉Sandia','🫒ACEITE-AOVE','🥑Aguacate','🧅Cebolla','🥬Lechuga','🫑Pimiento','🍅Tomates','🥕Zanahorias','🍄Champiñones','🌶️Jalapeños','🥔Patatas','🫒ACEITUNAS','🌰Lentejas','🥦Guisantes','🥚HUEVOS','🍗POLLO','🍖PAVO','🍞PAN','🍚ARROZ','🍝PASTA','🧋YOGURT','🧀QUESO','🥣AVENA','☕CAFE','🧻Rollo Cocina','🧻Hijiénico','🧴CHAMPÚ','🧼GEL DUCHA','🚮BOLSA BASURA','🧷PAÑALES','📜TOALLITAS'];
 
 // Abrir la base de datos
 const request = indexedDB.open('articulosDB', 1);
@@ -161,6 +163,20 @@ function borrarArticulo(id) {
 
     transaction.onerror = function(event) {
         console.error('Error al borrar el artículo', event);
+    };
+}
+function borrarTodasLasFilas() {
+    const transaction = db.transaction(['articulos'], 'readwrite');
+    const objectStore = transaction.objectStore('articulos');
+    const request = objectStore.clear();
+
+    request.onsuccess = function(event) {
+        console.log('Todas las filas borradas');
+        cargarTodos();
+    };
+
+    request.onerror = function(event) {
+        console.error('Error al borrar todas las filas', event);
     };
 }
 
