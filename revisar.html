@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <style>
+        /* Estilos básicos para un diseño centrado y atractivo */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /*min-height: 100vh;*/
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .task-input-container {
+            display: flex;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+
+        #newTaskInput {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-right: none;
+            font-size: 16px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        #addTaskBtn {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #addTaskBtn:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 100%;
+            max-width: 500px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td input[type="checkbox"] {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        td:first-child {
+            width: 75%;
+        }
+
+        td:last-child {
+            width: 25%;
+            white-space: nowrap;
+        }
+
+        #counters {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestor de Tareas</h1>
+    <div class="task-input-container">
+        <input type="text" id="newTaskInput" placeholder="Nueva tarea...">
+        <button id="addTaskBtn">+</button>
+    </div>
+
+    <div id="counters">
+        <span>Tareas pendientes: <span id="pendingCount">0</span></span>
+        <span>Tareas completadas: <span id="completedCount">0</span></span>
+    </div>
+
+    <table id="pendingTasks">
+        <thead>
+            <tr>
+                <th>Tarea</th>
+                <th>Fecha/Hora</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <table id="completedTasks">
+        <thead>
+            <tr>
+                <th>Tareas Completadas</th>
+                <th>Fecha/Hora</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // Paso 2: Configuración de IndexedDB
+        let db;
+        const request = indexedDB.open('taskManager', 1);
+
+        request.onerror = function(event) {
+            console.log('Error al abrir la base de datos:', event.target.error);
+        };
+
+        request.onsuccess = function(event) {
+            db = event.target.result;
+            loadTasks();
+        };
+
+        request.onupgradeneeded = function(event) {
+            db = event.target.result;
+            if (!db.objectStoreNames.contains('tasks')) {
+                const objectStore = db.createObjectStore('tasks', { keyPath: 'id', autoIncrement: true });
+                objectStore.createIndex('completed', 'completed', { unique: false });
+            }
+        };
+
+        // Paso 3: Funciones JavaScript para manejar las tareas
+        document.getElementById('addTaskBtn').addEventListener('click', addTask);
+
+        function addTask() {
+            const taskName = document.getElementById('newTaskInput').value.trim();
+            if (taskName) {
+                const date = new Date().toLocaleString();
+                const task = { name: taskName, date: date, completed: false };
+                const transaction = db.transaction(['tasks'], 'readwrite');
+                const objectStore = transaction.objectStore('tasks');
+                objectStore.add(task);
+
+                transaction.oncomplete = function() {
+                    document.getElementById('newTaskInput').value = '';
+                    loadTasks();
+                };
+            }
+        }
+
+        function loadTasks() {
+            const pendingTasks = document.querySelector('#pendingTasks tbody');
+            const completedTasks = document.querySelector('#completedTasks tbody');
+            const pendingCount = document.getElementById('pendingCount');
+            const completedCount = document.getElementById('completedCount');
+
+            pendingTasks.innerHTML = '';
+            completedTasks.innerHTML = '';
+
+            const transaction = db.transaction(['tasks'], 'readonly');
+            const objectStore = transaction.objectStore('tasks');
+            const request = objectStore.openCursor();
+
+            let pending = 0, completed = 0;
+
+            request.onsuccess = function(event) {
+                const cursor = event.target.result;
+                if (cursor) {
+                    const task = cursor.value;
+                    const row = document.createElement('tr');
+
+                    const taskCell = document.createElement('td');
+                    const dateCell = document.createElement('td');
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.checked = task.completed;
+                    checkbox.addEventListener('change', () => updateTaskStatus(task.id, checkbox.checked));
+
+                    taskCell.appendChild(checkbox);
+                    taskCell.appendChild(document.createTextNode(' ' + task.name));
+                    dateCell.textContent = task.date;
+
+                    row.appendChild(taskCell);
+                    row.appendChild(dateCell);
+
+                    if (task.completed) {
+                        completedTasks.appendChild(row);
+                        completed++;
+                    } else {
+                        pendingTasks.appendChild(row);
+                        pending++;
+                    }
+
+                    cursor.continue();
+                } else {
+                    pendingCount.textContent = pending;
+                    completedCount.textContent = completed;
+                }
+            };
+        }
+
+        function updateTaskStatus(id, completed) {
+            const transaction = db.transaction(['tasks'], 'readwrite');
+            const objectStore = transaction.objectStore('tasks');
+            const request = objectStore.get(id);
+
+            request.onsuccess = function() {
+                const task = request.result;
+                task.completed = completed;
+                objectStore.put(task);
+
+                transaction.oncomplete = function() {
+                    loadTasks();
+                };
+            };
+        }
+    </script>
+</body>
+</html>
