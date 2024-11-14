@@ -325,6 +325,7 @@ position: relative;
 .cajab {
   background: rgba(255, 255, 255, 0.4);
   width: 100%;
+  font-size: 32px;  
  } 
 button {
   background-color: white;
@@ -346,7 +347,7 @@ button {
 }
 
 .dropdown .dropbtn {
-  font-size: 28px;  
+  font-size: 32px;  
   border: none;
   outline: none;
   color: white;
