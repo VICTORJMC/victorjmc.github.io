@@ -1,6 +1,6 @@
 'use strit' 
 
-var myIndex = 0;
+var Index = 0;
 const ken = ["<a href='https://www.casadellibro.com/libro-los-pilares-de-la-tierra/9788401328510/746613' class='neon1'>LOS PILARES DE LA TIERRA</a><br><a href='https://www.casadellibro.com/libro-un-mundo-sin-fin/9788401336560/1158356' class='neon1'>UN MUNDO SIN FIN</a><br>"]
 
 const colleen = ["<a href='https://www.casadellibro.com/libro-el-primer-hombre-de-roma/9788408024002/598865' class='neon1'>EL PRIMER HOMBRE DE ROMA</a><br><a href='https://www.casadellibro.com/libro-la-corona-de-hierba/9788408023999/598867' class='neon1'>LA CORONA DE HIERBA</a><br><a href='https://www.casadellibro.com/libro-favoritos-de-la-fortuna-senores-de-roma-3/9788408080701/1224609' class='neon1'>FAVORITOS DE LA FORTUNA</a><br><a href='https://www.casadellibro.com/libro-las-mujeres-de-cesar/9788408023975/607387' class='neon1'>LAS MUJERES DE CESAR</a><br><a href='https://www.casadellibro.com/libro-cesar/9788408080725/1224611' class='neon1'>CESAR</a><br>   <a href='https://www.casadellibro.com/libro-el-caballo-de-cesar/9788466617949/979839' class='neon1'>EL CABALLO DE CESAR</a><br><a href='https://www.casadellibro.com/libro-antonio-y-cleopatra/9788408079354/1215933' class='neon1'>ANTONIO Y CLEOPATRA</a><br><a href='https://www.casadellibro.com/libro-la-cancion-de-troya/9788408072614/1137547' class='neon1'>LA CANCIÓN DE TROYA</a><br>"]
@@ -66,7 +66,7 @@ const href = ["<a href='https://amimaneracocinando.com/recetas/ensaladas/'>RECET
 var index = e[i];
 
 function bib(e){
-document.getElementById("libro").innerHTML = e[myIndex];
+document.getElementById("libro").innerHTML = e[Index];
 
 }
 
