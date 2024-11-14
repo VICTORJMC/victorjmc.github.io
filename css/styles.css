@@ -313,47 +313,84 @@ position: relative;
 
 }
 
-
-#recetas{
-font-size:1.5em;
+.navbarb {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+  justify-content: space-between; /* Distribuye los elementos en línea */
+  background-color: #333;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  
 }
-
-#recetas b {
-color:white;
-}
-
-
-#recetas p{
-text-align: justify;
-}
-#recetas table {
-  width: 95%;
-  border: none;
+.cajab {
   background: rgba(255, 255, 255, 0.4);
-}
-
-#recetas td, th {
-  padding: 8px;
-
-}
-#recetas  th {
-background-color: grey;
- border: 1px solid white;
-}
-
-th:hover {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+ } 
+button {
+  background-color: white;
   color: black;
+  border: 2px solid #e7e7e7;
+  padding: 4px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
-#n {
-color: white;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-#recetas  p {
-  text-align: justify;
+.dropdown .dropbtn {
+  font-size: 22px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
   color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#print{padding:15px;}
+i{color:#303030;}
 
 
 /*Pie de pagina*/
