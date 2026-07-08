@@ -1,361 +1,737 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<link rel="stylesheet" type="text/css" href="css/css3-text-animation.css">
-<link rel="stylesheet"  href="css\icomoon.css">
-<link rel="stylesheet"  href="css\desing.css">
-<link rel="stylesheet"  href="css\normalize.css">
-<link rel="stylesheet"  href="css\aldo.css">
-<link rel="stylesheet" href="style.css">
-<link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One|Merienda|Josefin+Sans' rel='stylesheet' type='text/css'>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
-<script src="js/modernizr-custom.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Realista Consulting | Consultoría Inmobiliaria & Financiera - Costa del Sol</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0a;
+    --bg-soft:#111111;
+    --card:#141414;
+    --border:rgba(255,255,255,0.08);
+    --gold:#c9a24b;
+    --gold-light:#dcbf76;
+    --text:#f2f0ea;
+    --text-dim:#a8a49c;
+    --whatsapp:#25d366;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Poppins',sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{font-family:'Playfair Display',serif;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    color:var(--gold);
+    font-size:0.72rem;
+    letter-spacing:2.5px;
+    font-weight:600;
+    text-transform:uppercase;
+    margin-bottom:14px;
+    display:block;
+  }
 
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(10,10,10,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;max-width:1180px;margin:0 auto;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:0.5px;}
+  .logo svg{width:30px;height:30px;flex-shrink:0;}
+  .logo .logo-text{display:flex;flex-direction:column;line-height:1.1;}
+  .logo .logo-text b{color:var(--gold-light);font-size:1rem;letter-spacing:1px;}
+  .logo .logo-text span{font-size:0.55rem;letter-spacing:1.5px;color:var(--text-dim);text-transform:uppercase;}
+  .nav-right{display:flex;align-items:center;gap:14px;}
+  .lang-toggle{display:flex;border:1px solid var(--border);border-radius:6px;overflow:hidden;}
+  .lang-toggle button{
+    background:transparent;border:none;color:var(--text-dim);
+    font-family:'Poppins',sans-serif;font-size:0.75rem;font-weight:600;
+    padding:7px 12px;cursor:pointer;transition:.2s;
+  }
+  .lang-toggle button.active{background:var(--gold);color:#151107;}
+  .btn-cta{
+    background:var(--gold);color:#151107;font-weight:600;font-size:0.85rem;
+    padding:11px 22px;border-radius:6px;border:none;cursor:pointer;white-space:nowrap;
+    transition:.2s;
+  }
+  .btn-cta:hover{background:var(--gold-light);}
+  .burger{
+    width:22px;height:16px;position:relative;cursor:pointer;flex-shrink:0;
+  }
+  .burger span{position:absolute;left:0;width:100%;height:2px;background:var(--text);}
+  .burger span:nth-child(1){top:0;}
+  .burger span:nth-child(2){top:7px;}
+  .burger span:nth-child(3){top:14px;}
 
-<!--El orden es importante se debe cargar 1 jQUERY-->
-<script type="text/javascript"  src="jquery-3.3.1.min.js">  </script>
-<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css"> 
-<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css"> 
-<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.min.css"> 
-<script type="text/javascript"  src="jquery-ui-1.12.1/jquery-ui.min.js">  </script>
-<script type="text/javascript"  src="js/tabs.js">  </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css\jquery.bxslider.css">
-<script type="text/javascript"  src="js/bxslider.js">  </script>
-<script type="text/javascript"  src="js/theme.js">  </script>
-<script type="text/javascript"  src="js/loto.js">  </script>
-<script type="text/javascript"  src="js/popup.js">  </script>
-<script type="text/javascript"  src="js/recetas.js">  </script>
-<script type="text/javascript"  src="js/biblio.js">  </script>
-<script type="text/javascript"  src="js/replyloop.js">  </script>
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:88vh;display:flex;align-items:center;
+    background:linear-gradient(180deg, rgba(6,8,14,0.55) 0%, rgba(6,8,14,0.55) 45%, rgba(8,8,8,0.92) 100%),
+      url('https://images.unsplash.com/photo-1748063578185-3d68121b11ff?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  }
+  .hero-inner{max-width:640px;padding:110px 24px 70px;}
+  .hero h1{
+    font-size:clamp(2.1rem,4.6vw,3.4rem);
+    font-weight:500;color:#f5f2ea;line-height:1.15;
+  }
+  .hero h1 em{color:var(--gold-light);font-style:italic;font-weight:500;display:block;}
+  .hero p{
+    margin-top:22px;color:#d8d5cc;font-size:1rem;max-width:520px;font-weight:300;
+  }
+  .hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--gold);color:#151107;font-weight:600;padding:15px 26px;
+    border-radius:6px;display:inline-flex;align-items:center;gap:8px;font-size:0.95rem;
+    transition:.2s;
+  }
+  .btn-primary:hover{background:var(--gold-light);}
+  .btn-outline{
+    border:1px solid rgba(255,255,255,0.25);color:var(--text);padding:15px 24px;
+    border-radius:6px;display:inline-flex;align-items:center;gap:8px;font-size:0.95rem;
+    transition:.2s;
+  }
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold-light);}
+  .hero-stats{
+    display:flex;gap:44px;margin-top:52px;padding-top:26px;
+    border-top:1px solid rgba(255,255,255,0.12);flex-wrap:wrap;
+  }
+  .hero-stats .stat b{
+    font-family:'Playfair Display',serif;color:var(--gold-light);font-size:1.7rem;font-weight:600;
+  }
+  .hero-stats .stat div.label{font-size:0.78rem;color:var(--text-dim);margin-top:4px;}
 
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:100px 0;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:500;color:#f5f2ea;}
+  .section-head p{margin-top:16px;color:var(--text-dim);font-size:1rem;}
+  .bg-alt{background:var(--bg-soft);}
 
+  /* ---------- RESULTS GRID ---------- */
+  .results-grid{
+    display:grid;grid-template-columns:1fr 1fr;
+    border:1px solid var(--border);border-radius:4px;overflow:hidden;
+  }
+  .result-card{
+    padding:42px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);
+  }
+  .result-card:nth-child(2n){border-right:none;}
+  .result-card:nth-child(3),.result-card:nth-child(4){border-bottom:none;}
+  .result-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:26px;}
+  .result-icon{
+    width:38px;height:38px;border:1px solid var(--gold);border-radius:6px;
+    display:flex;align-items:center;justify-content:center;color:var(--gold-light);
+  }
+  .result-num{font-family:'Playfair Display',serif;color:rgba(255,255,255,0.18);font-size:1.4rem;}
+  .result-card h3{font-size:1.1rem;font-weight:500;color:#f0ede5;margin-bottom:10px;}
+  .result-card p{color:var(--text-dim);font-size:0.92rem;}
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .service-card{
+    background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;
+    transition:.25s;
+  }
+  .service-card:hover{transform:translateY(-4px);border-color:rgba(201,162,75,0.4);}
+  .service-img{height:190px;overflow:hidden;}
+  .service-img img{width:100%;height:100%;object-fit:cover;}
+  .service-body{padding:26px;}
+  .service-icon{
+    width:34px;height:34px;border:1px solid var(--gold);border-radius:6px;
+    display:flex;align-items:center;justify-content:center;color:var(--gold-light);margin-bottom:18px;
+  }
+  .service-body h3{font-size:1.1rem;font-weight:500;color:#f0ede5;margin-bottom:10px;}
+  .service-body p{color:var(--text-dim);font-size:0.9rem;}
+
+  /* ---------- WHY US ---------- */
+  .why-media{border-radius:8px;overflow:hidden;position:relative;margin-bottom:60px;}
+  .why-media img{width:100%;height:460px;object-fit:cover;filter:brightness(0.85);}
+  .badge-float{
+    position:absolute;right:24px;bottom:24px;background:#0d0d0d;border:1px solid var(--border);
+    border-radius:6px;padding:14px 18px;display:flex;align-items:center;gap:12px;
+  }
+  .badge-float .stars{color:var(--gold);font-size:0.95rem;letter-spacing:1px;}
+  .badge-float .sub{font-size:0.72rem;color:var(--text-dim);margin-top:2px;}
+  .why-grid{display:grid;grid-template-columns:1fr;gap:0;max-width:760px;}
+  .why-item{
+    display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--border);
+  }
+  .why-item:last-child{border-bottom:none;}
+  .why-icon{
+    width:40px;height:40px;flex-shrink:0;border:1px solid var(--border);border-radius:6px;
+    display:flex;align-items:center;justify-content:center;color:var(--gold-light);
+  }
+  .why-item h3{font-size:1.02rem;font-weight:500;color:#f0ede5;margin-bottom:6px;}
+  .why-item p{color:var(--text-dim);font-size:0.9rem;}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi-head{text-align:center;max-width:600px;margin:0 auto 20px;}
+  .rating-pill{
+    display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);
+    border-radius:30px;padding:9px 20px;margin:22px auto 50px;color:var(--text-dim);font-size:0.85rem;
+  }
+  .rating-pill .stars{color:var(--gold);letter-spacing:2px;}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .testi-card{
+    background:var(--card);border:1px solid var(--border);border-radius:8px;padding:28px;
+  }
+  .testi-card .stars{color:var(--gold);letter-spacing:2px;margin-bottom:18px;display:block;}
+  .testi-card p.quote{
+    font-family:'Playfair Display',serif;font-style:italic;color:#e9e5da;font-size:1rem;
+    line-height:1.5;margin-bottom:24px;min-height:100px;
+  }
+  .testi-author{display:flex;align-items:center;gap:12px;}
+  .avatar{
+    width:38px;height:38px;border-radius:50%;background:var(--gold);color:#151107;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;
+    font-family:'Playfair Display',serif;
+  }
+  .testi-author b{font-size:0.9rem;color:#f0ede5;display:block;}
+  .testi-author span{font-size:0.76rem;color:var(--text-dim);}
+
+  /* ---------- CONTACT ---------- */
+  .contact-wrap{display:grid;grid-template-columns:0.85fr 1.15fr;gap:60px;}
+  .contact-info h2{font-size:clamp(1.7rem,3vw,2.2rem);margin-bottom:16px;color:#f5f2ea;}
+  .contact-info>p{color:var(--text-dim);margin-bottom:34px;max-width:420px;}
+  .contact-line{display:flex;align-items:center;gap:16px;margin-bottom:22px;}
+  .contact-line .ic{
+    width:40px;height:40px;border:1px solid var(--border);border-radius:6px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;color:var(--gold-light);
+  }
+  .contact-line a, .contact-line span.txt{font-size:0.95rem;color:#e9e5da;}
+  form{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:36px;}
+  .field{margin-bottom:22px;}
+  .field input, .field select, .field textarea{
+    width:100%;background:transparent;border:none;border-bottom:1px solid var(--border);
+    color:var(--text);font-family:'Poppins',sans-serif;font-size:0.95rem;padding:10px 2px;
+    outline:none;transition:.2s;
+  }
+  .field select option{background:#141414;color:var(--text);}
+  .field input::placeholder, .field textarea::placeholder{color:#6b675f;}
+  .field input:focus, .field select:focus, .field textarea:focus{border-color:var(--gold);}
+  .submit-btn{
+    width:100%;background:var(--gold);color:#151107;font-weight:600;padding:16px;
+    border:none;border-radius:6px;font-size:0.95rem;cursor:pointer;display:flex;
+    align-items:center;justify-content:center;gap:8px;transition:.2s;margin-top:6px;
+  }
+  .submit-btn:hover{background:var(--gold-light);}
+  .or-divider{text-align:center;color:var(--text-dim);font-size:0.8rem;margin:26px 0;position:relative;}
+  .direct-ctas{display:flex;gap:14px;}
+  .direct-ctas a{
+    flex:1;text-align:center;padding:14px;border-radius:6px;font-size:0.9rem;font-weight:500;
+    display:flex;align-items:center;justify-content:center;gap:8px;
+  }
+  .direct-ctas .call{border:1px solid var(--border);color:var(--text);}
+  .direct-ctas .wa{background:rgba(37,211,102,0.12);color:#3ee089;border:1px solid rgba(37,211,102,0.35);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:60px 0 26px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  .footer-grid .logo{margin-bottom:14px;}
+  .footer-grid>div>p{color:var(--text-dim);font-size:0.88rem;max-width:280px;}
+  .footer-grid h4{color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;}
+  .footer-grid ul{list-style:none;}
+  .footer-grid li{margin-bottom:10px;}
+  .footer-grid li a{color:var(--text-dim);font-size:0.9rem;transition:.2s;}
+  .footer-grid li a:hover{color:var(--gold-light);}
+  .footer-social{display:flex;gap:10px;margin-top:18px;}
+  .footer-social a{
+    width:34px;height:34px;border:1px solid var(--border);border-radius:6px;
+    display:flex;align-items:center;justify-content:center;color:var(--text-dim);
+  }
+  .footer-bottom{
+    border-top:1px solid var(--border);padding-top:22px;color:#6b675f;font-size:0.8rem;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  }
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{
+    position:fixed;bottom:26px;right:26px;width:54px;height:54px;background:var(--whatsapp);
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);z-index:200;cursor:pointer;color:#fff;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .results-grid{grid-template-columns:1fr;}
+    .result-card{border-right:none !important;}
+    .result-card:nth-child(3){border-bottom:1px solid var(--border);}
+    .services-grid{grid-template-columns:1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .contact-wrap{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .nav-right .btn-cta{display:none;}
+  }
+  @media (max-width:600px){
+    section{padding:70px 0;}
+    .hero-inner{padding-top:90px;}
+    .hero-stats{gap:28px;}
+  }
+</style>
 </head>
-
-
-
 <body>
 
+<!-- ============ HEADER ============ -->
 <header>
-  <ul>
-       <li><a class="active" onClick="navSection('home')" href="#">Inicio</a></li>
-       <li><a onClick="navSection('bancos')"href="#">Webcams</a></li>
-       <li><a onClick="navSection('arqueo')"href="#">Tiempo</a></li>
-       <li id="logo"><a href="#"><img src="img/logo.png" style="max-height: 200px; max-width: 200px;" /></a></li>
-       <li><a onClick="navSection('mail')"href="#">Biblio</a></li>
-       <li><a onClick="navSection('utilidades')"href="#">Agenda</a></li>
-       <li><a onClick="navSection('recetas')"href="#">Recetas</a></li>
-  </ul>
+  <div class="nav-wrap">
+    <a href="#top" class="logo">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4L4 16V36H15V25H25V36H36V16L20 4Z" stroke="#c9a24b" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="20" cy="4" r="1.6" fill="#c9a24b"/>
+      </svg>
+      <span class="logo-text"><b>REALISTA</b><span>Consulting</span></span>
+    </a>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="lang-es" class="active" onclick="setLang('es')">ES</button>
+        <button id="lang-en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="btn-cta" onclick="location.hash='#contacto'" data-i18n="nav.cta">Consulta gratuita</button>
+      <div class="burger" onclick="document.querySelector('header').scrollIntoView()"><span></span><span></span><span></span></div>
+    </div>
+  </div>
 </header>
 
-<section id="global">
-    <h1>Bienvenidos hoy es 
-            <script>
-            var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","  Diciembre");
-            var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
-            var f=new Date();
-            document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
-            </script> 
-    </h1><br>
-    
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <span class="eyebrow" data-i18n="hero.eyebrow">Consultoría Inmobiliaria & Financiera · Costa del Sol</span>
+    <h1>
+      <span data-i18n="hero.title1">Tu inversión inmobiliaria,</span>
+      <em data-i18n="hero.title2">en las manos correctas</em>
+    </h1>
+    <p data-i18n="hero.desc">Compra, vende o invierte en la Costa del Sol con acompañamiento experto de principio a fin. Seguridad, transparencia y resultados reales.</p>
+    <div class="hero-ctas">
+      <a href="#contacto" class="btn-primary"><span data-i18n="hero.cta1">Solicitar consulta gratuita</span> →</a>
+      <a href="https://wa.me/34692645160?text=Hola%20Realista%20Consulting%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" class="btn-outline">💬 <span data-i18n="hero.cta2">Hablar por WhatsApp</span></a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>5.0★</b><div class="label" data-i18n="hero.stat1">Valoración en Google</div></div>
+      <div class="stat"><b>+10</b><div class="label" data-i18n="hero.stat2">Años de experiencia</div></div>
+      <div class="stat"><b>100%</b><div class="label" data-i18n="hero.stat3">Acompañamiento personal</div></div>
+    </div>
+  </div>
+</section>
 
-  <div id="slider">
-       <section class="slide" id="home" style="display:block">
-
-
-          <div id="particles-js"></div>
-          <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-          <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
-          <script  src="js/index.js"></script>
-          <div class="sp-container">
-               <div class="sp-content">
-                 <div class="sp-globe"></div>
-                 <h2 class="frame-1">ESTA ES</h2>
-                 <h2 class="frame-2">MI WEB PERSONAL</h2>
-                 <h2 class="frame-3">HECHA CON HTML5</h2>
-                 <h2 class="frame-4">Y CSS3!</h2>
-                 <h2 class="frame-5">
-                   <span>VICTOR JOSE</span>
-                   <span>MARTINEZ</span>
-                   <span>CORRAL</span>
-                 </h2>
-                 <a class="sp-circle-link" href="https://victorjmc.github.io">VJMC</a>
-               </div>
-             </div>
-          <script  src="js/textanimation.js"></script>
-
-       </section> <!--id="home"-->
-
-
-          <section class="slide" id="bancos" style="display:none">
-          
-          <div id ="pestanas">
-           <ul>
-             <li ><a href="#tabs-1">COMBARRO</a></li>
-             <li onclick="go('https://www.youtube.com/embed/nWFcWooDAxI')"><a href="#tabs-2">TOSA DE MAR</a></li>
-             <li onclick="go('https://www.youtube.com/embed/smELZN0JkeI?si=n9QZAOBQJ80F2c61')"><a href="#tabs-3">CANTALOJAS GUADALAJARA</a></li>
-             <li onclick="go('https://www.youtube.com/embed/Jf87Z4oqtJw?si=QA7O8xMrmAe2b1zv')"><a href="#tabs-4">CIGUEÑA MADRIGAL</a></li>
-             <li onclick="go('https://www.youtube.com/embed/soqTSpaCids?si=cf7vVbzCTgM3Vsj9')"><a href="#tabs-5">GUISANDO</a></li>
-             <li onclick="go('https://www.youtube.com/embed/z7SiAaN4ogw?si=JeQ0V_3elVjhSmv5')"><a href="#tabs-6">DEL MUNDO</a></li>
-             <li ><a href="#tabs-7">CUENCA</a></li>
-             <li onclick="go('https://rtsp.me/embed/4asatA6z')"><a href="#tabs-8">SEGOVIA</a></li>
-             <li onclick="go('https://www.youtube.com/embed/rnXIjl_Rzy4?si=_pXUckCJ8K0uxYS4')"><a href="#tabs-9">NY TIMES SQUARE</a></li>
-             <li ><a href="#tabs-10">LA LANZADA</a></li>
-             <li ><a href="#tabs-11">SANSENXO</a></li>
-             <li ><a href="#tabs-12">PONTEVEDRA</a></li>
-      
-
-             
-            </ul>
-          <script>
-         var intervalID;
-
-         // Function to call repeatedly 
-         function sayHello(){
-         document.getElementById("calendar").src = "https://webcam.cuenca.es/live_plazamayor/readImage.asp?1674224453752";
-         
-         }
-      
-         // Function to start setInterval call
-         function start(){
-         intervalID = setInterval(sayHello, 500);
-         }
-
-         // Function to stop setInterval call
-         function stop(){
-         clearInterval(intervalID);
-         }
-
-         function go(loc) {
-           document.getElementById("calendar").src = loc; 
-         } 
-
-         </script>
-           
-            
-            
-              <div id="tabs-1"><b>www.camaramar.com/camera/77/iframe</b></div>
-
-              <div id="tabs-2"></div>
-
-              <div id="tabs-3"></div>
-
-              <div id="tabs-4"></div>
-
-              <div id="tabs-5"></div>
-
-              <div id="tabs-6"></div>
-
-              <div id="tabs-7">
-               <span onclick="start()" style="font-size:2em;">Play</span><span onclick="stop()" style="font-size:2em;margin-left:100px;">Stop</span>           
-             </div>
-
-              <div id="tabs-8"></div>
-              <div id="tabs-9"></div>
-              <div id="tabs-10"><b>www.camaramar.com/camera/58/iframe</b></div>
-              <div id="tabs-11"><b>https://www.g24.gal/-/sanxenxo?jwsource=cl</div>
-              <div id="tabs-12"><b>https://www.g24.gal/-/pontevedra</div>
-             
-                  
-          </div><!idpestanas-->
-        
-                      
-               <iframe id="calendar" src="https://www.youtube.com/embed/nWFcWooDAxI" scrolling="no" style="border-width:0"  width="100%" height="800" frameborder="0"></iframe>
-         
-       </section> <!--id="bancos"-->   
-
-
-
-
-
-       <section class="slide" id="arqueo" style="display:none">
-         <div id ="pestanas">
-           <ul>
-             <li><a href="#tabs-1">MADRID</a></li>
-             <li><a href="#tabs-2">PEDRO BERNARDO</a></li>
-             <li><a href="#tabs-3">ALCONCHEL DE LA ESTRELLA</a></li>
-             <li><a href="#tabs-4">PONTEVEDRA</a></li>
-             <li><a href="#tabs-5">NEW YORK</a></li>
-             <li><a href="#tabs-6">PRIEGO</a></li>
-             <li><a href="#tabs-7">ALCOBENDAS</a></li>
-             
-           </ul>
-
-              <div id="tabs-1"><div id="TTPW_gsdr"></div>
-              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fgsdr/C00/"></script>
-              </div>
-
-              <div id="tabs-2"><div id="TTPW_cvKb"></div>
-              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fcvKb/C00/"></script>
-              </div>
-
-              <div id="tabs-3"><div id="TTPW_Wrxz"></div>
-              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fWrxz/C00/"></script>
-              </div>
-
-              <div id="tabs-4"><div id="TTPW_BsZb"></div>
-              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fBsZb/C00/"></script>
-              </div>
-
-              <div id="tabs-5"><div id="TTPW_hqDte"></div>
-              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fhqDte/C00/"></script>
-              </div>
-
-              <div id="tabs-6"><div id="TTPW_uYZK"></div>
-              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fuYZK/C00/"></script>
-              </div>
-
-              <div id="tabs-7"><div id="TTPW_gZtB"></div>
-              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fgZtB/C00/"></script>
-              </div>
-           
-           
-        
-          </div>
-          
-       </section> <!--id="arqueo"-->
-
-
-
-
-       <section class="slide" id="mail" style="display:none">
-       <div class="navbarb">
-       <div class="dropdown"><button class="dropbtn" onclick="bib(ken)">Ken Follett</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(colleen)">Colleen McCullough</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(press)">Steven Pressfield</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(negr)">Javier Negrete</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(sant)">Pedro Santamaría</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(vill)">Luis Villalón</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(esla)">Juan Eslava Galán</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(guil)">Nicholas Guild</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(haef)">Gisbert Haefs</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(corr)">José Luis Corral</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(aizp)">Arturo Gonzalo Aizpiri</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(chic)">Marcos Chicot</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(pell)">Javier Pellicer</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(caba)">Antonio Cabanas</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(poste)">Santiago Posteguillo</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(massi)">Valerio Massimo Manfredi</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(rever)">Arturo Pérez-Reverte</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(perid)">Jose María Pérez Peridis</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(sebas)">SEBASTIÁN ROA</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(lucen)">MARIO VILLEN LUCENA</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(adal)">JESUS SANCHEZ ADALID</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(zoil)">JOSE ZOILO HERNANDEZ</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(mille)">MADELINE MILLER</button></div> 
-       <div class="dropdown"><button class="dropbtn" onclick="bib(ares)">NACHO ARES</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(palom)">MANOLO PALOMARES</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(goiz)">ALFONSO GOIZUETA</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(calia)">Alberto Caliani</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(soto)">José Soto Chica</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(roman)">Luis Manuel López Román</button></div>
-       <div class="dropdown"><button class="dropbtn" onclick="bib(href)">ENLACES</button></div>
-       </div>
-
-
-<div class="cajab"><center id="libro"></center></div>
-         
-         
-         
-        
-
-       </section> <!--id="mail"-->
-
-
-
-       <section class="slide" id="utilidades" style="display:none">
-         <div class="googleCalendar">
-         
-         <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FMadrid&amp;src=dmljdG9yLmVzQGdtYWlsLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%236633CC&amp;color=%23336699&amp;color=%23227F63&amp;showPrint=0" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-         </div>
-          
-       </section> <!--id="utilidades"-->
-
-
-        
-       <section class="slide" id="recetas" style="display:none">
-
-
-<div class="navbarb">
-    <div class="dropdown"><button class="dropbtn" onclick="clic(pastas)">PASTAS</button></div> 
-    <div class="dropdown"><button class="dropbtn" onclick="clic(arroces)">ARROCES</button></div> 
-    <div class="dropdown"><button class="dropbtn" onclick="clic(verduras)">VERDURAS</button></div> 
-    <div class="dropdown"><button class="dropbtn" onclick="clic(gourmet)">FAVORITO</button></div>
-    <div class="dropdown"><button class="dropbtn" onclick="clic(tapas)">TAPAS/POSTRES</button></div>
-</div>
-
-
-<div class="cajab"><center id="n"></center><p id="print"></p></div>
-
-           
-           
-        
-   
-       </section> <!--id="RECETAS"-->
-
-
-
-
-
-
-
-
-
- </div> <!id="slider"-->
-</section><!--id="global"-->
-
-
-
-<footer>
-       
-        <div class="rrss">
-           <a target="_blank" href="https://www.google.com/drive/"><img class="icons" src="img/google-drive.png"/></a>
-           <a target="_blank" href="https://github.com/VICTORJMC"><img class="icons" src="img/github.png"/></a>
-           <a target="_blank" href="https://gastronomiaycia.republica.com/2016/08/18/50-recetas-de-cocina-casera-faciles-ricas-y-sanas/"><img class="icons" src="img/spoon-knife.png"/></a>
-           <a target="_blank" href="https://es.khanacademy.org/computing/computer-programming/html-js-jquery"><img class="icons" src="img/library.png"/></a>
-           <a target="_blank" href="https://www.documaniatv.com/documentales-historia-videos-1-date.html"><img class="icons" src="img/film.png"/></a>
-           <a target="_blank" href="https://goluchas.com/ufc/ver-ufc-294-en-vivo-y-en-espanol/"><img class="icons" src="img/frustrated.png"/></a>
-           <a target="_blank" href="CompraIndexDB.html" title="Lista de la Compra"><img class="icons" src="img/cart.png"/></a>
-           <a href="task.html" title="Tareas"><img class="icons" src="img/clipboard.png"/></a>
-           <a target="_blank" href="revisar.html" title="Revisar"><img class="icons" src="img/clipboard.png"/></a>
-           <a href="#" class="subir" ></a> 
-           
-           <br><br>
-           <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral </p>
+<!-- ============ RESULTADOS ============ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="results.eyebrow">Resultados que transforman</span>
+      <h2 data-i18n="results.title">Lo que ganas al trabajar con nosotros</h2>
+      <p data-i18n="results.desc">No solo cerramos operaciones. Protegemos tu patrimonio y maximizamos tu inversión.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-top">
+          <div class="result-icon">🛡️</div><span class="result-num">01</span>
         </div>
+        <h3 data-i18n="results.c1.title">Decisiones con seguridad</h3>
+        <p data-i18n="results.c1.desc">Analizamos cada propiedad y operación para que inviertas sin sorpresas ni riesgos ocultos.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-top">
+          <div class="result-icon">📈</div><span class="result-num">02</span>
+        </div>
+        <h3 data-i18n="results.c2.title">Rentabilidad optimizada</h3>
+        <p data-i18n="results.c2.desc">Estrategias de compra e inversión pensadas para maximizar el valor y el retorno de tu dinero.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-top">
+          <div class="result-icon">⏱️</div><span class="result-num">03</span>
+        </div>
+        <h3 data-i18n="results.c3.title">Ahorro de tiempo</h3>
+        <p data-i18n="results.c3.desc">Nos ocupamos de la búsqueda, negociación y trámites. Tú solo tomas la decisión final.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-top">
+          <div class="result-icon">📊</div><span class="result-num">04</span>
+        </div>
+        <h3 data-i18n="results.c4.title">Financiación a medida</h3>
+        <p data-i18n="results.c4.desc">Gestionamos la mejor financiación posible junto a entidades de confianza para tu perfil.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    
-</footer> 
+<!-- ============ SERVICIOS ============ -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="services.eyebrow">Nuestros servicios</span>
+      <h2 data-i18n="services.title">Un servicio integral, un solo equipo</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1670589953882-b94c9cb380f5?auto=format&fit=crop&w=800&q=80" alt="Intermediación Inmobiliaria"></div>
+        <div class="service-body">
+          <div class="service-icon">🏢</div>
+          <h3 data-i18n="services.s1.title">Intermediación Inmobiliaria</h3>
+          <p data-i18n="services.s1.desc">Compra y venta de propiedades con búsqueda personalizada, negociación experta y gestión completa de la operación.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1638262052640-82e94d64664a?auto=format&fit=crop&w=800&q=80" alt="Asesoramiento Financiero"></div>
+        <div class="service-body">
+          <div class="service-icon">📈</div>
+          <h3 data-i18n="services.s2.title">Asesoramiento Financiero</h3>
+          <p data-i18n="services.s2.desc">Estudio de viabilidad, gestión de hipotecas y financiación adaptada para que tu inversión sea sostenible.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80" alt="Inversión Inmobiliaria"></div>
+        <div class="service-body">
+          <div class="service-icon">📉</div>
+          <h3 data-i18n="services.s3.title">Inversión Inmobiliaria</h3>
+          <p data-i18n="services.s3.desc">Identificamos oportunidades con alto potencial de rentabilidad y te acompañamos en cada paso de la inversión.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ============ POR QUÉ ELEGIRNOS ============ -->
+<section>
+  <div class="container">
+    <div class="why-media">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80" alt="Acuerdo de confianza">
+      <div class="badge-float">
+        <span style="font-size:1.4rem;">🏅</span>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="sub" data-i18n="why.badge">5.0 · Google</div>
+        </div>
+      </div>
+    </div>
+    <span class="eyebrow" data-i18n="why.eyebrow">Por qué elegirnos</span>
+    <h2 style="font-size:clamp(1.7rem,3vw,2.2rem);max-width:640px;margin-bottom:16px;" data-i18n="why.title">Experiencia, profesionalismo y resultados</h2>
+    <p style="color:var(--text-dim);max-width:640px;margin-bottom:44px;" data-i18n="why.desc">En Realista Consulting combinamos conocimiento inmobiliario y financiero para ofrecerte algo que pocos pueden: tranquilidad total.</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">📍</div>
+        <div><h3 data-i18n="why.i1.title">Expertos en la Costa del Sol</h3><p data-i18n="why.i1.desc">Conocemos el mercado de Fuengirola y Málaga como nadie. Datos reales, no promesas vacías.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">🤝</div>
+        <div><h3 data-i18n="why.i2.title">Doble especialidad</h3><p data-i18n="why.i2.desc">Inmobiliaria + financiera. Un único interlocutor para toda tu operación.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">✅</div>
+        <div><h3 data-i18n="why.i3.title">Trato cercano y honesto</h3><p data-i18n="why.i3.desc">Transparencia en cada paso. Te decimos lo que necesitas saber, no lo que quieres oír.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">⭐</div>
+        <div><h3 data-i18n="why.i4.title">5.0★ en Google</h3><p data-i18n="why.i4.desc">Nuestros clientes lo confirman: seriedad, fiabilidad y resultados.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script>                            
-function navSection(nav){
-   
-var section = new Array(5);
- section[0] = "home";
- section[1] = "bancos";
- section[2] = "arqueo";
- section[3] = "mail";
- section[4] = "utilidades";
- section[5] = "recetas";
-   
- var search;
- var show;
-for (var i=0;  i<6; i++) { 
-     search = document.getElementById(section[i]);
-     search.style.display ="none"; //oculta todas las seciones
-     if (section[i] == nav) { 
-      search.style.display = "block";
-      }<!-- //del if -->
-    }  <!-- //del for -->
- }<!-- //del function -->
-</script>  
+<!-- ============ TESTIMONIOS ============ -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="testi-head">
+      <span class="eyebrow" data-i18n="testi.eyebrow">Lo que dicen nuestros clientes</span>
+      <h2 data-i18n="testi.title">Valorados con 5.0★ en Google</h2>
+    </div>
+    <div style="text-align:center;">
+      <div class="rating-pill"><span class="stars">★★★★★</span> <span data-i18n="testi.pill">5.0 · 11 opiniones en Google</span></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p class="quote" data-i18n="testi.r1.quote">"Altamente recomendable. Profesionalidad y trato excelente de principio a fin."</p>
+        <div class="testi-author"><div class="avatar">J</div><div><b>Jose Valverde</b><span>Google Review</span></div></div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p class="quote" data-i18n="testi.r2.quote">"Da gusto dar con personas tan eficaces y dispuestas a ayudarte de verdad. Un equipo excepcional."</p>
+        <div class="testi-author"><div class="avatar">V</div><div><b>Vanesa C. González</b><span>Google Review</span></div></div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p class="quote" data-i18n="testi.r3.quote">"Hay seriedad y fiabilidad, no creo que haya un sitio mejor para confiar tu inversión inmobiliaria."</p>
+        <div class="testi-author"><div class="avatar">M</div><div><b>Manuel Merino</b><span>Google Review</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script type="text/javascript"  src="js/citas.js" async>  </script>
+<!-- ============ CONTACTO ============ -->
+<section id="contacto">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <span class="eyebrow" data-i18n="contact.eyebrow">Da el primer paso</span>
+        <h2 data-i18n="contact.title">Solicita tu consulta gratuita</h2>
+        <p data-i18n="contact.desc">Cuéntanos qué necesitas y un asesor te contactará en menos de 24 horas. Sin compromiso.</p>
+        <div class="contact-line"><div class="ic">📞</div><a href="tel:+34952237586">+34 952 23 75 86</a></div>
+        <div class="contact-line"><div class="ic">✉️</div><a href="mailto:info@realistaconsulting.es">info@realistaconsulting.es</a></div>
+        <div class="contact-line"><div class="ic">📍</div><span class="txt">Calle Fray Luis de León 4, esc. 1, local 11, 29640 Fuengirola, Málaga</span></div>
+      </div>
+      <div>
+        <form id="contactForm">
+          <div class="field"><input type="text" id="f-name" data-i18n-ph="form.name" placeholder="Nombre completo" required></div>
+          <div class="field"><input type="email" id="f-email" data-i18n-ph="form.email" placeholder="Correo electrónico" required></div>
+          <div class="field"><input type="tel" id="f-phone" data-i18n-ph="form.phone" placeholder="Teléfono"></div>
+          <div class="field">
+            <select id="f-subject">
+              <option value="" data-i18n="form.subject0">¿En qué te podemos ayudar?</option>
+              <option value="comprar" data-i18n="form.subject1">Quiero comprar una propiedad</option>
+              <option value="vender" data-i18n="form.subject2">Quiero vender una propiedad</option>
+              <option value="invertir" data-i18n="form.subject3">Quiero invertir</option>
+              <option value="financiacion" data-i18n="form.subject4">Necesito financiación</option>
+              <option value="otro" data-i18n="form.subject5">Otro</option>
+            </select>
+          </div>
+          <div class="field"><textarea id="f-message" rows="3" data-i18n-ph="form.message" placeholder="Cuéntanos más (opcional)"></textarea></div>
+          <button type="submit" class="submit-btn"><span data-i18n="form.submit">Enviar solicitud</span> →</button>
+        </form>
+        <div class="or-divider" data-i18n="form.or">O contáctanos directamente</div>
+        <div class="direct-ctas">
+          <a href="tel:+34952237586" class="call">📞 <span data-i18n="form.call">Llamar ahora</span></a>
+          <a href="https://wa.me/34692645160?text=Hola%20Realista%20Consulting%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" class="wa">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="logo">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+            <path d="M20 4L4 16V36H15V25H25V36H36V16L20 4Z" stroke="#c9a24b" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <span class="logo-text"><b>REALISTA</b><span>Consulting</span></span>
+        </a>
+        <p data-i18n="footer.desc">Consultoría inmobiliaria y asesoramiento financiero en la Costa del Sol.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">Enlaces</h4>
+        <ul>
+          <li><a href="#" data-i18n="footer.l1">Servicios</a></li>
+          <li><a href="#" data-i18n="footer.l2">Por qué elegirnos</a></li>
+          <li><a href="#" data-i18n="footer.l3">Opiniones</a></li>
+          <li><a href="#contacto" data-i18n="footer.l4">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contact">Contacto</h4>
+        <ul>
+          <li><a href="tel:+34952237586">+34 952 23 75 86</a></li>
+          <li><a href="mailto:info@realistaconsulting.es">info@realistaconsulting.es</a></li>
+          <li><span style="color:var(--text-dim);font-size:0.9rem;">Calle Fray Luis de León 4, esc. 1, local 11, 29640 Fuengirola, Málaga</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">© 2026 Realista Consulting S.L. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
 
+<a class="wa-float" href="https://wa.me/34692645160?text=Hola%20Realista%20Consulting%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.07-1.33A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.2-1.77 1.24-.46.05-1.02.07-1.65-.1-.38-.11-.87-.27-1.5-.53-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73 0-1.3.68-1.94.92-2.2.24-.26.53-.32.7-.32h.5c.16 0 .38-.02.58.45.22.53.75 1.83.82 1.96.06.13.1.28.02.45-.08.17-.13.28-.25.43-.13.15-.27.34-.38.46-.13.13-.26.27-.11.53.14.26.63 1.05 1.36 1.7.93.83 1.71 1.09 1.97 1.22.26.13.41.11.56-.06.16-.18.65-.75.82-1.01.17-.26.34-.22.57-.13.23.09 1.48.7 1.73.82.26.13.43.19.49.3.06.11.06.62-.16 1.24z"/></svg>
+</a>
 
+<script>
+const dict = {
+  es: {
+    "nav.cta":"Consulta gratuita",
+    "hero.eyebrow":"Consultoría Inmobiliaria & Financiera · Costa del Sol",
+    "hero.title1":"Tu inversión inmobiliaria,",
+    "hero.title2":"en las manos correctas",
+    "hero.desc":"Compra, vende o invierte en la Costa del Sol con acompañamiento experto de principio a fin. Seguridad, transparencia y resultados reales.",
+    "hero.cta1":"Solicitar consulta gratuita",
+    "hero.cta2":"Hablar por WhatsApp",
+    "hero.stat1":"Valoración en Google",
+    "hero.stat2":"Años de experiencia",
+    "hero.stat3":"Acompañamiento personal",
+    "results.eyebrow":"Resultados que transforman",
+    "results.title":"Lo que ganas al trabajar con nosotros",
+    "results.desc":"No solo cerramos operaciones. Protegemos tu patrimonio y maximizamos tu inversión.",
+    "results.c1.title":"Decisiones con seguridad",
+    "results.c1.desc":"Analizamos cada propiedad y operación para que inviertas sin sorpresas ni riesgos ocultos.",
+    "results.c2.title":"Rentabilidad optimizada",
+    "results.c2.desc":"Estrategias de compra e inversión pensadas para maximizar el valor y el retorno de tu dinero.",
+    "results.c3.title":"Ahorro de tiempo",
+    "results.c3.desc":"Nos ocupamos de la búsqueda, negociación y trámites. Tú solo tomas la decisión final.",
+    "results.c4.title":"Financiación a medida",
+    "results.c4.desc":"Gestionamos la mejor financiación posible junto a entidades de confianza para tu perfil.",
+    "services.eyebrow":"Nuestros servicios",
+    "services.title":"Un servicio integral, un solo equipo",
+    "services.s1.title":"Intermediación Inmobiliaria",
+    "services.s1.desc":"Compra y venta de propiedades con búsqueda personalizada, negociación experta y gestión completa de la operación.",
+    "services.s2.title":"Asesoramiento Financiero",
+    "services.s2.desc":"Estudio de viabilidad, gestión de hipotecas y financiación adaptada para que tu inversión sea sostenible.",
+    "services.s3.title":"Inversión Inmobiliaria",
+    "services.s3.desc":"Identificamos oportunidades con alto potencial de rentabilidad y te acompañamos en cada paso de la inversión.",
+    "why.badge":"5.0 · Google",
+    "why.eyebrow":"Por qué elegirnos",
+    "why.title":"Experiencia, profesionalismo y resultados",
+    "why.desc":"En Realista Consulting combinamos conocimiento inmobiliario y financiero para ofrecerte algo que pocos pueden: tranquilidad total.",
+    "why.i1.title":"Expertos en la Costa del Sol",
+    "why.i1.desc":"Conocemos el mercado de Fuengirola y Málaga como nadie. Datos reales, no promesas vacías.",
+    "why.i2.title":"Doble especialidad",
+    "why.i2.desc":"Inmobiliaria + financiera. Un único interlocutor para toda tu operación.",
+    "why.i3.title":"Trato cercano y honesto",
+    "why.i3.desc":"Transparencia en cada paso. Te decimos lo que necesitas saber, no lo que quieres oír.",
+    "why.i4.title":"5.0★ en Google",
+    "why.i4.desc":"Nuestros clientes lo confirman: seriedad, fiabilidad y resultados.",
+    "testi.eyebrow":"Lo que dicen nuestros clientes",
+    "testi.title":"Valorados con 5.0★ en Google",
+    "testi.pill":"5.0 · 11 opiniones en Google",
+    "testi.r1.quote":"\"Altamente recomendable. Profesionalidad y trato excelente de principio a fin.\"",
+    "testi.r2.quote":"\"Da gusto dar con personas tan eficaces y dispuestas a ayudarte de verdad. Un equipo excepcional.\"",
+    "testi.r3.quote":"\"Hay seriedad y fiabilidad, no creo que haya un sitio mejor para confiar tu inversión inmobiliaria.\"",
+    "contact.eyebrow":"Da el primer paso",
+    "contact.title":"Solicita tu consulta gratuita",
+    "contact.desc":"Cuéntanos qué necesitas y un asesor te contactará en menos de 24 horas. Sin compromiso.",
+    "form.name":"Nombre completo",
+    "form.email":"Correo electrónico",
+    "form.phone":"Teléfono",
+    "form.subject0":"¿En qué te podemos ayudar?",
+    "form.subject1":"Quiero comprar una propiedad",
+    "form.subject2":"Quiero vender una propiedad",
+    "form.subject3":"Quiero invertir",
+    "form.subject4":"Necesito financiación",
+    "form.subject5":"Otro",
+    "form.message":"Cuéntanos más (opcional)",
+    "form.submit":"Enviar solicitud",
+    "form.or":"O contáctanos directamente",
+    "form.call":"Llamar ahora",
+    "footer.desc":"Consultoría inmobiliaria y asesoramiento financiero en la Costa del Sol.",
+    "footer.links":"Enlaces",
+    "footer.l1":"Servicios","footer.l2":"Por qué elegirnos","footer.l3":"Opiniones","footer.l4":"Contacto",
+    "footer.contact":"Contacto",
+    "footer.rights":"© 2026 Realista Consulting S.L. Todos los derechos reservados."
+  },
+  en: {
+    "nav.cta":"Free consultation",
+    "hero.eyebrow":"Real Estate & Financial Consulting · Costa del Sol",
+    "hero.title1":"Your real estate investment,",
+    "hero.title2":"in the right hands",
+    "hero.desc":"Buy, sell or invest on the Costa del Sol with expert guidance from start to finish. Security, transparency and real results.",
+    "hero.cta1":"Request a free consultation",
+    "hero.cta2":"Talk on WhatsApp",
+    "hero.stat1":"Google rating",
+    "hero.stat2":"Years of experience",
+    "hero.stat3":"Personal guidance",
+    "results.eyebrow":"Results that make a difference",
+    "results.title":"What you gain by working with us",
+    "results.desc":"We don't just close deals. We protect your assets and maximize your investment.",
+    "results.c1.title":"Confident decisions",
+    "results.c1.desc":"We analyze every property and deal so you invest without surprises or hidden risks.",
+    "results.c2.title":"Optimized returns",
+    "results.c2.desc":"Buying and investment strategies designed to maximize the value and return on your money.",
+    "results.c3.title":"Time savings",
+    "results.c3.desc":"We handle the search, negotiation and paperwork. You only make the final decision.",
+    "results.c4.title":"Tailored financing",
+    "results.c4.desc":"We arrange the best possible financing with trusted institutions for your profile.",
+    "services.eyebrow":"Our services",
+    "services.title":"A complete service, a single team",
+    "services.s1.title":"Real Estate Brokerage",
+    "services.s1.desc":"Buying and selling properties with personalized search, expert negotiation and full deal management.",
+    "services.s2.title":"Financial Advisory",
+    "services.s2.desc":"Feasibility studies, mortgage management and financing tailored to make your investment sustainable.",
+    "services.s3.title":"Real Estate Investment",
+    "services.s3.desc":"We identify opportunities with high return potential and guide you through every step of the investment.",
+    "why.badge":"5.0 · Google",
+    "why.eyebrow":"Why choose us",
+    "why.title":"Experience, professionalism and results",
+    "why.desc":"At Realista Consulting we combine real estate and financial expertise to offer you something few can: total peace of mind.",
+    "why.i1.title":"Experts on the Costa del Sol",
+    "why.i1.desc":"We know the Fuengirola and Málaga market like no one else. Real data, not empty promises.",
+    "why.i2.title":"Dual specialization",
+    "why.i2.desc":"Real estate + financial. A single point of contact for your entire transaction.",
+    "why.i3.title":"Close and honest treatment",
+    "why.i3.desc":"Transparency at every step. We tell you what you need to know, not what you want to hear.",
+    "why.i4.title":"5.0★ on Google",
+    "why.i4.desc":"Our clients confirm it: seriousness, reliability and results.",
+    "testi.eyebrow":"What our clients say",
+    "testi.title":"Rated 5.0★ on Google",
+    "testi.pill":"5.0 · 11 reviews on Google",
+    "testi.r1.quote":"\"Highly recommended. Professionalism and excellent treatment from start to finish.\"",
+    "testi.r2.quote":"\"It's a pleasure to find people so efficient and willing to genuinely help you. An exceptional team.\"",
+    "testi.r3.quote":"\"There is seriousness and reliability, I don't think there's a better place to trust your real estate investment.\"",
+    "contact.eyebrow":"Take the first step",
+    "contact.title":"Request your free consultation",
+    "contact.desc":"Tell us what you need and an advisor will contact you within 24 hours. No obligation.",
+    "form.name":"Full name",
+    "form.email":"Email address",
+    "form.phone":"Phone",
+    "form.subject0":"How can we help you?",
+    "form.subject1":"I want to buy a property",
+    "form.subject2":"I want to sell a property",
+    "form.subject3":"I want to invest",
+    "form.subject4":"I need financing",
+    "form.subject5":"Other",
+    "form.message":"Tell us more (optional)",
+    "form.submit":"Send request",
+    "form.or":"Or contact us directly",
+    "form.call":"Call now",
+    "footer.desc":"Real estate consulting and financial advisory on the Costa del Sol.",
+    "footer.links":"Links",
+    "footer.l1":"Services","footer.l2":"Why choose us","footer.l3":"Reviews","footer.l4":"Contact",
+    "footer.contact":"Contact",
+    "footer.rights":"© 2026 Realista Consulting S.L. All rights reserved."
+  }
+};
 
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.getElementById('lang-es').classList.toggle('active', lang==='es');
+  document.getElementById('lang-en').classList.toggle('active', lang==='en');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(dict[lang][key]) el.textContent = dict[lang][key];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-ph');
+    if(dict[lang][key]) el.setAttribute('placeholder', dict[lang][key]);
+  });
+  localStorage.setItem('rc_lang', lang);
+}
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('f-name').value;
+  const email = document.getElementById('f-email').value;
+  const phone = document.getElementById('f-phone').value;
+  const subject = document.getElementById('f-subject').value;
+  const message = document.getElementById('f-message').value;
+  const body = `Nombre: ${name}%0AEmail: ${email}%0ATeléfono: ${phone}%0AMotivo: ${subject}%0AMensaje: ${message}`;
+  window.location.href = `mailto:info@realistaconsulting.es?subject=Nueva consulta desde la web&body=${body}`;
+});
+
+// Idioma inicial: recuerda la última selección
+const saved = localStorage.getItem('rc_lang');
+if(saved) setLang(saved);
+</script>
 </body>
 </html>
