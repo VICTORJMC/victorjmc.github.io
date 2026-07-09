@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/css3-text-animation.css">
+<link rel="stylesheet"  href="css\icomoon.css">
+<link rel="stylesheet"  href="css\desing.css">
+<link rel="stylesheet"  href="css\normalize.css">
+<link rel="stylesheet"  href="css\aldo.css">
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One|Merienda|Josefin+Sans' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+<script src="js/modernizr-custom.js"></script>
+
+
+<!--El orden es importante se debe cargar 1 jQUERY-->
+<script type="text/javascript"  src="jquery-3.3.1.min.js">  </script>
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css"> 
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css"> 
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.min.css"> 
+<script type="text/javascript"  src="jquery-ui-1.12.1/jquery-ui.min.js">  </script>
+<script type="text/javascript"  src="js/tabs.js">  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css\jquery.bxslider.css">
+<script type="text/javascript"  src="js/bxslider.js">  </script>
+<script type="text/javascript"  src="js/theme.js">  </script>
+<script type="text/javascript"  src="js/loto.js">  </script>
+<script type="text/javascript"  src="js/popup.js">  </script>
+<script type="text/javascript"  src="js/recetas.js">  </script>
+<script type="text/javascript"  src="js/biblio.js">  </script>
+<script type="text/javascript"  src="js/replyloop.js">  </script>
+
+
+</head>
+
+
+
+<body>
+
+<header>
+  <ul>
+       <li><a class="active" onClick="navSection('home')" href="#">Inicio</a></li>
+       <li><a onClick="navSection('bancos')"href="#">Webcams</a></li>
+       <li><a onClick="navSection('arqueo')"href="#">Tiempo</a></li>
+       <li id="logo"><a href="#"><img src="img/logo.png" style="max-height: 200px; max-width: 200px;" /></a></li>
+       <li><a onClick="navSection('mail')"href="#">Biblio</a></li>
+       <li><a onClick="navSection('utilidades')"href="#">Agenda</a></li>
+       <li><a onClick="navSection('recetas')"href="#">Recetas</a></li>
+  </ul>
+</header>
+
+<section id="global">
+    <h1>Bienvenidos hoy es 
+            <script>
+            var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","  Diciembre");
+            var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+            var f=new Date();
+            document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+            </script> 
+    </h1><br>
+    
+
+  <div id="slider">
+       <section class="slide" id="home" style="display:block">
+
+
+          <div id="particles-js"></div>
+          <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+          <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+          <script  src="js/index.js"></script>
+          <div class="sp-container">
+               <div class="sp-content">
+                 <div class="sp-globe"></div>
+                 <h2 class="frame-1">ESTA ES</h2>
+                 <h2 class="frame-2">MI WEB PERSONAL</h2>
+                 <h2 class="frame-3">HECHA CON HTML5</h2>
+                 <h2 class="frame-4">Y CSS3!</h2>
+                 <h2 class="frame-5">
+                   <span>VICTOR JOSE</span>
+                   <span>MARTINEZ</span>
+                   <span>CORRAL</span>
+                 </h2>
+                 <a class="sp-circle-link" href="https://victorjmc.github.io">VJMC</a>
+               </div>
+             </div>
+          <script  src="js/textanimation.js"></script>
+
+       </section> <!--id="home"-->
+
+
+          <section class="slide" id="bancos" style="display:none">
+          
+          <div id ="pestanas">
+           <ul>
+             <li ><a href="#tabs-1">COMBARRO</a></li>
+             <li onclick="go('https://www.youtube.com/embed/nWFcWooDAxI')"><a href="#tabs-2">TOSA DE MAR</a></li>
+             <li onclick="go('https://www.youtube.com/embed/smELZN0JkeI?si=n9QZAOBQJ80F2c61')"><a href="#tabs-3">CANTALOJAS GUADALAJARA</a></li>
+             <li onclick="go('https://www.youtube.com/embed/Jf87Z4oqtJw?si=QA7O8xMrmAe2b1zv')"><a href="#tabs-4">CIGUEÑA MADRIGAL</a></li>
+             <li onclick="go('https://www.youtube.com/embed/soqTSpaCids?si=cf7vVbzCTgM3Vsj9')"><a href="#tabs-5">GUISANDO</a></li>
+             <li onclick="go('https://www.youtube.com/embed/z7SiAaN4ogw?si=JeQ0V_3elVjhSmv5')"><a href="#tabs-6">DEL MUNDO</a></li>
+             <li ><a href="#tabs-7">CUENCA</a></li>
+             <li onclick="go('https://rtsp.me/embed/4asatA6z')"><a href="#tabs-8">SEGOVIA</a></li>
+             <li onclick="go('https://www.youtube.com/embed/rnXIjl_Rzy4?si=_pXUckCJ8K0uxYS4')"><a href="#tabs-9">NY TIMES SQUARE</a></li>
+             <li ><a href="#tabs-10">LA LANZADA</a></li>
+             <li ><a href="#tabs-11">SANSENXO</a></li>
+             <li ><a href="#tabs-12">PONTEVEDRA</a></li>
+      
+
+             
+            </ul>
+          <script>
+         var intervalID;
+
+         // Function to call repeatedly 
+         function sayHello(){
+         document.getElementById("calendar").src = "https://webcam.cuenca.es/live_plazamayor/readImage.asp?1674224453752";
+         
+         }
+      
+         // Function to start setInterval call
+         function start(){
+         intervalID = setInterval(sayHello, 500);
+         }
+
+         // Function to stop setInterval call
+         function stop(){
+         clearInterval(intervalID);
+         }
+
+         function go(loc) {
+           document.getElementById("calendar").src = loc; 
+         } 
+
+         </script>
+           
+            
+            
+              <div id="tabs-1"><b>www.camaramar.com/camera/77/iframe</b></div>
+
+              <div id="tabs-2"></div>
+
+              <div id="tabs-3"></div>
+
+              <div id="tabs-4"></div>
+
+              <div id="tabs-5"></div>
+
+              <div id="tabs-6"></div>
+
+              <div id="tabs-7">
+               <span onclick="start()" style="font-size:2em;">Play</span><span onclick="stop()" style="font-size:2em;margin-left:100px;">Stop</span>           
+             </div>
+
+              <div id="tabs-8"></div>
+              <div id="tabs-9"></div>
+              <div id="tabs-10"><b>www.camaramar.com/camera/58/iframe</b></div>
+              <div id="tabs-11"><b>https://www.g24.gal/-/sanxenxo?jwsource=cl</div>
+              <div id="tabs-12"><b>https://www.g24.gal/-/pontevedra</div>
+             
+                  
+          </div><!idpestanas-->
+        
+                      
+               <iframe id="calendar" src="https://www.youtube.com/embed/nWFcWooDAxI" scrolling="no" style="border-width:0"  width="100%" height="800" frameborder="0"></iframe>
+         
+       </section> <!--id="bancos"-->   
+
+
+
+
+
+       <section class="slide" id="arqueo" style="display:none">
+         <div id ="pestanas">
+           <ul>
+             <li><a href="#tabs-1">MADRID</a></li>
+             <li><a href="#tabs-2">PEDRO BERNARDO</a></li>
+             <li><a href="#tabs-3">ALCONCHEL DE LA ESTRELLA</a></li>
+             <li><a href="#tabs-4">PONTEVEDRA</a></li>
+             <li><a href="#tabs-5">NEW YORK</a></li>
+             <li><a href="#tabs-6">PRIEGO</a></li>
+             <li><a href="#tabs-7">ALCOBENDAS</a></li>
+             
+           </ul>
+
+              <div id="tabs-1"><div id="TTPW_gsdr"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fgsdr/C00/"></script>
+              </div>
+
+              <div id="tabs-2"><div id="TTPW_cvKb"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fcvKb/C00/"></script>
+              </div>
+
+              <div id="tabs-3"><div id="TTPW_Wrxz"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fWrxz/C00/"></script>
+              </div>
+
+              <div id="tabs-4"><div id="TTPW_BsZb"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fBsZb/C00/"></script>
+              </div>
+
+              <div id="tabs-5"><div id="TTPW_hqDte"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fhqDte/C00/"></script>
+              </div>
+
+              <div id="tabs-6"><div id="TTPW_uYZK"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fuYZK/C00/"></script>
+              </div>
+
+              <div id="tabs-7"><div id="TTPW_gZtB"></div>
+              <script type="text/javascript" src="https://www.tutiempo.net/s-widget/pw/fgZtB/C00/"></script>
+              </div>
+           
+           
+        
+          </div>
+          
+       </section> <!--id="arqueo"-->
+
+
+
+
+       <section class="slide" id="mail" style="display:none">
+       <div class="navbarb">
+       <div class="dropdown"><button class="dropbtn" onclick="bib(ken)">Ken Follett</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(colleen)">Colleen McCullough</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(press)">Steven Pressfield</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(negr)">Javier Negrete</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(sant)">Pedro Santamaría</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(vill)">Luis Villalón</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(esla)">Juan Eslava Galán</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(guil)">Nicholas Guild</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(haef)">Gisbert Haefs</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(corr)">José Luis Corral</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(aizp)">Arturo Gonzalo Aizpiri</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(chic)">Marcos Chicot</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(pell)">Javier Pellicer</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(caba)">Antonio Cabanas</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(poste)">Santiago Posteguillo</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(massi)">Valerio Massimo Manfredi</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(rever)">Arturo Pérez-Reverte</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(perid)">Jose María Pérez Peridis</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(sebas)">SEBASTIÁN ROA</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(lucen)">MARIO VILLEN LUCENA</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(adal)">JESUS SANCHEZ ADALID</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(zoil)">JOSE ZOILO HERNANDEZ</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(mille)">MADELINE MILLER</button></div> 
+       <div class="dropdown"><button class="dropbtn" onclick="bib(ares)">NACHO ARES</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(palom)">MANOLO PALOMARES</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(goiz)">ALFONSO GOIZUETA</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(calia)">Alberto Caliani</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(soto)">José Soto Chica</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(roman)">Luis Manuel López Román</button></div>
+       <div class="dropdown"><button class="dropbtn" onclick="bib(href)">ENLACES</button></div>
+       </div>
+
+
+<div class="cajab"><center id="libro"></center></div>
+         
+         
+         
+        
+
+       </section> <!--id="mail"-->
+
+
+
+       <section class="slide" id="utilidades" style="display:none">
+         <div class="googleCalendar">
+         
+         <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FMadrid&amp;src=dmljdG9yLmVzQGdtYWlsLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%236633CC&amp;color=%23336699&amp;color=%23227F63&amp;showPrint=0" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+         </div>
+          
+       </section> <!--id="utilidades"-->
+
+
+        
+       <section class="slide" id="recetas" style="display:none">
+
+
+<div class="navbarb">
+    <div class="dropdown"><button class="dropbtn" onclick="clic(pastas)">PASTAS</button></div> 
+    <div class="dropdown"><button class="dropbtn" onclick="clic(arroces)">ARROCES</button></div> 
+    <div class="dropdown"><button class="dropbtn" onclick="clic(verduras)">VERDURAS</button></div> 
+    <div class="dropdown"><button class="dropbtn" onclick="clic(gourmet)">FAVORITO</button></div>
+    <div class="dropdown"><button class="dropbtn" onclick="clic(tapas)">TAPAS/POSTRES</button></div>
+</div>
+
+
+<div class="cajab"><center id="n"></center><p id="print"></p></div>
+
+           
+           
+        
+   
+       </section> <!--id="RECETAS"-->
+
+
+
+
+
+
+
+
+
+ </div> <!id="slider"-->
+</section><!--id="global"-->
+
+
+
+<footer>
+       
+        <div class="rrss">
+           <a target="_blank" href="https://www.google.com/drive/"><img class="icons" src="img/google-drive.png"/></a>
+           <a target="_blank" href="https://github.com/VICTORJMC"><img class="icons" src="img/github.png"/></a>
+           <a target="_blank" href="https://gastronomiaycia.republica.com/2016/08/18/50-recetas-de-cocina-casera-faciles-ricas-y-sanas/"><img class="icons" src="img/spoon-knife.png"/></a>
+           <a target="_blank" href="https://es.khanacademy.org/computing/computer-programming/html-js-jquery"><img class="icons" src="img/library.png"/></a>
+           <a target="_blank" href="https://www.documaniatv.com/documentales-historia-videos-1-date.html"><img class="icons" src="img/film.png"/></a>
+           <a target="_blank" href="https://goluchas.com/ufc/ver-ufc-294-en-vivo-y-en-espanol/"><img class="icons" src="img/frustrated.png"/></a>
+           <a target="_blank" href="CompraIndexDB.html" title="Lista de la Compra"><img class="icons" src="img/cart.png"/></a>
+           <a href="task.html" title="Tareas"><img class="icons" src="img/clipboard.png"/></a>
+           <a target="_blank" href="revisar.html" title="Revisar"><img class="icons" src="img/clipboard.png"/></a>
+           <a href="#" class="subir" ></a> 
+           
+           <br><br>
+           <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral </p>
+        </div>
+
+    
+</footer> 
+
+
+<script>                            
+function navSection(nav){
+   
+var section = new Array(5);
+ section[0] = "home";
+ section[1] = "bancos";
+ section[2] = "arqueo";
+ section[3] = "mail";
+ section[4] = "utilidades";
+ section[5] = "recetas";
+   
+ var search;
+ var show;
+for (var i=0;  i<6; i++) { 
+     search = document.getElementById(section[i]);
+     search.style.display ="none"; //oculta todas las seciones
+     if (section[i] == nav) { 
+      search.style.display = "block";
+      }<!-- //del if -->
+    }  <!-- //del for -->
+ }<!-- //del function -->
+</script>  
+
+<script type="text/javascript"  src="js/citas.js" async>  </script>
+
+
+
+
+</body>
+</html>
